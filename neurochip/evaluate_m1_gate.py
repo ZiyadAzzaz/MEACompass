@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
+import subprocess
 
 import numpy as np
 import pandas as pd
@@ -11,6 +13,7 @@ from sklearn.metrics import mean_absolute_error
 
 from neurochip.evaluate import bootstrap_paired_mae
 from neurochip.train_baselines import summarize
+from neurochip.train_baselines import file_sha256
 
 
 JOIN_KEYS = ["sample_id", "casrn", "cohort", "endpoint", "seed", "outer_fold"]
@@ -136,6 +139,27 @@ def main() -> None:
     m1.to_csv(args.results_dir / "m1_predictions.csv", index=False)
     table = gate_table(merged)
     table.to_csv(args.results_dir / "m1_gate.csv", index=False)
+    tuning = pd.DataFrame(
+        [json.loads(path.read_text(encoding="utf-8")) for path in tuning_files]
+    ).sort_values(["seed", "outer_fold", "endpoint"])
+    tuning.to_json(args.results_dir / "m1_tuning.json", orient="records", indent=2)
+    manifest = {
+        "preregistration_commit": "8671fd84cc48d5b4fc45fe09ee20227cb3d46ac0",
+        "m1_implementation_commit": "2085c30",
+        "evaluation_commit": subprocess.check_output(
+            ["git", "rev-parse", "HEAD"], text=True
+        ).strip(),
+        "config": "configs/baselines.yaml",
+        "config_sha256": file_sha256(Path("configs/baselines.yaml")),
+        "seeds": sorted(int(value) for value in m1["seed"].unique()),
+        "features": int(tuning["feature_count"].iloc[0]),
+        "prediction_checkpoints": len(checkpoint_files),
+        "tuning_records": len(tuning_files),
+        "rows": len(m1),
+    }
+    (args.results_dir / "m1_manifest.json").write_text(
+        json.dumps(manifest, indent=2), encoding="utf-8"
+    )
     decision, passes = gate_m1_decision(table)
     print(table.to_string(index=False))
     print(f"GATE M1: {decision} (M1 beats B3 on {passes}/5 endpoints)")

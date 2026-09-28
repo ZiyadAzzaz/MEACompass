@@ -1,0 +1,16 @@
+{
+  "preregistration_commit": "8671fd84cc48d5b4fc45fe09ee20227cb3d46ac0",
+  "m1_implementation_commit": "2085c30",
+  "evaluation_commit": "e280e80a0ad96489d964dfb637d3507872af71d1",
+  "config": "configs/baselines.yaml",
+  "config_sha256": "9165e0b66c98099570563e466f0cf32586d11bf489991341053e843ef5506d28",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "features": 2139,
+  "prediction_checkpoints": 75,
+  "tuning_records": 75,
+  "rows": 59664
+}

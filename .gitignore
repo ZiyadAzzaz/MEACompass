@@ -7,6 +7,9 @@ results/*
 !results/bt_plus.csv
 !results/bt_plus_manifest.json
 !results/bt_plus_selections.csv
+!results/m1.csv
+!results/m1_gate.csv
+!results/m1_manifest.json
 artifacts/
 checkpoints/
 

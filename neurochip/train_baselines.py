@@ -36,14 +36,20 @@ def file_sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def select_best_trivial(train: pd.DataFrame, endpoint: str, seed: int, inner_folds: int) -> str:
-    predictions = {model: [] for model in TRIVIAL_MODELS}
+def select_best_baseline(
+    train: pd.DataFrame,
+    endpoint: str,
+    seed: int,
+    inner_folds: int,
+    candidates: tuple[str, ...] = TRIVIAL_MODELS,
+) -> str:
+    predictions = {model: [] for model in candidates}
     actual: list[np.ndarray] = []
     for inner_train_idx, inner_valid_idx in outer_folds(train, seed=seed, n_splits=inner_folds):
         inner_train = train.iloc[inner_train_idx]
         inner_valid = train.iloc[inner_valid_idx]
         actual.append(inner_valid["target12"].to_numpy())
-        for model in TRIVIAL_MODELS:
+        for model in candidates:
             fitted = fit_baseline(model, inner_train, endpoint)
             predictions[model].append(predict_baseline(fitted, inner_valid))
     joined_actual = np.concatenate(actual)
@@ -52,6 +58,10 @@ def select_best_trivial(train: pd.DataFrame, endpoint: str, seed: int, inner_fol
         for model, parts in predictions.items()
     }
     return min(scores, key=lambda model: (scores[model], model))
+
+
+def select_best_trivial(train: pd.DataFrame, endpoint: str, seed: int, inner_folds: int) -> str:
+    return select_best_baseline(train, endpoint, seed, inner_folds, TRIVIAL_MODELS)
 
 
 def xgb_grid(config: dict[str, object]) -> list[dict[str, object]]:

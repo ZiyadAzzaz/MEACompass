@@ -3,6 +3,7 @@ import pandas as pd
 
 from neurochip.baselines import endpoint_frame, fit_baseline, predict_baseline
 from neurochip.evaluate import bootstrap_paired_mae, prediction_metrics
+from neurochip.evaluate_m1_gate import gate_m1_decision
 from neurochip.train_m1 import compose_m1_prediction, m1_training_target
 
 
@@ -72,3 +73,14 @@ def test_paired_bootstrap_detects_uniformly_better_candidate() -> None:
     low, high = bootstrap_paired_mae(frame, "candidate", "reference", draws=100)
     assert low < 0
     assert high < 0
+
+
+def test_phase3_gate_m1_requires_two_endpoints_beating_b3() -> None:
+    assert gate_m1_decision(pd.DataFrame({"beats_b3": [True, True, False]})) == (
+        "SELECT_M1",
+        2,
+    )
+    assert gate_m1_decision(pd.DataFrame({"beats_b3": [True, False, False]})) == (
+        "SELECT_B3",
+        1,
+    )

@@ -16,7 +16,9 @@ from neurochip.train_baselines import summarize
 JOIN_KEYS = ["sample_id", "casrn", "cohort", "endpoint", "seed", "outer_fold"]
 
 
-def merge_m1_and_b3(m1: pd.DataFrame, baselines: pd.DataFrame) -> pd.DataFrame:
+def merge_m1_and_b3(
+    m1: pd.DataFrame, baselines: pd.DataFrame, bt_plus: pd.DataFrame
+) -> pd.DataFrame:
     b3 = baselines.loc[baselines["model"].eq("B3")].copy()
     if m1.duplicated(JOIN_KEYS).any() or b3.duplicated(JOIN_KEYS).any():
         raise ValueError("M1/B3 prediction keys must be unique")
@@ -31,6 +33,20 @@ def merge_m1_and_b3(m1: pd.DataFrame, baselines: pd.DataFrame) -> pd.DataFrame:
             f"M1 and B3 held-out rows do not match: M1={len(m1)}, B3={len(b3)}, "
             f"joined={len(merged)}"
         )
+    if bt_plus.duplicated(JOIN_KEYS).any():
+        raise ValueError("BT+ prediction keys must be unique")
+    merged = merged.merge(
+        bt_plus[JOIN_KEYS + ["prediction"]].rename(
+            columns={"prediction": "bt_plus_prediction"}
+        ),
+        on=JOIN_KEYS,
+        how="inner",
+        validate="one_to_one",
+    )
+    if len(merged) != len(m1):
+        raise ValueError(
+            f"M1 and BT+ held-out rows do not match: M1={len(m1)}, joined={len(merged)}"
+        )
     return merged
 
 
@@ -44,17 +60,22 @@ def gate_table(merged: pd.DataFrame) -> pd.DataFrame:
                 m1_prediction=("prediction", "mean"),
                 b3_prediction=("b3_prediction", "mean"),
                 bt_prediction=("bt_prediction", "mean"),
+                bt_plus_prediction=("bt_plus_prediction", "mean"),
             )
         )
         actual = averaged["target12"]
         m1_mae = mean_absolute_error(actual, averaged["m1_prediction"])
         b3_mae = mean_absolute_error(actual, averaged["b3_prediction"])
         bt_mae = mean_absolute_error(actual, averaged["bt_prediction"])
+        bt_plus_mae = mean_absolute_error(actual, averaged["bt_plus_prediction"])
         b3_low, b3_high = bootstrap_paired_mae(
             averaged, "m1_prediction", "b3_prediction"
         )
         bt_low, bt_high = bootstrap_paired_mae(
             averaged, "m1_prediction", "bt_prediction"
+        )
+        bt_plus_low, bt_plus_high = bootstrap_paired_mae(
+            averaged, "m1_prediction", "bt_plus_prediction"
         )
         beats_b3 = bool(b3_high < 0)
         beats_bt = bool(bt_high < 0)
@@ -66,18 +87,29 @@ def gate_table(merged: pd.DataFrame) -> pd.DataFrame:
                 "m1_mae": m1_mae,
                 "b3_mae": b3_mae,
                 "bt_mae": bt_mae,
+                "bt_plus_mae": bt_plus_mae,
                 "delta_mae_vs_b3": m1_mae - b3_mae,
                 "delta_mae_vs_b3_ci_low": b3_low,
                 "delta_mae_vs_b3_ci_high": b3_high,
                 "delta_mae_vs_bt": m1_mae - bt_mae,
                 "delta_mae_vs_bt_ci_low": bt_low,
                 "delta_mae_vs_bt_ci_high": bt_high,
+                "delta_mae_vs_bt_plus": m1_mae - bt_plus_mae,
+                "delta_mae_vs_bt_plus_ci_low": bt_plus_low,
+                "delta_mae_vs_bt_plus_ci_high": bt_plus_high,
                 "beats_b3": beats_b3,
                 "beats_bt": beats_bt,
                 "gate_endpoint_pass": beats_b3 or beats_bt,
             }
         )
     return pd.DataFrame(rows).sort_values("endpoint")
+
+
+def gate_m1_decision(table: pd.DataFrame) -> tuple[str, int]:
+    """Apply the Phase 3 main-model rule registered before M1 completion."""
+    endpoints_beating_b3 = int(table["beats_b3"].sum())
+    decision = "SELECT_M1" if endpoints_beating_b3 >= 2 else "SELECT_B3"
+    return decision, endpoints_beating_b3
 
 
 def parse_args() -> argparse.Namespace:
@@ -97,16 +129,16 @@ def main() -> None:
         )
     m1 = pd.concat([pd.read_csv(path) for path in checkpoint_files], ignore_index=True)
     baselines = pd.read_csv(args.results_dir / "baseline_predictions.csv")
-    merged = merge_m1_and_b3(m1, baselines)
+    bt_plus = pd.read_csv(args.results_dir / "bt_plus_predictions.csv")
+    merged = merge_m1_and_b3(m1, baselines, bt_plus)
     summary = summarize(m1)
     summary.to_csv(args.results_dir / "m1.csv", index=False)
     m1.to_csv(args.results_dir / "m1_predictions.csv", index=False)
     table = gate_table(merged)
     table.to_csv(args.results_dir / "m1_gate.csv", index=False)
-    passes = int(table["gate_endpoint_pass"].sum())
-    decision = "KEEP_M1" if passes >= 3 else "M1_DOES_NOT_PASS"
+    decision, passes = gate_m1_decision(table)
     print(table.to_string(index=False))
-    print(f"GATE M1: {decision} ({passes}/5 endpoints)")
+    print(f"GATE M1: {decision} (M1 beats B3 on {passes}/5 endpoints)")
 
 
 if __name__ == "__main__":

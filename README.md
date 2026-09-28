@@ -22,14 +22,26 @@ and organ-on-chip workflows.
 - Registered B0--B4 benchmark: complete across five outer folds and three seeds.
 - Gate B2: **STRONG**. B3 cleared every criterion on three of five endpoints.
 - Gate M1 selected the fusion model on 2/5 endpoints versus B3.
-- Sanity Gate S: **STOP — suspected leakage/confounding**. The registered
-  chemical-group permutation control retained a small significant bursts/min
-  advantage over BT+. M2/M3 have not been run pending an integrity audit.
+- Registered Sanity Gate S: **FAIL / STOP—unchanged**. The registered
+  chemical-block control retained a small bursts/min advantage over BT+.
+- Authorized post-registration integrity audit: **PASS—residual structure under
+  null**. No leak or realignment was found; the full well shuffle was clean and
+  real M1 exceeded all 20 repeated block-null runs on all five endpoints.
+- Gate M2: **PASS**. Nominal-90% nested group-CV+ coverage is 91.03–92.40%
+  overall, with every NTP/ToxCast cohort above 90%.
+- Gate M3: **PASS, mixed by endpoint**. At 70% accepted coverage, firing rate,
+  active electrodes, and `r` meet the ≥15% risk-reduction criterion with
+  chemical-bootstrap intervals below zero.
+- Gate L1: **LOCK**. M1 and the reliability protocol are frozen. The `r`
+  normalization caveat and the registered Gate S failure remain visible.
 
 See [`docs/neurochip_data_audit.md`](docs/neurochip_data_audit.md) for exact data
 counts, provenance, license, limitations, and the project-selection decision.
 See [`docs/phase2_baseline_results.md`](docs/phase2_baseline_results.md) for the
 held-out results and gate decision.
+See [`docs/integrity_audit.md`](docs/integrity_audit.md) and
+[`docs/phase3_m2_m3_results.md`](docs/phase3_m2_m3_results.md) for the audit and
+reliability gates.
 
 ## Reproduction interface
 

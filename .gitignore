@@ -24,6 +24,13 @@ results/*
 !results/m3_risk_coverage.csv
 !results/m3_decision.json
 !results/l1_decision.json
+!results/time_ablation.csv
+!results/practical_value.csv
+!results/main_results.csv
+!results/risk_coverage.csv
+!results/calibration.csv
+!results/standardized_predictions.csv
+!results/demo_predictions.csv
 !results/audit/
 results/audit/*
 !results/audit/feature_lineage.csv

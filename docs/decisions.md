@@ -181,3 +181,17 @@
 - Gate L1: **LOCK**. Freeze M1 and the reliability protocol. `r` retains its
   percent-control normalization caveat despite passing the abstention criterion.
 - Full evidence: `docs/phase3_m2_m3_results.md`.
+
+## 2026-09-28 — Post-lock time and practical-value analysis
+
+- P1 completed with frozen settings at DIV5, DIV5+7, and DIV5+7+9. DIV9 is a
+  post-lock ablation only and does not alter the registered primary model.
+- DIV7 is the earliest window with material gain across all five endpoints. DIV9
+  improves four endpoints; `r` does not improve from DIV7 to DIV9.
+- A fixed DIV7 reliability threshold abstains on nearly every DIV5 prediction,
+  30% at DIV7 by construction, and 2.7-7.1% at DIV9 for four endpoints; `r`
+  remains at 29.3% abstention.
+- P2 reports approximately 70% accepted held-out prediction instances. An accepted
+  DIV7 result is five assay days earlier than DIV12 (41.7% of the stated 12-day
+  duration). No monetary or autonomous-deployment claim is made.
+- Full evidence: `docs/time_practical_results.md`.

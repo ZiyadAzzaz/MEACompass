@@ -1,0 +1,16 @@
+endpoint,nominal_coverage,observed_coverage,cohort
+burst.per.min,0.9,0.9108431758530184,Overall
+meanfiringrate,0.9,0.9152885862516212,Overall
+nAE,0.9,0.92128728923476,Overall
+ns.n,0.9,0.91026376146789,Overall
+r,0.9,0.9239623865110248,Overall
+burst.per.min,0.9,0.91977969348659,NTP
+meanfiringrate,0.9,0.913074712643678,NTP
+nAE,0.9,0.9351053639846744,NTP
+ns.n,0.9,0.9217414529914528,NTP
+r,0.9,0.9638409961685824,NTP
+burst.per.min,0.9,0.906187624750499,ToxCast
+meanfiringrate,0.9,0.9164215686274508,ToxCast
+nAE,0.9,0.9142156862745098,ToxCast
+ns.n,0.9,0.9038690476190476,ToxCast
+r,0.9,0.9035539215686276,ToxCast

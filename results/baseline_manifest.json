@@ -1,0 +1,20 @@
+{
+  "preregistration_commit": "8671fd84cc48d5b4fc45fe09ee20227cb3d46ac0",
+  "code_commit": "816bd24f3004fe3ed5e58b6068b361191ec0604e",
+  "config": "configs\\baselines.yaml",
+  "config_sha256": "9165e0b66c98099570563e466f0cf32586d11bf489991341053e843ef5506d28",
+  "models": [
+    "B0",
+    "B1",
+    "B1b",
+    "B2",
+    "B3",
+    "B4"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "rows": 357984
+}

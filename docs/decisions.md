@@ -46,3 +46,21 @@
 - Causal contract rejects DIV9, DIV12, control-DIV12, EC50, hit-call, and viability
   fields as inputs.
 - Decision: proceed to matched-control normalization and B0–B4.
+
+## 2026-09-28 — Gates B1/B2: PASS / STRONG
+
+- B0–B4 completed for all five registered endpoints, five chemical-disjoint
+  outer folds, and seeds 0/1/2 (357,984 held-out prediction rows).
+- B3 met the full strong criterion on bursting, firing, and network spikes:
+  relative MAE gains were 41.65%, 15.78%, and 31.05%; the paired
+  chemical-bootstrap confidence intervals excluded zero in the beneficial
+  direction; delta Spearman values were 0.761, 0.583, and 0.610.
+- Active electrodes improved by 9.22%, but its confidence interval crossed zero.
+  Coordinated activity `r` did not improve in MAE and is a declared negative
+  result.
+- Decision: Gate B2 is **STRONG (3/5 endpoints)**. No feature-pack retry is
+  permitted or needed. Proceed to the pre-registered M1 chemistry-fusion test.
+- B4 structure-only modeling showed significant gains for bursting and network
+  spikes, but was weaker than B3 overall. This is evidence that chemistry may be
+  useful, not evidence that M1 will pass.
+- Full table: `docs/phase2_baseline_results.md`.

@@ -207,3 +207,15 @@
   not match. Preserve the result in the appendix; do not claim that official
   potency was predicted five days earlier.
 - Full evidence: `docs/potency_appendix.md`.
+
+## 2026-09-28 — Frozen M1 interpretability
+
+- Seed-0 outer models were refit with preserved task settings solely to compute
+  held-out XGBoost tree contributions; no tuning or result selection changed.
+- DIV7 neural features contribute 56.9-77.3% of total absolute attribution across
+  endpoints. Chemistry is complementary (11.2-31.8% combined Morgan/RDKit), while
+  cohort and explicit dose are small globally.
+- Three correct and two failure cases were selected post-lock by a disclosed
+  endpoint-scaled error rule. They are descriptive, not performance estimates or
+  automatically chosen showcase defaults.
+- Full evidence: `docs/interpretability.md`.

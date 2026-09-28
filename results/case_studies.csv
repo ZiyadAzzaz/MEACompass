@@ -1,0 +1,6 @@
+sample_id,casrn,trt,cohort,dose,endpoints,mean_scaled_absolute_error,all_endpoints_accepted,case_type,selection_note
+ToxCast|MW1147-5|E4,86-73-7,Fluorene,ToxCast,0.3,3,0.030416117111332058,False,correct,post-lock descriptive extreme by mean endpoint-scaled absolute error; not performance estimation
+ToxCast|MW1147-13|C5,56-81-5,Glycerol,ToxCast,1.0,3,0.03336084405989751,False,correct,post-lock descriptive extreme by mean endpoint-scaled absolute error; not performance estimation
+ToxCast|MW1145-22|A3,117428-22-5,Picoxystrobin,ToxCast,0.03,3,0.04706943198534503,True,correct,post-lock descriptive extreme by mean endpoint-scaled absolute error; not performance estimation
+ToxCast|MW1160-23|B5,1461-22-9,Tributyltin chloride,ToxCast,0.03,3,56.905431889141504,False,failure,post-lock descriptive extreme by mean endpoint-scaled absolute error; not performance estimation
+ToxCast|MW1160-23|C7,7487-94-7,Mercuric chloride,ToxCast,0.3,3,49.80999965833356,True,failure,post-lock descriptive extreme by mean endpoint-scaled absolute error; not performance estimation

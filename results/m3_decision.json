@@ -1,0 +1,10 @@
+{
+  "gate": "M3",
+  "decision": "PASS_MIXED_BY_ENDPOINT",
+  "coverage_evaluated": 0.7,
+  "passing_endpoints": ["meanfiringrate", "nAE", "r"],
+  "passing_count": 3,
+  "endpoints_total": 5,
+  "criterion": "at_least_15_percent_risk_reduction_and_chemical_bootstrap_ci_below_zero",
+  "nonpassing_endpoints": ["burst.per.min", "ns.n"]
+}

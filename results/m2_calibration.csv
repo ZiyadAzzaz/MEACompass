@@ -1,0 +1,6 @@
+endpoint,method,nominal_coverage,overall_coverage,ntp_coverage,toxcast_coverage,median_interval_width,n_rows,pass_overall,pass_ntp,pass_toxcast,gate_pass
+burst.per.min,nested_group_cvplus,0.9,0.9108431758530183,0.91977969348659,0.906187624750499,108.91044746754986,12192,True,True,True,True
+meanfiringrate,nested_group_cvplus,0.9,0.9152885862516212,0.9130747126436781,0.9164215686274509,128.8021997985178,12336,True,True,True,True
+nAE,nested_group_cvplus,0.9,0.92128728923476,0.9351053639846744,0.9142156862745098,70.08684849739075,12336,True,True,True,True
+ns.n,nested_group_cvplus,0.9,0.9102637614678899,0.9217414529914529,0.9038690476190476,162.62568745986198,10464,True,True,True,True
+r,nested_group_cvplus,0.9,0.9239623865110247,0.9638409961685823,0.9035539215686275,136.40270726631684,12336,True,True,True,True

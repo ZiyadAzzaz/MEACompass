@@ -1,0 +1,14 @@
+{
+  "gate": "L1",
+  "decision": "LOCK",
+  "date": "2026-09-28",
+  "basis": {
+    "registered_gate_s": "FAIL_STOP_UNCHANGED",
+    "post_registration_integrity_audit": "PASS_RESIDUAL_STRUCTURE_UNDER_NULL",
+    "m2": "PASS",
+    "m3": "PASS_MIXED_BY_ENDPOINT"
+  },
+  "main_model": "M1",
+  "frozen_headline": "Reliability-aware DIV7-to-DIV12 forecasting with calibrated abstention",
+  "limitations": ["r percent-control normalization has an extreme tail", "burst and network-spike abstention do not meet the 15 percent M3 threshold"]
+}

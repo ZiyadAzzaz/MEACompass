@@ -17,6 +17,13 @@ results/*
 !results/dose_strata.csv
 !results/cohort_results.csv
 !results/gate_s_decision.json
+!results/bt_plus_plus.csv
+!results/bt_plus_plus_selections.csv
+!results/m2_calibration.csv
+!results/m2_decision.json
+!results/m3_risk_coverage.csv
+!results/m3_decision.json
+!results/l1_decision.json
 !results/audit/
 results/audit/*
 !results/audit/feature_lineage.csv

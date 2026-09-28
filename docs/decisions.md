@@ -165,3 +165,19 @@
   post-hoc BT++ (inner-selected best of BT+ and DOSE-SMOOTH). All future reports
   must preserve both original BT+ and post-hoc BT++ results.
 - Full evidence: `docs/integrity_audit.md` and `results/audit/`.
+
+## 2026-09-28 — Gates M2/M3 and early L1 lock
+
+- Added post-hoc BT++ exactly as authorized: the better of BT+ and fixed
+  DOSE-SMOOTH is selected using chemical-disjoint inner-validation rows only.
+  Outer-test labels remain evaluation-only. Both BT+ and BT++ stay reported.
+- Gate M2 **PASS**: nested group-aware CV+ achieved 91.03-92.40% overall coverage
+  for nominal 90% intervals across all five endpoints, with every NTP/ToxCast
+  coverage above 90%. The allowed CQR switch was not used.
+- Gate M3 **PASS, mixed by endpoint**: at 70% accepted coverage, firing rate,
+  active electrodes, and `r` exceeded 15% risk reduction with chemical-bootstrap
+  intervals below zero. Bursts improved by 4.61%; network spikes improved by
+  5.26% with its interval crossing zero. All five remain visible.
+- Gate L1: **LOCK**. Freeze M1 and the reliability protocol. `r` retains its
+  percent-control normalization caveat despite passing the abstention criterion.
+- Full evidence: `docs/phase3_m2_m3_results.md`.

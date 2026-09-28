@@ -1,0 +1,11 @@
+{
+  "gate": "M2",
+  "decision": "PASS",
+  "method": "nested_group_cvplus",
+  "nominal_coverage": 0.9,
+  "overall_coverage_range": [0.910264, 0.923962],
+  "minimum_cohort_coverage": 0.903554,
+  "endpoints_passing": 5,
+  "endpoints_total": 5,
+  "cqr_switch_used": false
+}

@@ -64,3 +64,21 @@
   spikes, but was weaker than B3 overall. This is evidence that chemistry may be
   useful, not evidence that M1 will pass.
 - Full table: `docs/phase2_baseline_results.md`.
+
+## 2026-09-28 — Registered deviation: Sanity Gate S
+
+- Timing: registered after B0–B4 results and after M1 was launched, but before
+  M1 results, Gate M1 evaluation, or any uncertainty analysis.
+- Rationale: B0 unexpectedly outperformed the original inner-selected BT on
+  some endpoints. A stronger comparison and negative control are required before
+  interpreting uncertainty or abstention.
+- Original pre-registered BT and every original metric remain unchanged and will
+  still be reported. This deviation adds BT+ (inner-selected from B0/B1/B1b/B2),
+  chemical-group target permutation, dose-stratified evaluation, descriptive
+  per-cohort evaluation, and a DIV5-only B3 time ablation.
+- M2 is prohibited until Gate S is evaluated. A beneficial permutation result
+  with a confidence interval excluding zero, or disappearance of gain across
+  endpoints, triggers an immediate stop and report.
+- Gate L1 may lock early only after M1 evaluation, Gate S PASS, and Gate M3 PASS
+  or WEAK. CellTwin-X remains frozen only after that lock.
+- Full deviation protocol: `docs/phase2_addendum.md`.

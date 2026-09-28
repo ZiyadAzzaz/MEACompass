@@ -195,3 +195,15 @@
   DIV7 result is five assay days earlier than DIV12 (41.7% of the stated 12-day
   duration). No monetary or autonomous-deployment claim is made.
 - Full evidence: `docs/time_practical_results.md`.
+
+## 2026-09-28 — Potency Gate P1: appendix due target mismatch
+
+- The bundled official EC50 tables measure ontogeny-AUC potency, not DIV12-only
+  potency. Their `NA` values mean no supported in-range estimate under the EPA R
+  workflow and were not imputed or converted to zero.
+- Exploratory predicted-DIV12 versus official-AUC rankings are strong across all
+  five endpoints (Spearman 0.773-0.868; 54-61 comparable chemical/cohort pairs).
+- Gate P1 is **not eligible for a headline pass** because the response targets do
+  not match. Preserve the result in the appendix; do not claim that official
+  potency was predicted five days earlier.
+- Full evidence: `docs/potency_appendix.md`.

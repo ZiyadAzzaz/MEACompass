@@ -1,0 +1,6 @@
+endpoint,official_numeric,predicted_div12_estimable,comparable_pairs,spearman_predicted_div12_vs_official_auc,observed_comparable_pairs,spearman_observed_div12_vs_official_auc,gate_p1_eligible,gate_p1_decision
+burst.per.min,66,61,54,0.8676548718342733,60,0.8769784717278606,False,APPENDIX_TARGET_MISMATCH
+meanfiringrate,60,73,58,0.772707721935776,55,0.9100750956587418,False,APPENDIX_TARGET_MISMATCH
+nAE,64,70,61,0.8448842149159081,55,0.9374188839291491,False,APPENDIX_TARGET_MISMATCH
+ns.n,57,64,54,0.7924348959412011,57,0.9480883766816421,False,APPENDIX_TARGET_MISMATCH
+r,69,75,61,0.8197024954630368,61,0.9501481223977292,False,APPENDIX_TARGET_MISMATCH

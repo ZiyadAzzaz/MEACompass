@@ -1,0 +1,723 @@
+cohort,casrn,compound,endpoint,official_auc_ec50,official_status,predicted_div12_ec50,predicted_method,observed_div12_ec50,observed_method,target_match,target_mismatch_reason
+NTP,109-86-4,2-Methoxyethanol,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,109-86-4,2-Methoxyethanol,meanfiringrate,,not_estimable_or_above_range,0.09759085834080668,linear_50pct_fallback,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,109-86-4,2-Methoxyethanol,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,109-86-4,2-Methoxyethanol,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,109-86-4,2-Methoxyethanol,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,111-94-4,"3,3'-Iminobispropanenitrile",burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,111-94-4,"3,3'-Iminobispropanenitrile",meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,111-94-4,"3,3'-Iminobispropanenitrile",nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,111-94-4,"3,3'-Iminobispropanenitrile",ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,111-94-4,"3,3'-Iminobispropanenitrile",r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,117-81-7,Di(2-ethylhexyl) phthalate,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,117-81-7,Di(2-ethylhexyl) phthalate,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,117-81-7,Di(2-ethylhexyl) phthalate,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,117-81-7,Di(2-ethylhexyl) phthalate,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,117-81-7,Di(2-ethylhexyl) phthalate,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,120-12-7,Anthracene,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,120-12-7,Anthracene,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,120-12-7,Anthracene,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,120-12-7,Anthracene,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,120-12-7,Anthracene,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,12108-13-3,"Manganese, tricarbonyl[(1,2,3,4,5-.eta.)-1-methyl-2,4-cyclopentadien-1-yl]",burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,12108-13-3,"Manganese, tricarbonyl[(1,2,3,4,5-.eta.)-1-methyl-2,4-cyclopentadien-1-yl]",meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,12108-13-3,"Manganese, tricarbonyl[(1,2,3,4,5-.eta.)-1-methyl-2,4-cyclopentadien-1-yl]",nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,12108-13-3,"Manganese, tricarbonyl[(1,2,3,4,5-.eta.)-1-methyl-2,4-cyclopentadien-1-yl]",ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,12108-13-3,"Manganese, tricarbonyl[(1,2,3,4,5-.eta.)-1-methyl-2,4-cyclopentadien-1-yl]",r,11.79182,numeric,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,1241-94-7,2-Ethylhexyl diphenyl phosphate,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,1241-94-7,2-Ethylhexyl diphenyl phosphate,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,1241-94-7,2-Ethylhexyl diphenyl phosphate,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,1241-94-7,2-Ethylhexyl diphenyl phosphate,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,1241-94-7,2-Ethylhexyl diphenyl phosphate,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,129-00-0,Pyrene,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,129-00-0,Pyrene,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,129-00-0,Pyrene,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,129-00-0,Pyrene,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,129-00-0,Pyrene,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,133-06-2,Captan,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,133-06-2,Captan,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,133-06-2,Captan,nAE,12.748366,numeric,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,133-06-2,Captan,ns.n,18.175589,numeric,,no_high_dose_50pct_crossing,19.47245009185861,linear_50pct_fallback,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,133-06-2,Captan,r,14.219453,numeric,18.4114788925948,linear_50pct_fallback,15.9580989422254,linear_50pct_fallback,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,1330-78-5,Tricresyl phosphate,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,1330-78-5,Tricresyl phosphate,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,1330-78-5,Tricresyl phosphate,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,1330-78-5,Tricresyl phosphate,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,1330-78-5,Tricresyl phosphate,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,13674-84-5,Tris(2-chloroisopropyl) phosphate,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,13674-84-5,Tris(2-chloroisopropyl) phosphate,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,13674-84-5,Tris(2-chloroisopropyl) phosphate,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,13674-84-5,Tris(2-chloroisopropyl) phosphate,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,13674-84-5,Tris(2-chloroisopropyl) phosphate,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,1478-61-1,Bisphenol AF,burst.per.min,18.275204,numeric,16.471755157470156,hill_fixed_0_100_grid,18.786406569786163,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,1478-61-1,Bisphenol AF,meanfiringrate,,not_estimable_or_above_range,17.591051398543705,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,1478-61-1,Bisphenol AF,nAE,14.414984,numeric,16.471755157470156,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,1478-61-1,Bisphenol AF,ns.n,17.361018,numeric,14.442289266964027,hill_fixed_0_100_grid,18.786406569786163,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,1478-61-1,Bisphenol AF,r,15.244412,numeric,15.42367831351494,hill_fixed_0_100_grid,17.591051398543705,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,183658-27-7,"2-Ethylhexyl-2,3,4,5-tetrabromobenzoate",burst.per.min,17.282044,numeric,18.786406569786163,hill_fixed_0_100_grid,16.471755157470156,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,183658-27-7,"2-Ethylhexyl-2,3,4,5-tetrabromobenzoate",meanfiringrate,18.856885,numeric,18.786406569786163,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,183658-27-7,"2-Ethylhexyl-2,3,4,5-tetrabromobenzoate",nAE,13.110921,numeric,19.31149424080258,linear_50pct_fallback,16.471755157470156,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,183658-27-7,"2-Ethylhexyl-2,3,4,5-tetrabromobenzoate",ns.n,17.267206,numeric,18.786406569786163,hill_fixed_0_100_grid,15.42367831351494,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,183658-27-7,"2-Ethylhexyl-2,3,4,5-tetrabromobenzoate",r,14.912054,numeric,18.786406569786163,hill_fixed_0_100_grid,15.42367831351494,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,191-24-2,"Benzo[g,h,i]perylene",burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,191-24-2,"Benzo[g,h,i]perylene",meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,191-24-2,"Benzo[g,h,i]perylene",nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,191-24-2,"Benzo[g,h,i]perylene",ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,191-24-2,"Benzo[g,h,i]perylene",r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,192-97-2,Benzo(e)pyrene,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,192-97-2,Benzo(e)pyrene,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,192-97-2,Benzo(e)pyrene,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,192-97-2,Benzo(e)pyrene,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,192-97-2,Benzo(e)pyrene,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,2001-95-8,Valinomycin,burst.per.min,0.000222,numeric,0.042424336882362156,hill_fixed_0_100_grid,0.00022034146585195902,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,2001-95-8,Valinomycin,meanfiringrate,0.000239,numeric,0.0016663158378263248,hill_fixed_0_100_grid,0.00022034146585195902,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,2001-95-8,Valinomycin,nAE,0.00042,numeric,0.002858031069068535,hill_fixed_0_100_grid,0.00046267066713213153,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,2001-95-8,Valinomycin,ns.n,0.000307,numeric,0.007859546532561854,hill_fixed_0_100_grid,0.0003087022173535881,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,2001-95-8,Valinomycin,r,0.000375,numeric,0.003057423846387185,hill_fixed_0_100_grid,0.0003779252053623215,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,203-64-5,"4-H-Cyclopenta(d,e,f)phenanthrene",burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,203-64-5,"4-H-Cyclopenta(d,e,f)phenanthrene",meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,203-64-5,"4-H-Cyclopenta(d,e,f)phenanthrene",nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,203-64-5,"4-H-Cyclopenta(d,e,f)phenanthrene",ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,203-64-5,"4-H-Cyclopenta(d,e,f)phenanthrene",r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,207-08-9,Benzo(k)fluoranthene,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,207-08-9,Benzo(k)fluoranthene,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,207-08-9,Benzo(k)fluoranthene,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,207-08-9,Benzo(k)fluoranthene,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,207-08-9,Benzo(k)fluoranthene,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,215-58-7,"Dibenz[a,c] anthracene",burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,215-58-7,"Dibenz[a,c] anthracene",meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,215-58-7,"Dibenz[a,c] anthracene",nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,215-58-7,"Dibenz[a,c] anthracene",ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,215-58-7,"Dibenz[a,c] anthracene",r,7.746492,numeric,9.843701742963777,linear_50pct_fallback,18.902621016521813,linear_50pct_fallback,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,218-01-9,Chrysene,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,218-01-9,Chrysene,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,218-01-9,Chrysene,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,218-01-9,Chrysene,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,218-01-9,Chrysene,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,2465-27-2,Auramine O,burst.per.min,2.861331,numeric,2.9811921793661953,hill_fixed_0_100_grid,3.1837715140140364,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,2465-27-2,Auramine O,meanfiringrate,3.161672,numeric,3.631162891614854,hill_fixed_0_100_grid,3.8779093334150794,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,2465-27-2,Auramine O,nAE,2.670504,numeric,3.1837715140140364,hill_fixed_0_100_grid,4.141422802296804,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,2465-27-2,Auramine O,ns.n,2.683327,numeric,3.8779093334150794,hill_fixed_0_100_grid,2.7915027102899668,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,2465-27-2,Auramine O,r,1.892081,numeric,3.631162891614854,hill_fixed_0_100_grid,1.881596676686709,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,26040-51-7,Bis(2-ethylhexyl) tetrabromophthalate,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,26040-51-7,Bis(2-ethylhexyl) tetrabromophthalate,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,26040-51-7,Bis(2-ethylhexyl) tetrabromophthalate,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,26040-51-7,Bis(2-ethylhexyl) tetrabromophthalate,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,26040-51-7,Bis(2-ethylhexyl) tetrabromophthalate,r,10.911418,numeric,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,28094-15-7,6-Hydroxydopamine hydrochloride,burst.per.min,11.717871,numeric,,no_high_dose_50pct_crossing,19.379552314319994,linear_50pct_fallback,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,28094-15-7,6-Hydroxydopamine hydrochloride,meanfiringrate,,not_estimable_or_above_range,13.555163702713536,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,28094-15-7,6-Hydroxydopamine hydrochloride,nAE,5.983822,numeric,16.73977031600417,hill_fixed_0_100_grid,14.542966693254112,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,28094-15-7,6-Hydroxydopamine hydrochloride,ns.n,14.580187,numeric,13.555163702713536,hill_fixed_0_100_grid,16.73977031600417,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,28094-15-7,6-Hydroxydopamine hydrochloride,r,4.818975,numeric,11.776284293560513,hill_fixed_0_100_grid,5.828084701767294,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,29761-21-5,Isodecyl diphenyl phosphate,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,29761-21-5,Isodecyl diphenyl phosphate,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,29761-21-5,Isodecyl diphenyl phosphate,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,29761-21-5,Isodecyl diphenyl phosphate,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,29761-21-5,Isodecyl diphenyl phosphate,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,36913-39-0,1-Methyl-4-phenylpyridinium iodide,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,36913-39-0,1-Methyl-4-phenylpyridinium iodide,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,36913-39-0,1-Methyl-4-phenylpyridinium iodide,nAE,8.903005,numeric,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,36913-39-0,1-Methyl-4-phenylpyridinium iodide,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,36913-39-0,1-Methyl-4-phenylpyridinium iodide,r,8.446215,numeric,,no_high_dose_50pct_crossing,9.529705899902194,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-06-6,Phenobarbital,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-06-6,Phenobarbital,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-06-6,Phenobarbital,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-06-6,Phenobarbital,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-06-6,Phenobarbital,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-28-2,Estradiol,burst.per.min,,not_estimable_or_above_range,16.73977031600417,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-28-2,Estradiol,meanfiringrate,,not_estimable_or_above_range,16.73977031600417,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-28-2,Estradiol,nAE,,not_estimable_or_above_range,15.602753672296839,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-28-2,Estradiol,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-28-2,Estradiol,r,18.967314,numeric,14.542966693254112,hill_fixed_0_100_grid,15.602753672296839,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-29-3,Dichlorodiphenyltrichloroethane,burst.per.min,7.388678,numeric,8.535337215265963,hill_fixed_0_100_grid,4.141422802296804,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-29-3,Dichlorodiphenyltrichloroethane,meanfiringrate,9.489425,numeric,9.734743723621492,hill_fixed_0_100_grid,5.387127421640827,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-29-3,Dichlorodiphenyltrichloroethane,nAE,8.839131,numeric,9.734743723621492,hill_fixed_0_100_grid,9.734743723621492,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-29-3,Dichlorodiphenyltrichloroethane,ns.n,4.728168,numeric,7.992244557249326,hill_fixed_0_100_grid,5.753195968409641,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-29-3,Dichlorodiphenyltrichloroethane,r,3.656757,numeric,7.007529354621707,hill_fixed_0_100_grid,4.141422802296804,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-32-8,Benzo(a)pyrene,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-32-8,Benzo(a)pyrene,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-32-8,Benzo(a)pyrene,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-32-8,Benzo(a)pyrene,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-32-8,Benzo(a)pyrene,r,,not_estimable_or_above_range,9.812663127737384,linear_50pct_fallback,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-70-4,D-Glucitol,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-70-4,D-Glucitol,meanfiringrate,,not_estimable_or_above_range,0.0,linear_50pct_fallback,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-70-4,D-Glucitol,nAE,,not_estimable_or_above_range,10.396243482056303,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-70-4,D-Glucitol,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-78-2,Acetylsalicylic acid,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-78-2,Acetylsalicylic acid,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-78-2,Acetylsalicylic acid,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-78-2,Acetylsalicylic acid,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-78-2,Acetylsalicylic acid,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-81-7,L-Ascorbic acid,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-81-7,L-Ascorbic acid,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-81-7,L-Ascorbic acid,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-81-7,L-Ascorbic acid,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,50-81-7,L-Ascorbic acid,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,52645-53-1,Permethrin,burst.per.min,7.006089,numeric,2.0094557947526277,hill_fixed_0_100_grid,11.102693774663607,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,52645-53-1,Permethrin,meanfiringrate,6.801031,numeric,7.992244557249326,hill_fixed_0_100_grid,13.52334475803331,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,52645-53-1,Permethrin,nAE,8.084035,numeric,3.1837715140140364,hill_fixed_0_100_grid,10.396243482056303,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,52645-53-1,Permethrin,ns.n,6.055043,numeric,8.535337215265963,hill_fixed_0_100_grid,9.734743723621492,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,52645-53-1,Permethrin,r,8.413523,numeric,9.115334354004965,hill_fixed_0_100_grid,7.007529354621707,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,53-70-3,"Dibenz(a,h)anthracene",burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,53-70-3,"Dibenz(a,h)anthracene",meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,53-70-3,"Dibenz(a,h)anthracene",nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,53-70-3,"Dibenz(a,h)anthracene",ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,53-70-3,"Dibenz(a,h)anthracene",r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,5436-43-1,"2,2',4,4'-Tetrabromodiphenyl ether",burst.per.min,,not_estimable_or_above_range,16.471755157470156,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,5436-43-1,"2,2',4,4'-Tetrabromodiphenyl ether",meanfiringrate,18.568088,numeric,19.58428525656514,linear_50pct_fallback,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,5436-43-1,"2,2',4,4'-Tetrabromodiphenyl ether",nAE,11.768488,numeric,18.786406569786163,hill_fixed_0_100_grid,17.591051398543705,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,5436-43-1,"2,2',4,4'-Tetrabromodiphenyl ether",ns.n,,not_estimable_or_above_range,17.591051398543705,hill_fixed_0_100_grid,15.42367831351494,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,5436-43-1,"2,2',4,4'-Tetrabromodiphenyl ether",r,4.434165,numeric,18.786406569786163,hill_fixed_0_100_grid,12.662871520165275,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,55406-53-6,"Carbamic acid, butyl-, 3-iodo-2-propynyl ester",burst.per.min,1.299774,numeric,7.992244557249326,hill_fixed_0_100_grid,1.3544623587209932,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,55406-53-6,"Carbamic acid, butyl-, 3-iodo-2-propynyl ester",meanfiringrate,1.345394,numeric,2.613882941022915,hill_fixed_0_100_grid,1.881596676686709,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,55406-53-6,"Carbamic acid, butyl-, 3-iodo-2-propynyl ester",nAE,1.215139,numeric,2.9811921793661953,hill_fixed_0_100_grid,1.4465014044874336,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,55406-53-6,"Carbamic acid, butyl-, 3-iodo-2-propynyl ester",ns.n,1.235443,numeric,2.613882941022915,hill_fixed_0_100_grid,2.0094557947526277,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,55406-53-6,"Carbamic acid, butyl-, 3-iodo-2-propynyl ester",r,1.194688,numeric,2.4475648919075907,hill_fixed_0_100_grid,1.3544623587209932,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,56-38-2,Parathion,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,56-38-2,Parathion,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,56-38-2,Parathion,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,56-38-2,Parathion,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,56-38-2,Parathion,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,56803-37-3,tert-Butylphenyl diphenyl phosphate,burst.per.min,,not_estimable_or_above_range,18.786406569786163,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,56803-37-3,tert-Butylphenyl diphenyl phosphate,meanfiringrate,,not_estimable_or_above_range,18.23779616342997,linear_50pct_fallback,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,56803-37-3,tert-Butylphenyl diphenyl phosphate,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,56803-37-3,tert-Butylphenyl diphenyl phosphate,ns.n,,not_estimable_or_above_range,18.786406569786163,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,56803-37-3,tert-Butylphenyl diphenyl phosphate,r,19.611016,numeric,19.68284688458349,linear_50pct_fallback,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,60348-60-9,"2,2',4,4',5-Pentabromodiphenyl ether",burst.per.min,11.810079,numeric,14.442289266964027,hill_fixed_0_100_grid,13.52334475803331,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,60348-60-9,"2,2',4,4',5-Pentabromodiphenyl ether",meanfiringrate,16.167794,numeric,12.662871520165275,hill_fixed_0_100_grid,15.42367831351494,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,60348-60-9,"2,2',4,4',5-Pentabromodiphenyl ether",nAE,11.126083,numeric,15.42367831351494,hill_fixed_0_100_grid,13.52334475803331,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,60348-60-9,"2,2',4,4',5-Pentabromodiphenyl ether",ns.n,15.900149,numeric,15.42367831351494,hill_fixed_0_100_grid,15.42367831351494,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,60348-60-9,"2,2',4,4',5-Pentabromodiphenyl ether",r,6.668906,numeric,17.591051398543705,hill_fixed_0_100_grid,13.52334475803331,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,633-65-8,Berberine chloride,burst.per.min,0.112103,numeric,0.6878068939421871,hill_fixed_0_100_grid,0.08007037833360854,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,633-65-8,Berberine chloride,meanfiringrate,0.117821,numeric,0.5256748433855575,hill_fixed_0_100_grid,0.07320747655212441,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,633-65-8,Berberine chloride,nAE,0.145682,numeric,0.6288543667281176,hill_fixed_0_100_grid,0.1639847373325916,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,633-65-8,Berberine chloride,ns.n,0.078453,numeric,1.1775115763422712,hill_fixed_0_100_grid,0.08757664911345944,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,633-65-8,Berberine chloride,r,0.102659,numeric,0.5256748433855575,hill_fixed_0_100_grid,0.10476620464415433,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,638-38-0,"Acetic acid, manganese (2+) salt",burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,638-38-0,"Acetic acid, manganese (2+) salt",meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,638-38-0,"Acetic acid, manganese (2+) salt",nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,638-38-0,"Acetic acid, manganese (2+) salt",ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,638-38-0,"Acetic acid, manganese (2+) salt",r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,68631-49-2,"2,2',4,4',5,5'-Hexabromodiphenyl ether",burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,68631-49-2,"2,2',4,4',5,5'-Hexabromodiphenyl ether",meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,68631-49-2,"2,2',4,4',5,5'-Hexabromodiphenyl ether",nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,68631-49-2,"2,2',4,4',5,5'-Hexabromodiphenyl ether",ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,68631-49-2,"2,2',4,4',5,5'-Hexabromodiphenyl ether",r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,68937-41-7,Phenol isopropylated phosphate,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,68937-41-7,Phenol isopropylated phosphate,meanfiringrate,12.628515,numeric,16.331033597552675,linear_50pct_fallback,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,68937-41-7,Phenol isopropylated phosphate,nAE,19.959823,numeric,17.591051398543705,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,68937-41-7,Phenol isopropylated phosphate,ns.n,,not_estimable_or_above_range,19.861399592377037,linear_50pct_fallback,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,68937-41-7,Phenol isopropylated phosphate,r,11.35193,numeric,18.786406569786163,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,70-30-4,Hexachlorophene,burst.per.min,0.852196,numeric,2.688408040709034,hill_fixed_0_100_grid,0.6584614173047922,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,70-30-4,Hexachlorophene,meanfiringrate,1.4861,numeric,2.029094225892697,hill_fixed_0_100_grid,1.0041990089213542,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,70-30-4,Hexachlorophene,nAE,0.955105,numeric,2.176960042077874,hill_fixed_0_100_grid,1.6430753756466003,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,70-30-4,Hexachlorophene,ns.n,0.523305,numeric,2.4734631201682142,hill_fixed_0_100_grid,0.7859546532561854,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,70-30-4,Hexachlorophene,r,0.652245,numeric,3.320013989071851,hill_fixed_0_100_grid,0.7064453569630831,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,80-09-1,Bisphenol S,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,80-09-1,Bisphenol S,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,80-09-1,Bisphenol S,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,80-09-1,Bisphenol S,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,80-09-1,Bisphenol S,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,83-79-4,Rotenone,burst.per.min,0.006596,numeric,0.06617134196054372,hill_fixed_0_100_grid,0.013240311137274067,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,83-79-4,Rotenone,meanfiringrate,0.019998,numeric,0.02823137014849997,hill_fixed_0_100_grid,0.019333704368219008,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,83-79-4,Rotenone,nAE,0.016365,numeric,0.06617134196054372,hill_fixed_0_100_grid,0.03103388717302861,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,83-79-4,Rotenone,ns.n,0.009452,numeric,0.025681934590336925,hill_fixed_0_100_grid,0.009067369381110102,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,83-79-4,Rotenone,r,0.013193,numeric,0.15509861809140207,hill_fixed_0_100_grid,0.01758777304685274,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,848641-69-0,1-Ethyl-3-methylimidazolium diethylphosphate,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,848641-69-0,1-Ethyl-3-methylimidazolium diethylphosphate,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,848641-69-0,1-Ethyl-3-methylimidazolium diethylphosphate,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,848641-69-0,1-Ethyl-3-methylimidazolium diethylphosphate,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,85-01-8,Phenanthrene,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,85-01-8,Phenanthrene,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,85-01-8,Phenanthrene,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,85-01-8,Phenanthrene,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,85-01-8,Phenanthrene,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,860302-33-6,Firemaster 550,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,860302-33-6,Firemaster 550,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,860302-33-6,Firemaster 550,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,860302-33-6,Firemaster 550,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,860302-33-6,Firemaster 550,r,14.145276,numeric,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,91-20-3,Naphthalene,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,91-20-3,Naphthalene,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,91-20-3,Naphthalene,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,91-20-3,Naphthalene,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,91-20-3,Naphthalene,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,97-77-8,Tetraethylthiuram disulfide,burst.per.min,0.051735,numeric,0.6288543667281176,hill_fixed_0_100_grid,0.08757664911345944,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,97-77-8,Tetraethylthiuram disulfide,meanfiringrate,0.047049,numeric,0.1639847373325916,hill_fixed_0_100_grid,0.0669328000524801,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,97-77-8,Tetraethylthiuram disulfide,nAE,0.050475,numeric,0.17935763637214186,hill_fixed_0_100_grid,0.08007037833360854,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,97-77-8,Tetraethylthiuram disulfide,ns.n,0.059491,numeric,0.08757664911345944,hill_fixed_0_100_grid,0.08757664911345944,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+NTP,97-77-8,Tetraethylthiuram disulfide,r,0.05761,numeric,0.33584197599266125,hill_fixed_0_100_grid,0.0669328000524801,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,10043-35-3,Boric acid,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,10043-35-3,Boric acid,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,10043-35-3,Boric acid,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,10043-35-3,Boric acid,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,10043-35-3,Boric acid,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,101-02-0,Triphenyl phosphite,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,101-02-0,Triphenyl phosphite,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,101-02-0,Triphenyl phosphite,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,101-02-0,Triphenyl phosphite,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,101-02-0,Triphenyl phosphite,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,101-10-0,Cloprop,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,101-10-0,Cloprop,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,101-10-0,Cloprop,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,101-10-0,Cloprop,r,,not_estimable_or_above_range,0.5395604005371314,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,10453-86-8,Resmethrin,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,10453-86-8,Resmethrin,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,10453-86-8,Resmethrin,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,10453-86-8,Resmethrin,ns.n,5.789391,numeric,19.958642133901215,linear_50pct_fallback,2.7915027102899668,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,10453-86-8,Resmethrin,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,10540-29-1,Tamoxifen,burst.per.min,1.130871,numeric,0.1547225446531032,hill_fixed_0_100_grid,1.1875806189962426,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,10540-29-1,Tamoxifen,meanfiringrate,0.118688,numeric,0.2295435616428929,hill_fixed_0_100_grid,0.2451416107429004,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,10540-29-1,Tamoxifen,nAE,0.506127,numeric,0.14487774579964255,hill_fixed_0_100_grid,3.1837715140140364,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,10540-29-1,Tamoxifen,r,2.039067,numeric,0.034108251201498505,hill_fixed_0_100_grid,6.561649168830767,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,105512-06-9,Clodinafop-propargyl,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,105512-06-9,Clodinafop-propargyl,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,105512-06-9,Clodinafop-propargyl,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,105512-06-9,Clodinafop-propargyl,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,105512-06-9,Clodinafop-propargyl,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1095-90-5,Methadone,burst.per.min,5.460769,numeric,1.4465014044874336,hill_fixed_0_100_grid,10.396243482056303,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1095-90-5,Methadone,meanfiringrate,8.18383,numeric,1.2682796404488206,hill_fixed_0_100_grid,8.535337215265963,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1095-90-5,Methadone,nAE,5.055786,numeric,1.6497673276878204,hill_fixed_0_100_grid,9.115334354004965,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1095-90-5,Methadone,ns.n,9.291346,numeric,1.6497673276878204,hill_fixed_0_100_grid,11.102693774663607,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1095-90-5,Methadone,r,5.956489,numeric,3.400116612274965,hill_fixed_0_100_grid,9.734743723621492,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,111988-49-9,Thiacloprid,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,111988-49-9,Thiacloprid,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,111988-49-9,Thiacloprid,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,111988-49-9,Thiacloprid,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,111988-49-9,Thiacloprid,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,113-48-4,MGK 264,burst.per.min,,not_estimable_or_above_range,13.52334475803331,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,113-48-4,MGK 264,meanfiringrate,10.141317,numeric,0.0017702030268592335,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,113-48-4,MGK 264,nAE,,not_estimable_or_above_range,14.442289266964027,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,113-48-4,MGK 264,r,,not_estimable_or_above_range,0.6571973849172694,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,114-07-8,Erythromycin,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,114-07-8,Erythromycin,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,114-07-8,Erythromycin,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,114-07-8,Erythromycin,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,114-07-8,Erythromycin,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,115-28-6,Chlorendic acid,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,115-28-6,Chlorendic acid,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,115-28-6,Chlorendic acid,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,115-28-6,Chlorendic acid,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,115-28-6,Chlorendic acid,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,115-29-7,Endosulfan,burst.per.min,9.793478,numeric,8.535337215265963,hill_fixed_0_100_grid,6.144139772517839,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,115-29-7,Endosulfan,meanfiringrate,17.407233,numeric,6.144139772517839,hill_fixed_0_100_grid,14.442289266964027,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,115-29-7,Endosulfan,nAE,8.469068,numeric,6.144139772517839,hill_fixed_0_100_grid,8.535337215265963,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,115-29-7,Endosulfan,ns.n,5.624291,numeric,9.115334354004965,hill_fixed_0_100_grid,4.422842658953965,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,115-29-7,Endosulfan,r,7.90126,numeric,17.591051398543705,hill_fixed_0_100_grid,7.483708194754797,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,117428-22-5,Picoxystrobin,burst.per.min,0.277809,numeric,0.3429080887372842,hill_fixed_0_100_grid,0.1891197512051926,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,117428-22-5,Picoxystrobin,meanfiringrate,0.284619,numeric,0.3733342634206054,hill_fixed_0_100_grid,0.15954994078970205,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,117428-22-5,Picoxystrobin,nAE,0.31451,numeric,0.5245396606278416,hill_fixed_0_100_grid,0.20590031362185757,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,117428-22-5,Picoxystrobin,ns.n,0.207552,numeric,0.442525284967299,hill_fixed_0_100_grid,0.1891197512051926,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,117428-22-5,Picoxystrobin,r,0.270916,numeric,1.336286724054619,hill_fixed_0_100_grid,0.20590031362185757,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,122-14-5,Fenitrothion,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,122-14-5,Fenitrothion,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,122-14-5,Fenitrothion,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,122-14-5,Fenitrothion,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,122-14-5,Fenitrothion,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,124378-77-4,Enadoline,burst.per.min,6.139755,numeric,7.992244557249326,hill_fixed_0_100_grid,7.007529354621707,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,124378-77-4,Enadoline,meanfiringrate,5.95346,numeric,10.396243482056303,hill_fixed_0_100_grid,5.387127421640827,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,124378-77-4,Enadoline,nAE,12.360056,numeric,12.662871520165275,hill_fixed_0_100_grid,16.471755157470156,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,124378-77-4,Enadoline,ns.n,,not_estimable_or_above_range,9.115334354004965,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,124378-77-4,Enadoline,r,,not_estimable_or_above_range,18.786406569786163,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,131860-33-8,Azoxystrobin,burst.per.min,1.178706,numeric,2.0991921349910276,hill_fixed_0_100_grid,0.9878522472791549,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,131860-33-8,Azoxystrobin,meanfiringrate,1.24502,numeric,1.8054279056509617,hill_fixed_0_100_grid,0.9161276107314469,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,131860-33-8,Azoxystrobin,nAE,1.189087,numeric,2.0991921349910276,hill_fixed_0_100_grid,1.0651922843754758,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,131860-33-8,Azoxystrobin,ns.n,1.053197,numeric,2.4407552391405845,hill_fixed_0_100_grid,1.0651922843754758,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,131860-33-8,Azoxystrobin,r,1.213405,numeric,2.6318446467499683,hill_fixed_0_100_grid,1.0651922843754758,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,133-06-2,Captan,burst.per.min,10.298858,numeric,14.442289266964027,hill_fixed_0_100_grid,4.7233856864395225,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,133-06-2,Captan,meanfiringrate,6.638805,numeric,7.483708194754797,hill_fixed_0_100_grid,6.144139772517839,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,133-06-2,Captan,nAE,6.378753,numeric,15.058088026767162,linear_50pct_fallback,7.992244557249326,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,133-06-2,Captan,ns.n,4.441367,numeric,11.102693774663607,hill_fixed_0_100_grid,2.2918294488559883,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,133-06-2,Captan,r,4.122574,numeric,11.85714910070309,hill_fixed_0_100_grid,4.422842658953965,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,141517-21-7,Trifloxystrobin,burst.per.min,0.7355,numeric,1.6212554974032878,hill_fixed_0_100_grid,0.6726601315008129,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,141517-21-7,Trifloxystrobin,meanfiringrate,0.648695,numeric,1.1773947349235099,hill_fixed_0_100_grid,0.5291741959890097,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,141517-21-7,Trifloxystrobin,nAE,0.629487,numeric,1.6212554974032878,hill_fixed_0_100_grid,0.4885019656004335,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,141517-21-7,Trifloxystrobin,ns.n,0.83751,numeric,1.3816141598175764,hill_fixed_0_100_grid,0.7893332073432877,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,141517-21-7,Trifloxystrobin,r,0.926988,numeric,3.6072387903208947,hill_fixed_0_100_grid,0.7286652036768981,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,142459-58-3,Flufenacet,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,142459-58-3,Flufenacet,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,142459-58-3,Flufenacet,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,142459-58-3,Flufenacet,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,142459-58-3,Flufenacet,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,143-50-0,Kepone,burst.per.min,3.976278,numeric,6.561649168830767,hill_fixed_0_100_grid,6.561649168830767,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,143-50-0,Kepone,meanfiringrate,4.14169,numeric,1.6497673276878204,hill_fixed_0_100_grid,6.144139772517839,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,143-50-0,Kepone,nAE,3.858769,numeric,6.144139772517839,hill_fixed_0_100_grid,5.387127421640827,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,143-50-0,Kepone,ns.n,3.567868,numeric,6.561649168830767,hill_fixed_0_100_grid,6.561649168830767,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,143-50-0,Kepone,r,0.353824,numeric,7.992244557249326,hill_fixed_0_100_grid,4.422842658953965,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1461-22-9,Tributyltin chloride,burst.per.min,0.065054,numeric,0.03172593006158345,hill_fixed_0_100_grid,0.068186036215267,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1461-22-9,Tributyltin chloride,meanfiringrate,0.058604,numeric,0.08799455626160287,hill_fixed_0_100_grid,0.068186036215267,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1461-22-9,Tributyltin chloride,nAE,0.04123,numeric,0.08799455626160287,hill_fixed_0_100_grid,0.07423617127183152,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1461-22-9,Tributyltin chloride,ns.n,0.070672,numeric,0.013558547282656134,hill_fixed_0_100_grid,0.068186036215267,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1461-22-9,Tributyltin chloride,r,0.055304,numeric,0.08799455626160287,hill_fixed_0_100_grid,0.07423617127183152,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,147-24-0,Diphenhydramine,burst.per.min,8.195698,numeric,8.535337215265963,hill_fixed_0_100_grid,10.396243482056303,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,147-24-0,Diphenhydramine,meanfiringrate,5.271866,numeric,5.387127421640827,hill_fixed_0_100_grid,4.422842658953965,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,147-24-0,Diphenhydramine,nAE,16.013984,numeric,9.734743723621492,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,147-24-0,Diphenhydramine,r,,not_estimable_or_above_range,17.591051398543705,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1478-61-1,Bisphenol AF,burst.per.min,,not_estimable_or_above_range,7.483708194754797,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1478-61-1,Bisphenol AF,meanfiringrate,,not_estimable_or_above_range,15.42367831351494,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1478-61-1,Bisphenol AF,nAE,,not_estimable_or_above_range,10.396243482056303,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1478-61-1,Bisphenol AF,r,,not_estimable_or_above_range,10.396243482056303,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,148477-71-8,Spirodiclofen,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,148477-71-8,Spirodiclofen,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,148477-71-8,Spirodiclofen,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,148477-71-8,Spirodiclofen,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,148477-71-8,Spirodiclofen,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,151506-44-4,FR140423,burst.per.min,8.385867,numeric,8.535337215265963,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,151506-44-4,FR140423,meanfiringrate,5.450739,numeric,0.363687648512782,hill_fixed_0_100_grid,11.85714910070309,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,151506-44-4,FR140423,nAE,5.339676,numeric,6.561649168830767,hill_fixed_0_100_grid,9.115334354004965,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,151506-44-4,FR140423,ns.n,,not_estimable_or_above_range,0.00041675503152339017,hill_fixed_0_100_grid,0.02625,linear_50pct_fallback,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,151506-44-4,FR140423,r,,not_estimable_or_above_range,5.753195968409641,hill_fixed_0_100_grid,7.288014835122416,linear_50pct_fallback,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,153719-23-4,Thiamethoxam,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,153719-23-4,Thiamethoxam,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,153719-23-4,Thiamethoxam,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,153719-23-4,Thiamethoxam,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,153719-23-4,Thiamethoxam,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1563-66-2,Carbofuran,burst.per.min,15.485254,numeric,19.41648296842066,linear_50pct_fallback,15.42367831351494,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1563-66-2,Carbofuran,meanfiringrate,17.199012,numeric,16.471755157470156,hill_fixed_0_100_grid,16.471755157470156,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1563-66-2,Carbofuran,nAE,11.057432,numeric,15.42367831351494,hill_fixed_0_100_grid,12.662871520165275,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1563-66-2,Carbofuran,ns.n,10.645099,numeric,17.591051398543705,hill_fixed_0_100_grid,12.662871520165275,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1563-66-2,Carbofuran,r,5.286649,numeric,13.52334475803331,hill_fixed_0_100_grid,6.144139772517839,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,159138-81-5,Cariporide mesylate,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,9.803318757586357,linear_50pct_fallback,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,159138-81-5,Cariporide mesylate,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,159138-81-5,Cariporide mesylate,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,159138-81-5,Cariporide mesylate,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,159138-81-5,Cariporide mesylate,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,175013-18-0,Pyraclostrobin,burst.per.min,0.096255,numeric,0.28929270954350433,hill_fixed_0_100_grid,0.068186036215267,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,175013-18-0,Pyraclostrobin,meanfiringrate,0.083997,numeric,0.3149616010170023,hill_fixed_0_100_grid,0.04457535838026477,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,175013-18-0,Pyraclostrobin,nAE,0.098642,numeric,0.48179047603287667,hill_fixed_0_100_grid,0.08799455626160287,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,175013-18-0,Pyraclostrobin,ns.n,0.076542,numeric,0.2241698124041069,hill_fixed_0_100_grid,0.04853052212587309,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,175013-18-0,Pyraclostrobin,r,0.091464,numeric,1.0354742251269036,hill_fixed_0_100_grid,0.09580229783415006,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,188425-85-6,Boscalid,burst.per.min,15.573681,numeric,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,188425-85-6,Boscalid,meanfiringrate,7.552923,numeric,,no_high_dose_50pct_crossing,7.992244557249326,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,188425-85-6,Boscalid,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,188425-85-6,Boscalid,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,15.42367831351494,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,188425-85-6,Boscalid,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1912-24-9,Atrazine,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1912-24-9,Atrazine,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1912-24-9,Atrazine,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1912-24-9,Atrazine,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1912-24-9,Atrazine,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,194098-25-4,CP-409092,burst.per.min,17.524266,numeric,9.115334354004965,hill_fixed_0_100_grid,17.591051398543705,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,194098-25-4,CP-409092,meanfiringrate,15.084294,numeric,10.396243482056303,hill_fixed_0_100_grid,3.631162891614854,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,194098-25-4,CP-409092,nAE,5.711545,numeric,8.535337215265963,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,194098-25-4,CP-409092,ns.n,,not_estimable_or_above_range,1.2682796404488206,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,194098-25-4,CP-409092,r,11.23327,numeric,3.400116612274965,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1948-33-0,TBHQ,burst.per.min,13.918625,numeric,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1948-33-0,TBHQ,meanfiringrate,,not_estimable_or_above_range,16.471755157470156,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1948-33-0,TBHQ,nAE,6.419499,numeric,17.591051398543705,hill_fixed_0_100_grid,11.102693774663607,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1948-33-0,TBHQ,ns.n,7.592043,numeric,18.786406569786163,hill_fixed_0_100_grid,8.535337215265963,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,1948-33-0,TBHQ,r,2.697032,numeric,15.42367831351494,hill_fixed_0_100_grid,6.144139772517839,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2001-95-8,2001-95-8,burst.per.min,,chemical_absent_from_official_ec50_table,0.03965759377382257,hill_fixed_0_100_grid,0.00026975055263874566,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2001-95-8,2001-95-8,meanfiringrate,,chemical_absent_from_official_ec50_table,0.001456062162357259,hill_fixed_0_100_grid,0.0003087022173535881,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2001-95-8,2001-95-8,nAE,,chemical_absent_from_official_ec50_table,0.002858031069068535,hill_fixed_0_100_grid,0.00046267066713213153,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2001-95-8,2001-95-8,ns.n,,chemical_absent_from_official_ec50_table,0.006419946083430615,hill_fixed_0_100_grid,0.0003087022173535881,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2001-95-8,2001-95-8,r,,chemical_absent_from_official_ec50_table,0.003270727417075828,hill_fixed_0_100_grid,0.0004042914534872845,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,205-99-2,Benzo(b)fluoranthene,burst.per.min,5.607147,numeric,,no_high_dose_50pct_crossing,6.561649168830767,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,205-99-2,Benzo(b)fluoranthene,meanfiringrate,3.92123,numeric,,no_high_dose_50pct_crossing,2.7915027102899668,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,205-99-2,Benzo(b)fluoranthene,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,205-99-2,Benzo(b)fluoranthene,ns.n,3.718466,numeric,,no_high_dose_50pct_crossing,6.144139772517839,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,205-99-2,Benzo(b)fluoranthene,r,6.78495,numeric,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,208-96-8,Acenaphthylene,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,208-96-8,Acenaphthylene,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,208-96-8,Acenaphthylene,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,208-96-8,Acenaphthylene,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,208-96-8,Acenaphthylene,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,210880-92-5,Clothiandin,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,210880-92-5,Clothiandin,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,210880-92-5,Clothiandin,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,210880-92-5,Clothiandin,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,210880-92-5,Clothiandin,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2155-70-6,Tributyltin methacrylate,burst.per.min,0.100349,numeric,0.04853052212587309,hill_fixed_0_100_grid,0.10430281894958703,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2155-70-6,Tributyltin methacrylate,meanfiringrate,0.007967,numeric,0.08799455626160287,hill_fixed_0_100_grid,0.20590031362185757,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2155-70-6,Tributyltin methacrylate,nAE,0.039181,numeric,0.08799455626160287,hill_fixed_0_100_grid,0.20590031362185757,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2155-70-6,Tributyltin methacrylate,ns.n,0.085476,numeric,0.017497400023703865,hill_fixed_0_100_grid,0.0063085867239472656,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2155-70-6,Tributyltin methacrylate,r,0.087642,numeric,0.08799455626160287,hill_fixed_0_100_grid,0.20590031362185757,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,220860-50-4,CP-457920,burst.per.min,9.273567,numeric,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,220860-50-4,CP-457920,meanfiringrate,,not_estimable_or_above_range,9.855347169043577,linear_50pct_fallback,7.007529354621707,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,220860-50-4,CP-457920,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,220860-50-4,CP-457920,ns.n,,not_estimable_or_above_range,14.442289266964027,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,220860-50-4,CP-457920,r,,not_estimable_or_above_range,16.471755157470156,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2212-67-1,Molinate,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,9.551053885842997,linear_50pct_fallback,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2212-67-1,Molinate,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,11.85714910070309,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2212-67-1,Molinate,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2212-67-1,Molinate,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2212-67-1,Molinate,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,22224-92-6,Fenamiphos,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,22224-92-6,Fenamiphos,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,22224-92-6,Fenamiphos,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,22224-92-6,Fenamiphos,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,22224-92-6,Fenamiphos,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,23031-36-9,Prallethrin,burst.per.min,4.58551,numeric,,no_high_dose_50pct_crossing,0.9750061232157975,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,23031-36-9,Prallethrin,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,1.2682796404488206,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,23031-36-9,Prallethrin,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,23031-36-9,Prallethrin,ns.n,0.581713,numeric,16.872989561902685,linear_50pct_fallback,0.4730817880098363,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,23031-36-9,Prallethrin,r,1.636029,numeric,18.788866470630268,linear_50pct_fallback,1.761873071785738,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2385-85-5,Mirex,burst.per.min,3.299659,numeric,5.044351351205036,hill_fixed_0_100_grid,2.0094557947526277,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2385-85-5,Mirex,meanfiringrate,9.407461,numeric,10.396243482056303,hill_fixed_0_100_grid,6.561649168830767,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2385-85-5,Mirex,nAE,2.07417,numeric,6.144139772517839,hill_fixed_0_100_grid,1.6497673276878204,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2385-85-5,Mirex,ns.n,1.006305,numeric,5.387127421640827,hill_fixed_0_100_grid,1.1120163737047806,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2385-85-5,Mirex,r,2.384917,numeric,9.734743723621492,hill_fixed_0_100_grid,2.0094557947526277,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,28434-00-6,S-Bioallethrin,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,28434-00-6,S-Bioallethrin,meanfiringrate,,not_estimable_or_above_range,18.532698140167167,linear_50pct_fallback,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,28434-00-6,S-Bioallethrin,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,28434-00-6,S-Bioallethrin,ns.n,5.412921,numeric,17.591051398543705,hill_fixed_0_100_grid,4.7233856864395225,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,28434-00-6,S-Bioallethrin,r,14.077602,numeric,,no_high_dose_50pct_crossing,15.42367831351494,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2971-36-0,HPTE,burst.per.min,13.000781,numeric,6.561649168830767,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2971-36-0,HPTE,meanfiringrate,10.231822,numeric,5.753195968409641,hill_fixed_0_100_grid,11.85714910070309,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2971-36-0,HPTE,nAE,7.094203,numeric,6.144139772517839,hill_fixed_0_100_grid,18.977673325499413,linear_50pct_fallback,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2971-36-0,HPTE,ns.n,,not_estimable_or_above_range,2.1460032540954783,hill_fixed_0_100_grid,11.102693774663607,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,2971-36-0,HPTE,r,16.87105,numeric,4.422842658953965,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,298-04-4,Disulfoton,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,298-04-4,Disulfoton,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,298-04-4,Disulfoton,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,298-04-4,Disulfoton,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,298-04-4,Disulfoton,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,309-00-2,Aldrin,burst.per.min,4.410878,numeric,7.483708194754797,hill_fixed_0_100_grid,5.753195968409641,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,309-00-2,Aldrin,meanfiringrate,2.973509,numeric,7.007529354621707,hill_fixed_0_100_grid,4.422842658953965,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,309-00-2,Aldrin,nAE,4.175832,numeric,7.483708194754797,hill_fixed_0_100_grid,5.387127421640827,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,309-00-2,Aldrin,ns.n,7.101281,numeric,7.992244557249326,hill_fixed_0_100_grid,5.753195968409641,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,309-00-2,Aldrin,r,2.033852,numeric,9.115334354004965,hill_fixed_0_100_grid,6.144139772517839,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,3380-34-5,Triclosan,burst.per.min,7.34527,numeric,11.102693774663607,hill_fixed_0_100_grid,10.396243482056303,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,3380-34-5,Triclosan,meanfiringrate,9.106284,numeric,9.734743723621492,hill_fixed_0_100_grid,9.115334354004965,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,3380-34-5,Triclosan,nAE,9.693618,numeric,11.85714910070309,hill_fixed_0_100_grid,10.396243482056303,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,3380-34-5,Triclosan,ns.n,6.158815,numeric,8.535337215265963,hill_fixed_0_100_grid,7.992244557249326,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,3380-34-5,Triclosan,r,9.212333,numeric,14.442289266964027,hill_fixed_0_100_grid,8.535337215265963,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,361377-29-9,Fluoxastrobin,burst.per.min,0.571736,numeric,1.9024626877068422,hill_fixed_0_100_grid,0.6209595987670137,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,361377-29-9,Fluoxastrobin,meanfiringrate,0.561497,numeric,1.7562397589877523,hill_fixed_0_100_grid,0.5291741959890097,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,361377-29-9,Fluoxastrobin,nAE,0.935544,numeric,2.418316711941208,hill_fixed_0_100_grid,1.086900394345157,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,361377-29-9,Fluoxastrobin,ns.n,0.360491,numeric,1.7562397589877523,hill_fixed_0_100_grid,0.3547618763476519,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,361377-29-9,Fluoxastrobin,r,0.840016,numeric,3.0740448982489084,hill_fixed_0_100_grid,1.0033614319707334,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,39515-41-8,Fenpropathrin,burst.per.min,16.851451,numeric,16.471755157470156,hill_fixed_0_100_grid,1.2682796404488206,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,39515-41-8,Fenpropathrin,meanfiringrate,,not_estimable_or_above_range,15.42367831351494,hill_fixed_0_100_grid,0.912967722894287,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,39515-41-8,Fenpropathrin,nAE,13.211788,numeric,17.591051398543705,hill_fixed_0_100_grid,15.42367831351494,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,39515-41-8,Fenpropathrin,ns.n,0.24524,numeric,12.662871520165275,hill_fixed_0_100_grid,0.08562218859693818,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,39515-41-8,Fenpropathrin,r,3.209535,numeric,7.992244557249326,hill_fixed_0_100_grid,2.7915027102899668,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,50-28-2,17beta Estradiol,burst.per.min,8.824464,numeric,17.910330834265817,linear_50pct_fallback,18.487859376377692,linear_50pct_fallback,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,50-28-2,17beta Estradiol,meanfiringrate,11.972158,numeric,14.442289266964027,hill_fixed_0_100_grid,19.479807849229882,linear_50pct_fallback,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,50-28-2,17beta Estradiol,nAE,,not_estimable_or_above_range,16.471755157470156,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,50-28-2,17beta Estradiol,r,,not_estimable_or_above_range,11.102693774663607,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,50-29-3,"p,p'-DDT",burst.per.min,5.733757,numeric,6.561649168830767,hill_fixed_0_100_grid,5.387127421640827,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,50-29-3,"p,p'-DDT",meanfiringrate,4.585276,numeric,5.753195968409641,hill_fixed_0_100_grid,6.561649168830767,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,50-29-3,"p,p'-DDT",nAE,4.275219,numeric,0.912967722894287,hill_fixed_0_100_grid,3.8779093334150794,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,50-29-3,"p,p'-DDT",ns.n,3.255286,numeric,5.387127421640827,hill_fixed_0_100_grid,3.631162891614854,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,50-29-3,"p,p'-DDT",r,1.683777,numeric,4.7233856864395225,hill_fixed_0_100_grid,3.1837715140140364,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,50-55-5,Reserpine,burst.per.min,4.822705,numeric,4.7233856864395225,hill_fixed_0_100_grid,10.396243482056303,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,50-55-5,Reserpine,meanfiringrate,1.81603,numeric,7.992244557249326,hill_fixed_0_100_grid,9.115334354004965,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,50-55-5,Reserpine,nAE,3.086919,numeric,2.9811921793661953,hill_fixed_0_100_grid,11.102693774663607,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,50-55-5,Reserpine,ns.n,8.934556,numeric,4.422842658953965,hill_fixed_0_100_grid,10.396243482056303,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,50-55-5,Reserpine,r,7.82001,numeric,9.734743723621492,hill_fixed_0_100_grid,12.662871520165275,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,50-78-2,Aspirin,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,50-78-2,Aspirin,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,50-78-2,Aspirin,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,50-78-2,Aspirin,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,50-78-2,Aspirin,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,51-03-6,Piperonyl butoxide,burst.per.min,14.103643,numeric,9.734743723621492,hill_fixed_0_100_grid,18.786406569786163,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,51-03-6,Piperonyl butoxide,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,51-03-6,Piperonyl butoxide,nAE,19.878534,numeric,16.471755157470156,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,51-03-6,Piperonyl butoxide,r,14.232191,numeric,10.396243482056303,hill_fixed_0_100_grid,16.471755157470156,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,51-52-5,6 Propyl 2 thiouracil,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,51-52-5,6 Propyl 2 thiouracil,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,51-52-5,6 Propyl 2 thiouracil,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,51-52-5,6 Propyl 2 thiouracil,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,55-98-1,Busulfan,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,55-98-1,Busulfan,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,55-98-1,Busulfan,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,55-98-1,Busulfan,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,55-98-1,Busulfan,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,55406-53-6,IPBC,burst.per.min,3.525077,numeric,11.776284293560513,hill_fixed_0_100_grid,4.100007409859457,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,55406-53-6,IPBC,meanfiringrate,2.726088,numeric,7.721804918779103,hill_fixed_0_100_grid,4.398786507590822,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,55406-53-6,IPBC,nAE,3.291332,numeric,7.721804918779103,hill_fixed_0_100_grid,3.5619527674567415,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,55406-53-6,IPBC,ns.n,2.832334,numeric,7.197316198421992,hill_fixed_0_100_grid,4.100007409859457,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,55406-53-6,IPBC,r,2.35785,numeric,6.708452363784662,hill_fixed_0_100_grid,3.320013989071851,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,56-04-2,6-Methyl-2-thiouracil,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,12.662871520165275,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,56-04-2,6-Methyl-2-thiouracil,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,9.734743723621492,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,56-04-2,6-Methyl-2-thiouracil,nAE,,not_estimable_or_above_range,0.07078763329110804,linear_50pct_fallback,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,56-04-2,6-Methyl-2-thiouracil,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,56-04-2,6-Methyl-2-thiouracil,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,56-38-2,Parathion,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,56-38-2,Parathion,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,56-38-2,Parathion,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,56-38-2,Parathion,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,56-38-2,Parathion,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,56-55-3,Benz(a)anthracene,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,56-55-3,Benz(a)anthracene,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,56-55-3,Benz(a)anthracene,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,56-55-3,Benz(a)anthracene,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,56-55-3,Benz(a)anthracene,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,56-81-5,Glycerol,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,56-81-5,Glycerol,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,56-81-5,Glycerol,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,56-81-5,Glycerol,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,56-81-5,Glycerol,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,57-74-9,Chlordane,burst.per.min,7.520093,numeric,6.144139772517839,hill_fixed_0_100_grid,6.144139772517839,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,57-74-9,Chlordane,meanfiringrate,6.932356,numeric,7.483708194754797,hill_fixed_0_100_grid,6.561649168830767,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,57-74-9,Chlordane,nAE,4.358795,numeric,7.483708194754797,hill_fixed_0_100_grid,4.422842658953965,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,57-74-9,Chlordane,ns.n,4.485463,numeric,7.992244557249326,hill_fixed_0_100_grid,0.6153807506572982,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,57-74-9,Chlordane,r,6.830914,numeric,8.535337215265963,hill_fixed_0_100_grid,6.561649168830767,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,57966-95-7,Cymoxanil,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,57966-95-7,Cymoxanil,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,57966-95-7,Cymoxanil,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,57966-95-7,Cymoxanil,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,57966-95-7,Cymoxanil,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,584-79-2,Allethrin,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,8.535337215265963,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,584-79-2,Allethrin,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,4.141422802296804,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,584-79-2,Allethrin,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,584-79-2,Allethrin,ns.n,1.12757,numeric,11.85714910070309,hill_fixed_0_100_grid,0.8548767471302325,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,584-79-2,Allethrin,r,3.4079,numeric,,no_high_dose_50pct_crossing,4.422842658953965,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,59-30-3,Folic acid,burst.per.min,,not_estimable_or_above_range,2.1887708647597655,linear_50pct_fallback,14.442289266964027,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,59-30-3,Folic acid,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,59-30-3,Folic acid,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,59-30-3,Folic acid,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,59-30-3,Folic acid,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,8.739453822064618,linear_50pct_fallback,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,60-54-8,Tetracycline,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,60-54-8,Tetracycline,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,60-54-8,Tetracycline,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,60-54-8,Tetracycline,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,60-54-8,Tetracycline,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,60-56-0,Methimazole,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,60-56-0,Methimazole,meanfiringrate,,not_estimable_or_above_range,11.102693774663607,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,60-56-0,Methimazole,nAE,,not_estimable_or_above_range,16.471755157470156,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,60-56-0,Methimazole,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,60-56-0,Methimazole,r,,not_estimable_or_above_range,18.477923871373722,linear_50pct_fallback,19.868706074015222,linear_50pct_fallback,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,62-38-4,Phenylmercuric acetate,burst.per.min,0.062075,numeric,0.2657157936865604,hill_fixed_0_100_grid,0.06262897796446401,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,62-38-4,Phenylmercuric acetate,meanfiringrate,0.062993,numeric,0.08799455626160287,hill_fixed_0_100_grid,0.07423617127183152,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,62-38-4,Phenylmercuric acetate,nAE,0.037539,numeric,0.08799455626160287,hill_fixed_0_100_grid,0.068186036215267,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,62-38-4,Phenylmercuric acetate,ns.n,0.073817,numeric,0.03172593006158345,hill_fixed_0_100_grid,0.068186036215267,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,62-38-4,Phenylmercuric acetate,r,0.033365,numeric,0.442525284967299,hill_fixed_0_100_grid,0.07423617127183152,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,66230-04-4,Esfenvalerate,burst.per.min,4.691059,numeric,7.992244557249326,hill_fixed_0_100_grid,1.881596676686709,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,66230-04-4,Esfenvalerate,meanfiringrate,2.95206,numeric,8.535337215265963,hill_fixed_0_100_grid,1.4465014044874336,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,66230-04-4,Esfenvalerate,nAE,14.755581,numeric,15.42367831351494,hill_fixed_0_100_grid,16.471755157470156,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,66230-04-4,Esfenvalerate,ns.n,0.744589,numeric,5.753195968409641,hill_fixed_0_100_grid,0.8004820263164858,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,66230-04-4,Esfenvalerate,r,0.480432,numeric,2.9811921793661953,hill_fixed_0_100_grid,0.8548767471302325,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,68359-37-5,Cyfluthrin,burst.per.min,0.980208,numeric,4.7233856864395225,hill_fixed_0_100_grid,0.6571973849172694,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,68359-37-5,Cyfluthrin,meanfiringrate,0.704076,numeric,4.422842658953965,hill_fixed_0_100_grid,0.5762248556835194,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,68359-37-5,Cyfluthrin,nAE,8.572468,numeric,6.561649168830767,hill_fixed_0_100_grid,7.992244557249326,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,68359-37-5,Cyfluthrin,ns.n,0.331135,numeric,2.7915027102899668,hill_fixed_0_100_grid,0.27958951080570216,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,68359-37-5,Cyfluthrin,r,0.833384,numeric,3.1837715140140364,hill_fixed_0_100_grid,0.8548767471302325,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,69-65-8,D-Mannitol,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,69-65-8,D-Mannitol,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,69-65-8,D-Mannitol,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,69-65-8,D-Mannitol,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,2.613882941022915,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,69-65-8,D-Mannitol,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,71751-41-2,Abamectin,burst.per.min,0.002399,numeric,0.00579444650036042,hill_fixed_0_100_grid,0.008141275255523425,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,71751-41-2,Abamectin,meanfiringrate,0.000955,numeric,0.0002494408099218324,hill_fixed_0_100_grid,0.0020891542866526116,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,71751-41-2,Abamectin,nAE,0.005365,numeric,0.0010583018426998116,hill_fixed_0_100_grid,0.04853052212587309,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,71751-41-2,Abamectin,ns.n,0.132883,numeric,0.0003,hill_fixed_0_100_grid,0.021527619907408757,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,71751-41-2,Abamectin,r,0.194972,numeric,2.512605239664624e-05,hill_fixed_0_100_grid,0.3149616010170023,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,72-20-8,Endrin,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,72-20-8,Endrin,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,72-20-8,Endrin,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,72-20-8,Endrin,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,72-20-8,Endrin,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,72-43-5,Methoxychlor,burst.per.min,16.06275,numeric,8.535337215265963,hill_fixed_0_100_grid,11.85714910070309,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,72-43-5,Methoxychlor,meanfiringrate,16.159419,numeric,8.535337215265963,hill_fixed_0_100_grid,15.42367831351494,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,72-43-5,Methoxychlor,nAE,6.067098,numeric,10.396243482056303,hill_fixed_0_100_grid,11.102693774663607,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,72-43-5,Methoxychlor,ns.n,2.808599,numeric,7.483708194754797,hill_fixed_0_100_grid,8.535337215265963,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,72-43-5,Methoxychlor,r,3.569749,numeric,7.483708194754797,hill_fixed_0_100_grid,4.7233856864395225,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,72-54-8,"p,p'-DDD",burst.per.min,8.51544,numeric,7.483708194754797,hill_fixed_0_100_grid,7.007529354621707,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,72-54-8,"p,p'-DDD",meanfiringrate,9.026456,numeric,0.0015520983605418575,hill_fixed_0_100_grid,8.535337215265963,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,72-54-8,"p,p'-DDD",nAE,5.049383,numeric,9.115334354004965,hill_fixed_0_100_grid,5.753195968409641,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,72-54-8,"p,p'-DDD",ns.n,3.456209,numeric,7.483708194754797,hill_fixed_0_100_grid,6.561649168830767,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,72-54-8,"p,p'-DDD",r,2.632074,numeric,4.141422802296804,hill_fixed_0_100_grid,3.631162891614854,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,72-55-9,"p,p'-DDE",burst.per.min,4.424393,numeric,6.561649168830767,hill_fixed_0_100_grid,3.8779093334150794,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,72-55-9,"p,p'-DDE",meanfiringrate,4.264058,numeric,5.387127421640827,hill_fixed_0_100_grid,3.8779093334150794,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,72-55-9,"p,p'-DDE",nAE,4.063382,numeric,7.483708194754797,hill_fixed_0_100_grid,4.141422802296804,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,72-55-9,"p,p'-DDE",ns.n,4.303674,numeric,5.387127421640827,hill_fixed_0_100_grid,6.144139772517839,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,72-55-9,"p,p'-DDE",r,4.102716,numeric,5.387127421640827,hill_fixed_0_100_grid,4.141422802296804,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,7487-94-7,Mercuric chloride,burst.per.min,1.180345,numeric,,no_high_dose_50pct_crossing,1.1485873578950423,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,7487-94-7,Mercuric chloride,meanfiringrate,1.090831,numeric,2.837894653896301,hill_fixed_0_100_grid,2.0991921349910276,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,7487-94-7,Mercuric chloride,nAE,0.94233,numeric,2.837894653896301,hill_fixed_0_100_grid,2.2635401921419596,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,7487-94-7,Mercuric chloride,ns.n,0.993515,numeric,1.3354759503255011,hill_fixed_0_100_grid,0.9161276107314469,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,7487-94-7,Mercuric chloride,r,0.933661,numeric,2.2635401921419596,hill_fixed_0_100_grid,2.0991921349910276,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,75330-75-5,Lovastatin,burst.per.min,5.244451,numeric,,no_high_dose_50pct_crossing,2.4407552391405845,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,75330-75-5,Lovastatin,meanfiringrate,7.973646,numeric,8.790965333075247,hill_fixed_0_100_grid,3.060076542344005,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,75330-75-5,Lovastatin,nAE,2.770519,numeric,8.790965333075247,hill_fixed_0_100_grid,7.011783658643718,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,75330-75-5,Lovastatin,ns.n,2.735317,numeric,3.060076542344005,hill_fixed_0_100_grid,2.4407552391405845,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,75330-75-5,Lovastatin,r,2.683355,numeric,13.81823857005623,hill_fixed_0_100_grid,7.011783658643718,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,759-94-4,EPTC,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,759-94-4,EPTC,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,759-94-4,EPTC,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,759-94-4,EPTC,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,759-94-4,EPTC,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,7696-12-0,Tetramethrin,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,7696-12-0,Tetramethrin,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,7696-12-0,Tetramethrin,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,7696-12-0,Tetramethrin,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,7696-12-0,Tetramethrin,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,77-40-7,Bisphenol B,burst.per.min,10.840127,numeric,,no_high_dose_50pct_crossing,9.734743723621492,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,77-40-7,Bisphenol B,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,7.483708194754797,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,77-40-7,Bisphenol B,nAE,13.722237,numeric,19.020654898599968,linear_50pct_fallback,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,77-40-7,Bisphenol B,r,,not_estimable_or_above_range,7.85163374558288,linear_50pct_fallback,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,789-02-6,"o,p'-DDT",burst.per.min,0.882753,numeric,5.387127421640827,hill_fixed_0_100_grid,5.753195968409641,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,789-02-6,"o,p'-DDT",meanfiringrate,1.554998,numeric,1.5447947295928721,hill_fixed_0_100_grid,3.8779093334150794,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,789-02-6,"o,p'-DDT",nAE,4.180645,numeric,7.007529354621707,hill_fixed_0_100_grid,5.387127421640827,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,789-02-6,"o,p'-DDT",ns.n,1.481016,numeric,5.387127421640827,hill_fixed_0_100_grid,6.144139772517839,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,789-02-6,"o,p'-DDT",r,0.070288,numeric,1.881596676686709,hill_fixed_0_100_grid,0.38840111796479865,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,79538-32-2,Tefluthrin,burst.per.min,0.817626,numeric,3.1837715140140364,hill_fixed_0_100_grid,0.5395604005371314,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,79538-32-2,Tefluthrin,meanfiringrate,1.639253,numeric,2.613882941022915,hill_fixed_0_100_grid,0.6571973849172694,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,79538-32-2,Tefluthrin,nAE,8.88006,numeric,0.0003,hill_fixed_0_100_grid,7.992244557249326,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,79538-32-2,Tefluthrin,ns.n,0.520273,numeric,1.881596676686709,hill_fixed_0_100_grid,0.34054666570950687,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,79538-32-2,Tefluthrin,r,0.474799,numeric,1.3544623587209932,hill_fixed_0_100_grid,1.1875806189962426,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,79902-63-9,Simvastatin,burst.per.min,8.149468,numeric,2.0991921349910276,hill_fixed_0_100_grid,7.011783658643718,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,79902-63-9,Simvastatin,meanfiringrate,6.039557,numeric,2.6318446467499683,hill_fixed_0_100_grid,6.5026815779909,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,79902-63-9,Simvastatin,nAE,1.043851,numeric,2.6318446467499683,hill_fixed_0_100_grid,2.2635401921419596,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,79902-63-9,Simvastatin,ns.n,2.162468,numeric,2.4407552391405845,hill_fixed_0_100_grid,1.1485873578950423,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,79902-63-9,Simvastatin,r,1.893704,numeric,2.837894653896301,hill_fixed_0_100_grid,2.2635401921419596,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,8000-34-8,Clove leaf oil,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,8000-34-8,Clove leaf oil,meanfiringrate,,not_estimable_or_above_range,1.761873071785738,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,8000-34-8,Clove leaf oil,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,8000-34-8,Clove leaf oil,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,8018-01-7,Mancozeb,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,8018-01-7,Mancozeb,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,8018-01-7,Mancozeb,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,8018-01-7,Mancozeb,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,8018-01-7,Mancozeb,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,80844-07-1,Etofenprox,burst.per.min,7.092711,numeric,12.662871520165275,hill_fixed_0_100_grid,11.102693774663607,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,80844-07-1,Etofenprox,meanfiringrate,5.475556,numeric,8.535337215265963,hill_fixed_0_100_grid,5.753195968409641,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,80844-07-1,Etofenprox,nAE,7.776113,numeric,11.102693774663607,hill_fixed_0_100_grid,11.85714910070309,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,80844-07-1,Etofenprox,ns.n,6.409873,numeric,6.144139772517839,hill_fixed_0_100_grid,7.007529354621707,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,80844-07-1,Etofenprox,r,7.445259,numeric,9.115334354004965,hill_fixed_0_100_grid,10.396243482056303,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,81131-70-6,Pravastin sodium,burst.per.min,8.841336,numeric,,no_high_dose_50pct_crossing,1.0412601852939487,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,81131-70-6,Pravastin sodium,meanfiringrate,,not_estimable_or_above_range,0.0003,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,81131-70-6,Pravastin sodium,nAE,5.296707,numeric,,no_high_dose_50pct_crossing,10.396243482056303,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,81131-70-6,Pravastin sodium,ns.n,0.278012,numeric,,no_high_dose_50pct_crossing,0.3188781142282502,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,81131-70-6,Pravastin sodium,r,5.569405,numeric,,no_high_dose_50pct_crossing,7.007529354621707,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,82657-04-3,Bifenthrin,burst.per.min,1.329334,numeric,2.7915027102899668,hill_fixed_0_100_grid,0.2295435616428929,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,82657-04-3,Bifenthrin,meanfiringrate,0.904588,numeric,2.4475648919075907,hill_fixed_0_100_grid,0.26179958561030886,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,82657-04-3,Bifenthrin,nAE,2.856668,numeric,0.18845573476581934,hill_fixed_0_100_grid,2.2918294488559883,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,82657-04-3,Bifenthrin,ns.n,0.142286,numeric,2.4475648919075907,hill_fixed_0_100_grid,0.09144042672231369,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,82657-04-3,Bifenthrin,r,0.339249,numeric,2.4475648919075907,hill_fixed_0_100_grid,0.29858830513555146,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,83-32-9,Acenaphthene,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,83-32-9,Acenaphthene,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,83-32-9,Acenaphthene,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,83-32-9,Acenaphthene,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,83-32-9,Acenaphthene,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,83-79-4,Rotenone,burst.per.min,0.020329,numeric,0.08007037833360854,hill_fixed_0_100_grid,0.01333960625268346,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,83-79-4,Rotenone,meanfiringrate,0.026797,numeric,0.02988071615757687,hill_fixed_0_100_grid,0.01745389428183176,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,83-79-4,Rotenone,nAE,0.021835,numeric,0.08757664911345944,hill_fixed_0_100_grid,0.022837137755852152,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,83-79-4,Rotenone,ns.n,0.016428,numeric,0.035745706824462986,hill_fixed_0_100_grid,0.02087974681240445,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,83-79-4,Rotenone,r,0.014499,numeric,0.2807385739416615,hill_fixed_0_100_grid,0.01595790581951247,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,85-01-8,Phenanthrene,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,85-01-8,Phenanthrene,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,85-01-8,Phenanthrene,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,85-01-8,Phenanthrene,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,85-01-8,Phenanthrene,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,86-73-7,Fluorene,burst.per.min,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,86-73-7,Fluorene,meanfiringrate,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,86-73-7,Fluorene,nAE,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,86-73-7,Fluorene,ns.n,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,86-73-7,Fluorene,r,,not_estimable_or_above_range,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,97-53-0,Eugenol,burst.per.min,13.390369,numeric,,no_high_dose_50pct_crossing,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,97-53-0,Eugenol,meanfiringrate,18.071746,numeric,19.58013799045592,linear_50pct_fallback,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,97-53-0,Eugenol,nAE,,not_estimable_or_above_range,18.42693119230094,linear_50pct_fallback,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,97-53-0,Eugenol,r,,not_estimable_or_above_range,0.06758002494994514,linear_50pct_fallback,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,97-77-8,Disulfiram,burst.per.min,0.183434,numeric,2.0440911362523013,hill_fixed_0_100_grid,0.123633534880129,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,97-77-8,Disulfiram,meanfiringrate,0.160281,numeric,0.6769220978447786,hill_fixed_0_100_grid,0.10430281894958703,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,97-77-8,Disulfiram,nAE,0.10489,numeric,0.9510846505801571,hill_fixed_0_100_grid,0.11355758981547445,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,97-77-8,Disulfiram,ns.n,0.099442,numeric,0.17370677910476512,hill_fixed_0_100_grid,0.09580229783415006,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,97-77-8,Disulfiram,r,0.099408,numeric,1.1273516718497352,hill_fixed_0_100_grid,0.10430281894958703,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,NOCAS_47330,PharmaGSID_47330,burst.per.min,5.372363,numeric,,no_high_dose_50pct_crossing,8.49962419972805,linear_50pct_fallback,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,NOCAS_47330,PharmaGSID_47330,meanfiringrate,4.822879,numeric,9.115334354004965,hill_fixed_0_100_grid,2.4475648919075907,hill_fixed_0_100_grid,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,NOCAS_47330,PharmaGSID_47330,nAE,10.803368,numeric,11.85714910070309,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,NOCAS_47330,PharmaGSID_47330,ns.n,,not_estimable_or_above_range,12.662871520165275,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50
+ToxCast,NOCAS_47330,PharmaGSID_47330,r,,not_estimable_or_above_range,13.52334475803331,hill_fixed_0_100_grid,,no_high_dose_50pct_crossing,False,official is ontogeny-AUC EC50; estimate is DIV12-only EC50

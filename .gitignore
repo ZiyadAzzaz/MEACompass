@@ -31,6 +31,8 @@ results/*
 !results/calibration.csv
 !results/standardized_predictions.csv
 !results/demo_predictions.csv
+!results/potency_detail.csv
+!results/potency_summary.csv
 !results/audit/
 results/audit/*
 !results/audit/feature_lineage.csv

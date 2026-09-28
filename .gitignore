@@ -10,6 +10,13 @@ results/*
 !results/m1.csv
 !results/m1_gate.csv
 !results/m1_manifest.json
+!results/gate_s_main.csv
+!results/gate_s_permutation.csv
+!results/gate_s_div5.csv
+!results/gate_s_div5_metrics.csv
+!results/dose_strata.csv
+!results/cohort_results.csv
+!results/gate_s_decision.json
 artifacts/
 checkpoints/
 

@@ -21,8 +21,10 @@ and organ-on-chip workflows.
 - Leakage controls and chemical-disjoint splits: passed (Gate D2).
 - Registered B0--B4 benchmark: complete across five outer folds and three seeds.
 - Gate B2: **STRONG**. B3 cleared every criterion on three of five endpoints.
-- Next registered stage: M1 early-measurement + chemistry fusion, followed by
-  uncertainty calibration and abstention.
+- Gate M1 selected the fusion model on 2/5 endpoints versus B3.
+- Sanity Gate S: **STOP — suspected leakage/confounding**. The registered
+  chemical-group permutation control retained a small significant bursts/min
+  advantage over BT+. M2/M3 have not been run pending an integrity audit.
 
 See [`docs/neurochip_data_audit.md`](docs/neurochip_data_audit.md) for exact data
 counts, provenance, license, limitations, and the project-selection decision.

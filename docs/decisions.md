@@ -98,3 +98,30 @@
 - The percent-of-control transform for coordinated activity `r` will not be
   changed. Active electrodes and `r` remain visible limitations unless later
   registered evidence materially changes their status.
+
+## 2026-09-28 — Gate M1: SELECT M1
+
+- All 75 prediction and 75 tuning checkpoints completed before aggregate
+  evaluation.
+- M1 beat B3 with a beneficial chemical-bootstrap confidence interval on exactly
+  two endpoints: active electrodes and coordinated activity `r`.
+- M1 beat inner-selected BT+ on all five endpoints, but did not decisively beat
+  B3 for bursting or firing and was tied/slightly worse for network spikes.
+- Decision: select M1 under the Phase 3 rule, while retaining the pre-registered
+  warning that percent-control `r` is unstable near zero control denominators.
+- Full evidence: `docs/phase3_m1_results.md`.
+
+## 2026-09-28 — Sanity Gate S: STOP, suspected leakage/confounding
+
+- The chemical-group permutation negative control retained a beneficial
+  bursts/min delta MAE versus BT+ of -0.525, with 95% CI [-0.969, -0.136].
+- Its relative gain was small (1.60%), and the other four endpoints did not have
+  a beneficial confidence interval, but the registered rule requires an
+  immediate stop whenever the permutation CI excludes zero beneficially.
+- The non-permuted M1 cleared the fair-gain condition on all five endpoints and
+  showed low/mid-dose signal. These positive results do not override the negative
+  control.
+- Decision: do not run M2, M3, or Gate L1. Freeze scientific progression pending
+  an integrity audit and user review. Do not claim a validated early-prediction
+  result yet.
+- Full evidence: `docs/sanity_gate_s_results.md`.

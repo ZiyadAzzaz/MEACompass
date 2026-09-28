@@ -1,0 +1,11 @@
+{
+  "gate": "S",
+  "decision": "STOP_SUSPECTED_LEAKAGE_OR_CONFOUNDING",
+  "trigger_endpoint": "burst.per.min",
+  "permutation_delta_mae_vs_bt_plus": -0.5245431804174672,
+  "ci_low": -0.9689509198413405,
+  "ci_high": -0.13640100746763867,
+  "relative_gain_percent": 1.5971424794298525,
+  "m2_authorized": false,
+  "m3_authorized": false
+}

@@ -1,6 +1,6 @@
 PYTHON ?= python
 
-.PHONY: test baselines audit
+.PHONY: test baselines m1 audit
 
 test:
 	$(PYTHON) -m pytest -q
@@ -11,3 +11,5 @@ audit:
 baselines:
 	$(PYTHON) -m neurochip.train_baselines --config configs/baselines.yaml
 
+m1:
+	$(PYTHON) -m neurochip.train_m1 --config configs/baselines.yaml

@@ -3,6 +3,7 @@ import pandas as pd
 
 from neurochip.baselines import endpoint_frame, fit_baseline, predict_baseline
 from neurochip.evaluate import prediction_metrics
+from neurochip.train_m1 import compose_m1_prediction, m1_training_target
 
 
 def synthetic_frame() -> pd.DataFrame:
@@ -41,3 +42,19 @@ def test_locf_has_undefined_delta_spearman() -> None:
     metrics = prediction_metrics(frame)
     assert np.isnan(metrics["spearman_delta"])
 
+
+def test_m1_residual_target_and_prediction_round_trip() -> None:
+    frame = endpoint_frame(synthetic_frame(), "nAE")
+    bt_prediction = frame["target7"].to_numpy()
+    residual = m1_training_target(frame, "bt_residual", bt_prediction)
+    reconstructed = compose_m1_prediction(residual, "bt_residual", bt_prediction)
+    assert np.allclose(reconstructed, frame["target12"])
+
+
+def test_m1_direct_target_and_prediction_are_unchanged() -> None:
+    frame = endpoint_frame(synthetic_frame(), "nAE")
+    placeholder_bt = np.zeros(len(frame))
+    target = m1_training_target(frame, "direct", placeholder_bt)
+    assert np.allclose(
+        compose_m1_prediction(target, "direct", placeholder_bt), frame["target12"]
+    )

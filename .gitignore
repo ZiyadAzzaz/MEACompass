@@ -17,6 +17,10 @@ results/*
 !results/dose_strata.csv
 !results/cohort_results.csv
 !results/gate_s_decision.json
+!results/audit/
+results/audit/*
+!results/audit/feature_lineage.csv
+!results/audit/permutation_mapping.csv
 artifacts/
 checkpoints/
 

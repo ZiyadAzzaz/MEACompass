@@ -23,9 +23,14 @@ All five endpoints and all original BT comparisons remain mandatory.
 ## S-b: permutation negative control
 
 - Within each outer training fold, permute DIV12 targets at the canonical-CAS
-  group level using one fixed seed.
+  group level using fixed seed `20260928` and split seed 0.
 - Keep every well, concentration, and replicate belonging to a shuffled chemical
   together.
+- Implement this as a bijection of donor chemical target blocks. Within each
+  block, order rows by dose, plate, and well. When donor and recipient block sizes
+  differ, align the complete donor block to recipient rows by deterministic
+  empirical-percentile interpolation. One donor chemical supplies every target
+  assigned to one recipient chemical; targets are never shuffled well by well.
 - Retrain B3. Expected result: no meaningful positive skill over BT+.
 - If any endpoint has beneficial delta MAE versus BT+ with a chemical-bootstrap
   confidence interval excluding zero, stop immediately and report suspected
@@ -35,7 +40,10 @@ All five endpoints and all original BT comparisons remain mandatory.
 
 - Evaluate B3 and M1 against BT+ on zero, low, mid, and high dose strata.
 - Derive low/mid/high cut points from positive doses in each outer training fold
-  only and apply them unchanged to its outer test fold.
+  only and apply them unchanged to its outer test fold. The cut points are the
+  1/3 and 2/3 quantiles of positive-dose eligible training rows, computed
+  separately for each endpoint and outer fold. Zero dose is always its own
+  stratum.
 - Report all five endpoints.
 
 ## S-d: per-cohort evaluation

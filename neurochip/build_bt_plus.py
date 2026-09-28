@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
+import subprocess
 
 import pandas as pd
 import yaml
@@ -12,7 +13,12 @@ import yaml
 from neurochip.baselines import endpoint_frame, fit_baseline, predict_baseline
 from neurochip.data import PRIMARY_ENDPOINTS, build_longitudinal_table
 from neurochip.splits import outer_folds
-from neurochip.train_baselines import prediction_records, select_best_baseline, summarize
+from neurochip.train_baselines import (
+    file_sha256,
+    prediction_records,
+    select_best_baseline,
+    summarize,
+)
 
 
 BT_PLUS_CANDIDATES = ("B0", "B1", "B1b", "B2")
@@ -87,6 +93,11 @@ def main() -> None:
     )
     selections.to_csv(results_dir / "bt_plus_selections.csv", index=False)
     manifest = {
+        "code_commit": subprocess.check_output(
+            ["git", "rev-parse", "HEAD"], text=True
+        ).strip(),
+        "config": str(args.config),
+        "config_sha256": file_sha256(args.config),
         "candidates": list(BT_PLUS_CANDIDATES),
         "selection": "inner_validation_mae_only",
         "outer_test_role": "evaluation_only",

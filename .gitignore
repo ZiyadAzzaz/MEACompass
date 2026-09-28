@@ -4,6 +4,9 @@ data/derived/
 results/*
 !results/baselines.csv
 !results/baseline_manifest.json
+!results/bt_plus.csv
+!results/bt_plus_manifest.json
+!results/bt_plus_selections.csv
 artifacts/
 checkpoints/
 

@@ -1,0 +1,14 @@
+{
+  "code_commit": "55de16bc4aa946b9af7a2727c569641a95bc68d8",
+  "config": "configs\\baselines.yaml",
+  "config_sha256": "9165e0b66c98099570563e466f0cf32586d11bf489991341053e843ef5506d28",
+  "candidates": [
+    "B0",
+    "B1",
+    "B1b",
+    "B2"
+  ],
+  "selection": "inner_validation_mae_only",
+  "outer_test_role": "evaluation_only",
+  "checkpoints": 75
+}

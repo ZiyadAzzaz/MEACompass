@@ -111,6 +111,25 @@ def audit(root: Path) -> dict[str, object]:
         for metric in METRICS
     }
     concentration_counts = raw.groupby(["cohort", "trt"])["dose"].nunique()
+    primary_metrics = ["meanfiringrate", "burst.per.min", "nAE", "ns.n", "r"]
+    control_medians = (
+        raw.loc[raw["dose"].eq(0)]
+        .groupby(["cohort", "Plate.SN", "DIV"])[primary_metrics]
+        .median()
+    )
+    control_denominators: dict[str, object] = {}
+    for div in (5, 7, 12):
+        at_div = control_medians.xs(div, level="DIV")
+        control_denominators[str(div)] = {
+            metric: {
+                "minimum": float(at_div[metric].min()),
+                "median": float(at_div[metric].median()),
+                "maximum": float(at_div[metric].max()),
+                "absolute_below_0.05": int(at_div[metric].abs().lt(0.05).sum()),
+                "exact_zero": int(at_div[metric].eq(0).sum()),
+            }
+            for metric in primary_metrics
+        }
 
     return {
         "records": int(len(raw)),
@@ -132,6 +151,7 @@ def audit(root: Path) -> dict[str, object]:
             "median": float(concentration_counts.median()),
             "maximum": int(concentration_counts.max()),
         },
+        "primary_endpoint_control_medians": control_denominators,
         "ec50_rows": int(len(ec50)),
         "ec50_numeric_rows": int(pd.to_numeric(ec50["ec"], errors="coerce").notna().sum()),
         "missingness": missing,

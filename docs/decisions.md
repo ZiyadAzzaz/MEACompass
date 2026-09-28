@@ -20,3 +20,29 @@
 - Primary category remains Model & Algorithm unless the final implementation
   demonstrates a genuinely complete research workflow.
 
+## 2026-09-28 — Pre-registration frozen
+
+- Frozen commit: `8671fd84cc48d5b4fc45fe09ee20227cb3d46ac0`.
+- No predictive result was computed before this commit.
+- The exact primary endpoints, transformations, folds, baseline selection,
+  metrics, confidence intervals, gates, and kill condition are fixed in
+  `docs/preregistration.md`.
+
+## 2026-09-28 — Raw labels outside the official cohort
+
+- Three PFAS treatment labels occur in the combined ToxCast raw CSV but are absent
+  from both official experimental summary catalogs and the paper's declared 146
+  entries.
+- Decision: retain their raw rows but exclude them from the pre-registered primary
+  cohort. Do not invent study metadata for them. They may be described separately
+  in an appendix.
+
+## 2026-09-28 — Gate D2: PASS
+
+- Evidence: 11 tests passed for canonical mapping, seeds 0/1/2 chemical-disjoint
+  outer folds, complete fold coverage, and fail-closed causal feature selection.
+- Primary cohort: 136 canonical CAS groups after the three pre-declared
+  out-of-catalog treatments are excluded.
+- Causal contract rejects DIV9, DIV12, control-DIV12, EC50, hit-call, and viability
+  fields as inputs.
+- Decision: proceed to matched-control normalization and B0–B4.

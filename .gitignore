@@ -1,7 +1,9 @@
 # Data and generated artifacts
 data/raw/
 data/derived/
-results/
+results/*
+!results/baselines.csv
+!results/baseline_manifest.json
 artifacts/
 checkpoints/
 
@@ -23,4 +25,3 @@ htmlcov/
 .idea/
 .DS_Store
 Thumbs.db
-

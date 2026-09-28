@@ -24,6 +24,7 @@ from neurochip.train_m1 import compose_m1_prediction, m1_training_target
 
 AUDIT_SEED = 20260928
 DIAGNOSTIC_MODELS = ("DOSE_SMOOTH", "FULL_SHUFFLE")
+BLOCK_PERMUTATION_SEEDS = tuple(AUDIT_SEED + 100_003 * (index + 1) for index in range(20))
 
 
 def safe_pearson(left: pd.Series, right: pd.Series) -> float:
@@ -329,15 +330,293 @@ def summarize_basic(results_dir: Path, stage: str, expected: int = 75) -> None:
     if len(files) != expected:
         raise RuntimeError(f"{stage} requires {expected} checkpoints; found {len(files)}")
     predictions = pd.concat([pd.read_csv(path) for path in files], ignore_index=True)
+    if "bt_prediction" not in predictions.columns:
+        registered = pd.read_csv(results_dir / "bt_plus_predictions.csv")
+        original_bt = registered[KEYS + ["bt_prediction"]].drop_duplicates(KEYS)
+        predictions = predictions.merge(
+            original_bt, on=KEYS, how="left", validate="many_to_one"
+        )
+        if predictions["bt_prediction"].isna().any():
+            raise ValueError("Diagnostic rows do not align with original BT predictions")
     paired_summary(predictions).to_csv(results_dir / "audit" / f"{stage}.csv", index=False)
+
+
+def run_block_permutations(
+    frame: pd.DataFrame,
+    chemistry_columns: list[str],
+    config: dict[str, object],
+    results_dir: Path,
+    permutation_ids: list[int],
+    settings: dict[str, dict[str, dict[str, object]]],
+) -> None:
+    """Run fixed B3/M1 models under independent chemical-block null mappings."""
+    early_features = primary_feature_columns(frame) + ["cohort_toxcast"]
+    m1_features = list(dict.fromkeys(early_features + chemistry_columns))
+    checkpoint_dir = results_dir / "audit" / "block_permutation_checkpoints"
+    checkpoint_dir.mkdir(parents=True, exist_ok=True)
+    for permutation_id in permutation_ids:
+        permutation_seed = BLOCK_PERMUTATION_SEEDS[permutation_id]
+        for seed in config["seeds"]:
+            folds = list(outer_folds(frame, int(seed), int(config["outer_folds"])))
+            for fold, (train_idx, test_idx) in enumerate(folds):
+                for endpoint in config.get("primary_endpoints", PRIMARY_ENDPOINTS):
+                    train = endpoint_frame(frame.iloc[train_idx], endpoint).reset_index(drop=True)
+                    test = endpoint_frame(frame.iloc[test_idx], endpoint).reset_index(drop=True)
+                    train["endpoint_name"] = endpoint
+                    test["endpoint_name"] = endpoint
+                    permuted, mapping = block_permute(train, endpoint, fold, permutation_seed)
+                    mapping_hash = hashlib.sha256(
+                        json.dumps(mapping, sort_keys=True).encode("utf-8")
+                    ).hexdigest()
+                    reference = bt_plus_for_task(results_dir, int(seed), fold, endpoint)
+                    for model_name, features in (("B3_NULL", early_features), ("M1_NULL", m1_features)):
+                        path = checkpoint_dir / (
+                            f"perm{permutation_id:02d}_seed{seed}_fold{fold}_{model_name}_{endpoint}.csv"
+                        )
+                        if path.exists():
+                            continue
+                        model_key = model_name.removesuffix("_NULL")
+                        fixed = settings[model_key][endpoint]
+                        prediction = fit_fixed(
+                            permuted,
+                            test,
+                            features,
+                            fixed,
+                            config,
+                            int(seed),
+                            str(fixed.get("variant", "direct")),
+                            str(fixed.get("bt_model", "B2")),
+                        )
+                        record = diagnostic_record(
+                            test, prediction, reference, model_name, endpoint, int(seed), fold
+                        )
+                        record["permutation_id"] = permutation_id
+                        record["permutation_seed"] = permutation_seed
+                        record["mapping_sha256"] = mapping_hash
+                        record.to_csv(path, index=False)
+                        print(
+                            f"RUN block perm={permutation_id} seed={seed} fold={fold} "
+                            f"model={model_name} endpoint={endpoint}",
+                            flush=True,
+                        )
+
+
+def summarize_block_permutations(results_dir: Path, expected: int = 3000) -> None:
+    files = sorted((results_dir / "audit" / "block_permutation_checkpoints").glob("*.csv"))
+    if len(files) != expected:
+        raise RuntimeError(f"Repeated block null requires {expected} checkpoints; found {len(files)}")
+    predictions = pd.concat([pd.read_csv(path) for path in files], ignore_index=True)
+    rows: list[dict[str, object]] = []
+    for (permutation_id, permutation_seed, model, endpoint), source in predictions.groupby(
+        ["permutation_id", "permutation_seed", "model", "endpoint"], sort=True
+    ):
+        mae = mean_absolute_error(source["target12"], source["prediction"])
+        reference_mae = mean_absolute_error(source["target12"], source["bt_plus_prediction"])
+        rows.append(
+            {
+                "permutation_id": permutation_id,
+                "permutation_seed": permutation_seed,
+                "model": model,
+                "endpoint": endpoint,
+                "n_rows": len(source),
+                "n_chemicals": source["casrn"].nunique(),
+                "mae": mae,
+                "bt_plus_mae": reference_mae,
+                "delta_mae_vs_bt_plus": mae - reference_mae,
+                "relative_gain_vs_bt_plus_percent": 100 * (reference_mae - mae) / reference_mae,
+            }
+        )
+    pd.DataFrame(rows).to_csv(results_dir / "audit" / "block_permutation_null.csv", index=False)
+
+
+def run_decomposition(
+    frame: pd.DataFrame,
+    config: dict[str, object],
+    results_dir: Path,
+    settings: dict[str, dict[str, dict[str, object]]],
+) -> None:
+    endpoint = "burst.per.min"
+    early_all = primary_feature_columns(frame)
+    neural = [name for name in early_all if name != "log10_1p_dose"]
+    variants = {
+        "P1_EARLY": neural,
+        "P2_DOSE_COHORT": ["log10_1p_dose", "cohort_toxcast"],
+        "P3_EARLY_DOSE": neural + ["log10_1p_dose"],
+        "P4_EARLY_COHORT": neural + ["cohort_toxcast"],
+        "P5_FULL_B3": early_all + ["cohort_toxcast"],
+    }
+    checkpoint_dir = results_dir / "audit" / "decomposition_checkpoints"
+    checkpoint_dir.mkdir(parents=True, exist_ok=True)
+    for seed in config["seeds"]:
+        for fold, (train_idx, test_idx) in enumerate(
+            outer_folds(frame, int(seed), int(config["outer_folds"]))
+        ):
+            train = endpoint_frame(frame.iloc[train_idx], endpoint).reset_index(drop=True)
+            test = endpoint_frame(frame.iloc[test_idx], endpoint).reset_index(drop=True)
+            train["endpoint_name"] = endpoint
+            test["endpoint_name"] = endpoint
+            permuted, _ = block_permute(train, endpoint, fold, AUDIT_SEED)
+            reference = bt_plus_for_task(results_dir, int(seed), fold, endpoint)
+            for model_name, features in variants.items():
+                path = checkpoint_dir / f"seed{seed}_fold{fold}_{model_name}.csv"
+                if path.exists():
+                    continue
+                prediction = fit_fixed(
+                    permuted, test, features, settings["B3"][endpoint], config, int(seed)
+                )
+                diagnostic_record(
+                    test, prediction, reference, model_name, endpoint, int(seed), fold
+                ).to_csv(path, index=False)
+                print(f"RUN decomposition seed={seed} fold={fold} model={model_name}", flush=True)
+
+
+def summarize_decomposition(results_dir: Path, expected: int = 75) -> None:
+    files = sorted((results_dir / "audit" / "decomposition_checkpoints").glob("*.csv"))
+    if len(files) != expected:
+        raise RuntimeError(f"Decomposition requires {expected} checkpoints; found {len(files)}")
+    predictions = pd.concat([pd.read_csv(path) for path in files], ignore_index=True)
+    registered = pd.read_csv(results_dir / "bt_plus_predictions.csv")
+    predictions = predictions.merge(
+        registered[KEYS + ["bt_prediction"]].drop_duplicates(KEYS),
+        on=KEYS,
+        how="left",
+        validate="many_to_one",
+    )
+    paired_summary(predictions).to_csv(results_dir / "audit" / "decomposition.csv", index=False)
+
+
+def write_baseline_asymmetry(results_dir: Path) -> None:
+    """Compare the registered seed-0 S2 prediction with every requested reference."""
+    permuted = pd.concat(
+        [pd.read_csv(path) for path in sorted((results_dir / "gate_s_permutation_checkpoints").glob("*.csv"))],
+        ignore_index=True,
+    )
+    if len(permuted[KEYS].drop_duplicates()) != len(permuted):
+        raise ValueError("Registered S2 predictions are not unique on frozen keys")
+    baseline = pd.read_csv(results_dir / "baseline_predictions.csv")
+    baseline = baseline.loc[
+        baseline["seed"].eq(0) & baseline["model"].isin(["B0", "B1", "B1b", "B2"])
+    ]
+    dose = pd.concat(
+        [pd.read_csv(path) for path in sorted((results_dir / "audit" / "dose_smooth_checkpoints").glob("seed0_*.csv"))],
+        ignore_index=True,
+    )
+    references: list[tuple[str, pd.DataFrame, str]] = [
+        (name, baseline.loc[baseline["model"].eq(name)], "prediction")
+        for name in ("B0", "B1", "B1b", "B2")
+    ]
+    references.extend(
+        [
+            ("BT+", permuted, "bt_plus_prediction"),
+            ("DOSE_SMOOTH", dose, "prediction"),
+        ]
+    )
+    rows: list[dict[str, object]] = []
+    for endpoint, candidate in permuted.groupby("endpoint", sort=True):
+        for reference_name, reference_frame, prediction_column in references:
+            reference = reference_frame.loc[reference_frame["endpoint"].eq(endpoint), KEYS + [prediction_column]].rename(
+                columns={prediction_column: "reference_prediction"}
+            )
+            merged = candidate.merge(reference, on=KEYS, how="inner", validate="one_to_one")
+            if len(merged) != len(candidate):
+                raise ValueError(f"S2 and {reference_name} rows do not align for {endpoint}")
+            candidate_mae = mean_absolute_error(merged["target12"], merged["prediction"])
+            reference_mae = mean_absolute_error(merged["target12"], merged["reference_prediction"])
+            low, high = bootstrap_paired_mae(merged, "prediction", "reference_prediction")
+            rows.append(
+                {
+                    "endpoint": endpoint,
+                    "candidate": "B3_PERMUTED_REGISTERED",
+                    "reference": reference_name,
+                    "n_rows": len(merged),
+                    "candidate_mae": candidate_mae,
+                    "reference_mae": reference_mae,
+                    "delta_mae": candidate_mae - reference_mae,
+                    "delta_mae_ci_low": low,
+                    "delta_mae_ci_high": high,
+                    "relative_gain_percent": 100 * (reference_mae - candidate_mae) / reference_mae,
+                }
+            )
+    pd.DataFrame(rows).to_csv(results_dir / "audit" / "baseline_asymmetry.csv", index=False)
+
+
+def write_real_vs_null(results_dir: Path) -> None:
+    block = pd.read_csv(results_dir / "audit" / "block_permutation_null.csv")
+    gate = pd.read_csv(results_dir / "gate_s_main.csv")
+    registered_null = pd.read_csv(results_dir / "gate_s_permutation.csv")
+    full = pd.read_csv(results_dir / "audit" / "full_shuffle.csv")
+    m1 = pd.read_csv(results_dir / "m1_predictions.csv")
+    dose = pd.concat(
+        [pd.read_csv(path) for path in sorted((results_dir / "audit" / "dose_smooth_checkpoints").glob("*.csv"))],
+        ignore_index=True,
+    )
+    rows: list[dict[str, object]] = []
+    for endpoint in PRIMARY_ENDPOINTS:
+        real_b3 = gate.loc[(gate["model"] == "B3") & (gate["endpoint"] == endpoint)].iloc[0]
+        real_m1 = gate.loc[(gate["model"] == "M1") & (gate["endpoint"] == endpoint)].iloc[0]
+        s2 = registered_null.loc[registered_null["endpoint"] == endpoint].iloc[0]
+        full_row = full.loc[full["endpoint"] == endpoint].iloc[0]
+        paired = m1.loc[m1["endpoint"].eq(endpoint)].merge(
+            dose.loc[dose["endpoint"].eq(endpoint), KEYS + ["prediction"]].rename(
+                columns={"prediction": "dose_prediction"}
+            ),
+            on=KEYS,
+            how="inner",
+            validate="one_to_one",
+        )
+        if len(paired) != len(m1.loc[m1["endpoint"].eq(endpoint)]):
+            raise ValueError(f"M1 and DOSE-SMOOTH rows do not align for {endpoint}")
+        m1_mae = mean_absolute_error(paired["target12"], paired["prediction"])
+        dose_mae = mean_absolute_error(paired["target12"], paired["dose_prediction"])
+        dose_low, dose_high = bootstrap_paired_mae(paired, "prediction", "dose_prediction")
+        null = block.loc[
+            block["endpoint"].eq(endpoint) & block["model"].eq("M1_NULL"),
+            "relative_gain_vs_bt_plus_percent",
+        ]
+        real_gain = float(real_m1["relative_gain_vs_bt_plus_percent"])
+        exceedances = int(null.ge(real_gain).sum())
+        rows.append(
+            {
+                "endpoint": endpoint,
+                "real_b3_gain_vs_bt_plus_percent": real_b3["relative_gain_vs_bt_plus_percent"],
+                "real_m1_gain_vs_bt_plus_percent": real_gain,
+                "real_m1_delta_mae_vs_dose_smooth": m1_mae - dose_mae,
+                "real_m1_vs_dose_smooth_ci_low": dose_low,
+                "real_m1_vs_dose_smooth_ci_high": dose_high,
+                "registered_s2_null_gain_percent": s2["relative_gain_vs_bt_plus_percent"],
+                "block_null_mean_gain_percent": null.mean(),
+                "block_null_sd_gain_percent": null.std(ddof=1),
+                "block_null_2_5_percent": null.quantile(0.025),
+                "block_null_median_percent": null.median(),
+                "block_null_97_5_percent": null.quantile(0.975),
+                "block_null_max_gain_percent": null.max(),
+                "block_null_exceedances": exceedances,
+                "block_null_runs": len(null),
+                "empirical_p_fraction": exceedances / len(null),
+                "empirical_p_report": "<0.05" if len(null) == 20 and exceedances == 0 else f"{exceedances / len(null):.3f}",
+                "full_shuffle_gain_percent": full_row["relative_gain_vs_bt_plus_percent"],
+                "full_shuffle_delta_ci_low": full_row["delta_mae_vs_bt_plus_ci_low"],
+                "full_shuffle_delta_ci_high": full_row["delta_mae_vs_bt_plus_ci_high"],
+            }
+        )
+    pd.DataFrame(rows).to_csv(results_dir / "audit" / "real_vs_null.csv", index=False)
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", type=Path, default=Path("configs/baselines.yaml"))
-    parser.add_argument("--stage", choices=["mechanism", "dose_smooth", "full_shuffle", "summarize_basic"], required=True)
+    parser.add_argument(
+        "--stage",
+        choices=[
+            "mechanism", "dose_smooth", "full_shuffle", "summarize_basic",
+            "block_permutation", "summarize_block", "decomposition", "summarize_decomposition",
+            "baseline_asymmetry", "real_vs_null",
+        ],
+        required=True,
+    )
     parser.add_argument("--diagnostic", choices=["dose_smooth", "full_shuffle"])
     parser.add_argument("--seeds", nargs="+", type=int)
+    parser.add_argument("--permutations", nargs="+", type=int)
     return parser.parse_args()
 
 
@@ -353,10 +632,27 @@ def main() -> None:
     elif args.stage in {"dose_smooth", "full_shuffle"}:
         seeds = args.seeds if args.seeds is not None else list(config["seeds"])
         run_basic_diagnostic(frame, config, results_dir, args.stage, seeds, settings)
-    else:
+    elif args.stage == "summarize_basic":
         if args.diagnostic is None:
             raise ValueError("--diagnostic is required for summarize_basic")
         summarize_basic(results_dir, args.diagnostic)
+    elif args.stage == "block_permutation":
+        permutation_ids = args.permutations if args.permutations is not None else list(range(20))
+        if any(index < 0 or index >= 20 for index in permutation_ids):
+            raise ValueError("Permutation ids must be between 0 and 19")
+        run_block_permutations(
+            frame, chemistry_columns, config, results_dir, permutation_ids, settings
+        )
+    elif args.stage == "summarize_block":
+        summarize_block_permutations(results_dir)
+    elif args.stage == "decomposition":
+        run_decomposition(frame, config, results_dir, settings)
+    elif args.stage == "summarize_decomposition":
+        summarize_decomposition(results_dir)
+    elif args.stage == "baseline_asymmetry":
+        write_baseline_asymmetry(results_dir)
+    else:
+        write_real_vs_null(results_dir)
 
 
 if __name__ == "__main__":

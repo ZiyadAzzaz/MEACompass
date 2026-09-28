@@ -1,0 +1,14 @@
+{
+  "audit": "GATE_S_POST_REGISTRATION_INTEGRITY",
+  "decision": "PASS_RESIDUAL_STRUCTURE_UNDER_NULL",
+  "registered_gate_s_decision": "FAIL_STOP_UNCHANGED",
+  "feature_leak_found": false,
+  "full_shuffle_clean": true,
+  "baseline_asymmetry_found": false,
+  "dose_cohort_explanation": "Rank-interpolated blocks retain generic early-neural trajectory structure; registered S2 does not significantly beat DOSE-SMOOTH.",
+  "real_effect_separated_from_null": true,
+  "endpoints_separated": 5,
+  "block_permutation_runs": 20,
+  "m2_authorized_by_audit": true,
+  "requires_bt_plus_plus": true
+}

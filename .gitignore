@@ -21,6 +21,13 @@ results/*
 results/audit/*
 !results/audit/feature_lineage.csv
 !results/audit/permutation_mapping.csv
+!results/audit/full_shuffle.csv
+!results/audit/dose_smooth.csv
+!results/audit/block_permutation_null.csv
+!results/audit/real_vs_null.csv
+!results/audit/baseline_asymmetry.csv
+!results/audit/decomposition.csv
+!results/audit/audit_decision.json
 artifacts/
 checkpoints/
 

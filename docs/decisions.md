@@ -148,3 +148,20 @@
   BT++ is added post hoc as inner-selected best of BT+ and DOSE-SMOOTH, and M2 may
   resume with both BT+ and BT++ reported.
 - Deadline/timebox supplied by the user: 2026-09-29 14:00 Africa/Cairo.
+
+## 2026-09-28 — Post-registration integrity audit: PASS
+
+- Audit classification: **PASS — RESIDUAL STRUCTURE UNDER NULL**. The historical
+  registered Gate S remains **FAIL / STOP** and its files are unchanged.
+- No feature/data leak or target realignment was found. The full well-level target
+  shuffle had no beneficial confidence interval on any endpoint.
+- The registered burst null was compatible with DOSE-SMOOTH and did not
+  significantly beat it. Decomposition showed that rank-interpolated chemical
+  blocks retain generic early-neural trajectory structure.
+- Real M1 beat DOSE-SMOOTH with a beneficial chemical-bootstrap interval on all
+  five endpoints, exceeded all 20 repeated M1 block-null runs on all five, and had
+  zero exceedances per endpoint (reported as empirical p < 0.05).
+- Per the authorized audit rule, scientific progression may resume after adding
+  post-hoc BT++ (inner-selected best of BT+ and DOSE-SMOOTH). All future reports
+  must preserve both original BT+ and post-hoc BT++ results.
+- Full evidence: `docs/integrity_audit.md` and `results/audit/`.

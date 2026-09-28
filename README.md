@@ -1,49 +1,37 @@
 # NeuroChip-Twin
 
-**Reliability-Aware Early Prediction of Neural Network Development from
-Microelectrode-Array Assays**
+**Reliability-aware early prediction of neural network development from
+microelectrode-array assays**
 
-*Toward Functional Digital Twins for Neural Organ-on-Chip Screening*
+NeuroChip-Twin uses measurements available by day in vitro 7 (DIV7) to forecast
+five DIV12 functional outcomes for unseen chemicals. It adds calibrated 90%
+intervals and abstains on the least certain 30% of cases.
 
-NeuroChip-Twin asks whether DIV5 and DIV7 functional measurements from a rat
-cortical neural microelectrode-array assay can predict DIV12 outcomes for unseen
-chemicals—and whether calibrated uncertainty can identify cases that should
-continue to the full assay.
+The source is a **rat cortical neural MEA assay, not an organ-on-chip dataset**.
+This is a retrospective research decision-support prototype, not an autonomous
+assay-termination system. Human neural organ-on-chip transfer requires prospective
+external validation.
 
-The EPA source is a neural MEA assay, not an organ-on-chip dataset. The intended
-application is decision support for functional readouts used in neural in-vitro
-and organ-on-chip workflows.
+## Locked result
 
-## Current status
+- M1 improves MAE versus inner-selected BT+ by 14.2–39.0% on all five endpoints;
+  every chemical-bootstrap paired interval excludes zero.
+- Against the stricter post-audit BT++, gains are 12.3–42.9% and remain significant
+  on all five endpoints.
+- Nested group CV+ attains 91.0–92.4% empirical coverage at nominal 90%.
+- At 70% retained coverage, abstention clears the registered 15% risk-reduction
+  criterion for firing rate, active electrodes, and coordinated activity. Bursts
+  and network spikes are explicit limitations.
+- The registered permutation gate originally stopped. A bounded integrity audit
+  found no leakage, produced a clean full-shuffle result, and separated real M1
+  from 20 independent chemical-block null runs. The failed gate remains recorded.
+- Gate L1 is **LOCK**: the model, reliability protocol, and claims are frozen.
 
-- Data feasibility gate: passed.
-- Pre-registration: frozen at commit `8671fd84` before predictive results.
-- Leakage controls and chemical-disjoint splits: passed (Gate D2).
-- Registered B0--B4 benchmark: complete across five outer folds and three seeds.
-- Gate B2: **STRONG**. B3 cleared every criterion on three of five endpoints.
-- Gate M1 selected the fusion model on 2/5 endpoints versus B3.
-- Registered Sanity Gate S: **FAIL / STOP—unchanged**. The registered
-  chemical-block control retained a small bursts/min advantage over BT+.
-- Authorized post-registration integrity audit: **PASS—residual structure under
-  null**. No leak or realignment was found; the full well shuffle was clean and
-  real M1 exceeded all 20 repeated block-null runs on all five endpoints.
-- Gate M2: **PASS**. Nominal-90% nested group-CV+ coverage is 91.03–92.40%
-  overall, with every NTP/ToxCast cohort above 90%.
-- Gate M3: **PASS, mixed by endpoint**. At 70% accepted coverage, firing rate,
-  active electrodes, and `r` meet the ≥15% risk-reduction criterion with
-  chemical-bootstrap intervals below zero.
-- Gate L1: **LOCK**. M1 and the reliability protocol are frozen. The `r`
-  normalization caveat and the registered Gate S failure remain visible.
+Read the integrated [report](docs/report_draft.md), [integrity audit](docs/integrity_audit.md),
+[defense Q&A](docs/defense_qa.md), [video script](docs/video_script.md), and
+[competition deck outline](docs/slides_outline.md).
 
-See [`docs/neurochip_data_audit.md`](docs/neurochip_data_audit.md) for exact data
-counts, provenance, license, limitations, and the project-selection decision.
-See [`docs/phase2_baseline_results.md`](docs/phase2_baseline_results.md) for the
-held-out results and gate decision.
-See [`docs/integrity_audit.md`](docs/integrity_audit.md) and
-[`docs/phase3_m2_m3_results.md`](docs/phase3_m2_m3_results.md) for the audit and
-reliability gates.
-
-## Reproduction interface
+## Reproduce without retraining
 
 ```bash
 make setup
@@ -52,13 +40,27 @@ make reproduce-lite
 make demo
 ```
 
-`reproduce-lite` is result-only: it reads registered CSV artifacts, validates the
-frozen prediction schema, and regenerates tables and figures. It never launches
-training. Missing result files cause an explicit failure rather than an implicit
-retraining step. The schema is documented in
-[`schemas/prediction_schema_v1.yaml`](schemas/prediction_schema_v1.yaml).
+`reproduce-lite` validates the frozen prediction schema and regenerates tables and
+figures from saved result artifacts only. It never launches training and fails
+explicitly if required files are missing. The Streamlit demo likewise uses only
+precomputed held-out predictions.
+
+## Evidence map
+
+- Data provenance and license: `docs/neurochip_data_audit.md`
+- Preregistration and append-only decisions: `docs/preregistration.md`,
+  `docs/decisions.md`
+- Main and stricter comparator results: `results/gate_s_main.csv`,
+  `results/bt_plus_plus.csv`
+- Integrity controls: `results/audit/`
+- Calibration and selective risk: `results/m2_calibration.csv`,
+  `results/m3_risk_coverage.csv`
+- Time and practical analysis: `results/time_ablation.csv`,
+  `results/practical_value.csv`
+- Interpretation and cases: `results/feature_importance.csv`,
+  `results/case_studies.csv`
 
 ## License
 
-Project code is licensed under Apache-2.0. EPA data are not redistributed through
-Git and retain the terms linked from the data audit.
+Project code is Apache-2.0. EPA data are not redistributed through Git and retain
+the terms linked from the data audit.

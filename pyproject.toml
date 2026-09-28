@@ -22,9 +22,9 @@ dependencies = [
 test = ["pytest==9.1.1"]
 demo = [
   "matplotlib==3.9.2",
-  "pillow>=10,<13",
-  "seaborn>=0.13,<1",
-  "streamlit>=1.40,<2",
+  "pillow==12.3.0",
+  "seaborn==0.13.2",
+  "streamlit==1.64.0",
 ]
 
 [tool.setuptools.packages.find]

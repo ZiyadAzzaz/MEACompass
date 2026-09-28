@@ -13,6 +13,7 @@ dependencies:
       - rdkit==2026.3.6
       - PyYAML==6.0.3
       - pytest==9.1.1
-      - matplotlib>=3.10,<4
-      - seaborn>=0.13,<1
-      - streamlit>=1.40,<2
+      - matplotlib==3.9.2
+      - seaborn==0.13.2
+      - pillow==12.3.0
+      - streamlit==1.64.0

@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 from neurochip.baselines import endpoint_frame, fit_baseline, predict_baseline
-from neurochip.evaluate import prediction_metrics
+from neurochip.evaluate import bootstrap_paired_mae, prediction_metrics
 from neurochip.train_m1 import compose_m1_prediction, m1_training_target
 
 
@@ -58,3 +58,17 @@ def test_m1_direct_target_and_prediction_are_unchanged() -> None:
     assert np.allclose(
         compose_m1_prediction(target, "direct", placeholder_bt), frame["target12"]
     )
+
+
+def test_paired_bootstrap_detects_uniformly_better_candidate() -> None:
+    frame = pd.DataFrame(
+        {
+            "casrn": np.repeat(["a", "b", "c"], 3),
+            "target12": np.arange(9, dtype=float),
+            "candidate": np.arange(9, dtype=float),
+            "reference": np.arange(9, dtype=float) + 2,
+        }
+    )
+    low, high = bootstrap_paired_mae(frame, "candidate", "reference", draws=100)
+    assert low < 0
+    assert high < 0

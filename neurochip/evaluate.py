@@ -64,3 +64,34 @@ def bootstrap_delta_mae(
     counts = grouped["count"].to_numpy()[sampled].sum(axis=1)
     estimates = model_sums / counts - bt_sums / counts
     return float(np.quantile(estimates, 0.025)), float(np.quantile(estimates, 0.975))
+
+
+def bootstrap_paired_mae(
+    frame: pd.DataFrame,
+    candidate_column: str,
+    reference_column: str,
+    draws: int = 1000,
+    seed: int = 20260928,
+) -> tuple[float, float]:
+    """Chemical-bootstrap CI for MAE(candidate) minus MAE(reference)."""
+    required = {"casrn", "target12", candidate_column, reference_column}
+    missing = required - set(frame.columns)
+    if missing:
+        raise ValueError(f"Paired bootstrap is missing columns: {sorted(missing)}")
+    errors = frame.assign(
+        candidate_error=np.abs(frame["target12"] - frame[candidate_column]),
+        reference_error=np.abs(frame["target12"] - frame[reference_column]),
+    )
+    grouped = errors.groupby("casrn", sort=True).agg(
+        candidate_sum=("candidate_error", "sum"),
+        reference_sum=("reference_error", "sum"),
+        count=("candidate_error", "size"),
+    )
+    rng = np.random.default_rng(seed)
+    sampled = rng.integers(0, len(grouped), size=(draws, len(grouped)))
+    counts = grouped["count"].to_numpy()[sampled].sum(axis=1)
+    estimates = (
+        grouped["candidate_sum"].to_numpy()[sampled].sum(axis=1) / counts
+        - grouped["reference_sum"].to_numpy()[sampled].sum(axis=1) / counts
+    )
+    return float(np.quantile(estimates, 0.025)), float(np.quantile(estimates, 0.975))

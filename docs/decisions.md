@@ -82,3 +82,19 @@
 - Gate L1 may lock early only after M1 evaluation, Gate S PASS, and Gate M3 PASS
   or WEAK. CellTwin-X remains frozen only after that lock.
 - Full deviation protocol: `docs/phase2_addendum.md`.
+
+## 2026-09-28 — Phase 3 protocol registered before M1 completion
+
+- Timing: registered with 26/75 M1 prediction checkpoints complete and before
+  any aggregate M1 result or Gate M1 evaluation existed.
+- BT+ is now the only baseline for headline claims. Original BT comparisons stay
+  visible as the pre-registered analysis and are never removed.
+- Main-model selection is fixed as follows: M1 becomes the main model only if it
+  beats B3 with a chemical-bootstrap confidence interval excluding zero on at
+  least two endpoints. A tie or worse result selects the simpler B3; chemistry
+  remains an ablation.
+- Gate S remains mandatory before M2. Gate M2/M3 and Gate L1 stop/lock rules are
+  fixed in `docs/phase3_protocol.md`.
+- The percent-of-control transform for coordinated activity `r` will not be
+  changed. Active electrodes and `r` remain visible limitations unless later
+  registered evidence materially changes their status.

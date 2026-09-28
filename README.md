@@ -29,6 +29,21 @@ counts, provenance, license, limitations, and the project-selection decision.
 See [`docs/phase2_baseline_results.md`](docs/phase2_baseline_results.md) for the
 held-out results and gate decision.
 
+## Reproduction interface
+
+```bash
+make setup
+make test
+make reproduce-lite
+make demo
+```
+
+`reproduce-lite` is result-only: it reads registered CSV artifacts, validates the
+frozen prediction schema, and regenerates tables and figures. It never launches
+training. Missing result files cause an explicit failure rather than an implicit
+retraining step. The schema is documented in
+[`schemas/prediction_schema_v1.yaml`](schemas/prediction_schema_v1.yaml).
+
 ## License
 
 Project code is licensed under Apache-2.0. EPA data are not redistributed through

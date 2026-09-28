@@ -20,10 +20,14 @@ dependencies = [
 
 [project.optional-dependencies]
 test = ["pytest==9.1.1"]
+demo = [
+  "matplotlib>=3.10,<4",
+  "seaborn>=0.13,<1",
+  "streamlit>=1.40,<2",
+]
 
 [tool.setuptools.packages.find]
 include = ["neurochip*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-

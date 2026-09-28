@@ -1,9 +1,20 @@
 PYTHON ?= python
+RESULTS_DIR ?= results
+ARTIFACTS_DIR ?= artifacts/reproduce-lite
 
-.PHONY: test baselines bt-plus m1 audit
+.PHONY: setup reproduce-lite demo test baselines bt-plus m1 audit
+
+setup:
+	$(PYTHON) -m pip install -e ".[test,demo]"
 
 test:
-	$(PYTHON) -m pytest -q
+	$(PYTHON) -m pytest -q -p no:cacheprovider
+
+reproduce-lite:
+	$(PYTHON) -m neurochip.reproduce_lite --results-dir $(RESULTS_DIR) --output-dir $(ARTIFACTS_DIR)
+
+demo:
+	$(PYTHON) -m streamlit run app/streamlit_app.py
 
 audit:
 	$(PYTHON) scripts/audit_epa_nfa.py

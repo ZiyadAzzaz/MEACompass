@@ -1,0 +1,35 @@
+schema_name: neurochip_prediction
+schema_version: 1.0.0
+frozen: 2026-09-28
+identity_columns:
+  - sample_id
+  - endpoint
+  - model
+  - fold
+  - seed
+required_columns:
+  sample_id: string
+  endpoint: string
+  model: string
+  chemical_id: string
+  cohort: string
+  dose: float_nullable
+  y_true: float
+  y_pred: float
+  uncertainty: float_nullable
+  uncertainty_lower: float_nullable
+  uncertainty_upper: float_nullable
+  fold: integer
+  seed: integer
+optional_columns:
+  bt_plus_pred: float_nullable
+  observed_div5: float_nullable
+  observed_div7: float_nullable
+  observed_div9: float_nullable
+  observed_div12: float_nullable
+  verdict: string_nullable
+  split_role: string_nullable
+notes:
+  - dose and uncertainty fields must exist but may be null before their registered analyses are available.
+  - uncertainty is interval width; bounds contain the corresponding prediction interval.
+  - new columns may be appended, but required columns may not be renamed or reinterpreted without a documented schema migration.

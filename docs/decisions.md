@@ -125,3 +125,26 @@
   an integrity audit and user review. Do not claim a validated early-prediction
   result yet.
 - Full evidence: `docs/sanity_gate_s_results.md`.
+
+## 2026-09-28 — Authorized post-registration Gate S integrity audit
+
+- The registered Gate S result remains **FAIL / STOP** and will not be rewritten.
+- Scope is limited to mechanism/data-flow review, fixed-hyperparameter diagnostic
+  models, baseline asymmetry, null distributions, and residual-signal
+  decomposition. Original data, targets, transforms, endpoints, splits,
+  predictions, results, and checkpoints are immutable.
+- All diagnostic outputs must be new files under `results/audit/`. M2/M3 remain
+  prohibited unless every audit PASS condition is met.
+- Diagnostic models use the frozen outer splits, seeds 0/1/2 unless explicitly
+  specified, no re-tuning, and median inner-selected hyperparameters.
+- Required controls are DOSE-SMOOTH, full well-level target shuffle, and 20
+  documented chemical-block permutations for B3 and M1. If the timebox is tight,
+  10 permutations are allowed only as an explicit deviation.
+- Audit outcomes are fixed as PASS — residual structure under null; LEAK FOUND;
+  or UNEXPLAINED. A full-shuffle beneficial CI, leaking feature/data path, or
+  target/index realignment triggers LEAK FOUND. Failure of any PASS condition
+  without an identified leak triggers UNEXPLAINED and stops before M2/M3.
+- If and only if the audit passes, the historical Gate S failure remains visible,
+  BT++ is added post hoc as inner-selected best of BT+ and DOSE-SMOOTH, and M2 may
+  resume with both BT+ and BT++ reported.
+- Deadline/timebox supplied by the user: 2026-09-29 14:00 Africa/Cairo.

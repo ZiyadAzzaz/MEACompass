@@ -368,3 +368,17 @@
   laboratory/device transfer, and it does not alter the locked primary headline.
 - Full evidence: `docs/f3_cross_cohort_results.md` and aggregate files under
   `results/f3_cross_cohort/`.
+
+## 2026-09-29 — F6 technical report generated
+
+- Built `docs/MEACompass_Technical_Report.pdf` from the reviewed Markdown source
+  using pinned, free ReportLab and pypdf dependencies.
+- The report is 18 pages including two appendix sections, contains all 24 required
+  topics, four evidence figures, the locked five-endpoint results, the preserved
+  Gate S stop, F3b CUT, and secondary F3 PASS with bounded wording.
+- PDF structure, page count, text extraction, required sections, figure embedding,
+  and absence of local machine paths are automated tests. The full repository
+  suite passed after generation.
+- Gate F6 is **BRANCH — publication content complete, user fields pending**.
+  Team information and AI-tool names/roles remain `USER CONFIRMATION REQUIRED`;
+  neither was guessed.

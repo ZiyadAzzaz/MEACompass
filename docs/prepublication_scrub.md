@@ -26,20 +26,24 @@ reachable git history where practical. Git history was not rewritten.
 - No tracked file exceeds the repository's 50 MiB artifact limit.
 - Raw EPA downloads, external refinement files, checkpoints, environments, and
   generated artifacts remain ignored.
-- Current external-validation candidates are all marked
-  `allowed_for_analysis=NO`; the fetcher refuses to download them.
+- Six external-validation candidates pass the amended file-level provenance rule
+  and are marked `allowed_for_analysis=YES`. No file was downloaded because F3b
+  was cut at the frozen-model availability gate; the fetcher also refuses until
+  every SHA-256 is frozen.
 - The repository contains no git remote and no public URL is claimed.
 
 ## Publication status
 
 **PUBLICATION STATUS: DO NOT PUSH**
 
-The only content blocker found by this scrub is the unconfirmed AI-tool
-disclosure. Making the repository public is also a human-only action under the
-approved protocol. Exact first-push commands are intentionally withheld until:
+The remaining content blockers are the unconfirmed AI-tool disclosure and
+unconfirmed team identity/affiliations in the technical report. Making the
+repository public is also a human-only action under the approved protocol. Exact
+first-push commands are intentionally withheld until:
 
 1. the user confirms every AI assistant/service used and its role;
 2. `docs/ai_tool_disclosure.md` is finalized and reviewed;
-3. the scrub and tests are rerun with `AI DISCLOSURE: PASS`.
+3. the user confirms team name, members, and affiliations;
+4. the scrub and tests are rerun with `AI DISCLOSURE: PASS`.
 
 No secret or sensitive-history remediation is currently required.

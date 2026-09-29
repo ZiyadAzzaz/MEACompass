@@ -9,3 +9,5 @@ pytest==9.1.1
 matplotlib>=3.10,<4
 seaborn>=0.13,<1
 streamlit>=1.40,<2
+reportlab==5.0.1
+pypdf==6.1.1

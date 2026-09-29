@@ -2,6 +2,13 @@
 
 **Toward Functional Digital Twins for Neural Organ-on-Chip Screening**
 
+## Team information
+
+**Team name, members, and affiliations:** USER CONFIRMATION REQUIRED.
+
+This field will be replaced only from the team's direct confirmation before final
+publication; identity is not guessed.
+
 ## Abstract
 
 Late functional readouts slow developmental-neurotoxicity triage. MEACompass
@@ -26,7 +33,7 @@ system, not an autonomous assay-termination system. The source is a rat cortical
 neural MEA assay—not an organ-on-chip dataset—and prospective human neural
 organ-on-chip validation remains required.
 
-## 1. Problem and intended use
+## 1. Problem and importance
 
 Developmental-neurotoxicity studies follow the maturation of neural cultures over
 multiple days. Waiting until DIV12 provides the endpoint but delays triage. The
@@ -49,7 +56,30 @@ values and intervals, and **HYPOTHESIS** statements about later or external use.
 It never makes an autonomous assay-termination decision. A wide interval produces
 an abstention recommendation and the assay continues.
 
-## 2. Data and audit
+Developmental neurotoxicity is difficult to study because neural-network
+formation is dynamic and functional disturbances can emerge over multiple days.
+The EPA Network Formation Assay is a new approach methodology that uses
+microelectrode arrays to follow activity in cortical cultures. Earlier reliable
+forecasts could prioritize review and allocate confirmatory measurements. They do
+not replace the final readout, toxicological interpretation, or human oversight.
+
+## 2. Related work
+
+Frank et al. established medium-throughput MEA measurements for evaluating
+chemical effects on neural network function. Shafer et al. evaluated network
+formation across 136 chemicals and several developmental timepoints, providing
+the longitudinal basis for this study. EPA and OECD work on the DNT in vitro
+testing battery places these assays in a broader new-approach-method framework;
+no single assay is a complete developmental-neurotoxicity decision system.
+MEACompass addresses a narrower problem: forecasting a later functional
+measurement from causally earlier observations while quantifying uncertainty.
+
+Its distinguishing design choices are chemical-disjoint evaluation, strong
+time-informed comparators, nested group-aware calibration, a registered negative
+control with an auditable stop, and selective prediction. Boosted trees suit this
+tabular, small-chemical regime and remain practical across nested group folds.
+
+## 3. Data and audit
 
 ### 2.1 Source and scope
 
@@ -91,7 +121,7 @@ names, seals, or logos must not imply endorsement. Project code is Apache-2.0.
 Chemical structures were resolved with the public PubChem PUG REST service. Raw
 EPA data, external-refinement files, caches, and checkpoints are excluded from Git.
 
-## 3. Preregistered protocol and registered deviations
+## 4. Preregistered protocol
 
 Primary endpoints, target construction, causal feature contract, group splits,
 metrics, chemical bootstrap, baseline grid, interval rules, and gates were frozen
@@ -99,7 +129,7 @@ at commit `8671fd84cc48d5b4fc45fe09ee20227cb3d46ac0` before predictive results.
 Later decisions are append-only in `docs/decisions.md`; they do not overwrite the
 original protocol.
 
-### 3.1 Time causality
+### 4.1 Time causality
 
 Primary inputs contain raw DIV5 and DIV7 measurements and missingness flags,
 exposure dose, cohort, and structure-only chemical descriptors. DIV9 is used only
@@ -107,7 +137,7 @@ in a declared post-lock time ablation. DIV12 measurements, DIV12 controls as
 features, official potency values, hit calls, and late viability measurements are
 forbidden. Automated tests fail closed on future-derived feature names.
 
-### 3.2 Chemical-disjoint nested evaluation
+### 4.2 Chemical-disjoint nested evaluation
 
 The outer design uses five stratified group folds repeated for seeds 0, 1, and 2.
 Canonical CAS RN is the group, so every alias, concentration, plate, well, and
@@ -116,7 +146,7 @@ inside each outer training set choose baselines and hyperparameters. Outer-test
 folds are evaluation only. A random well split would leak correlated views of the
 same chemical and answer an easier, operationally irrelevant question.
 
-### 3.3 Comparators
+### 4.3 Comparators
 
 - **B0:** dose-bin mean learned from the outer training data.
 - **B1/B1b/B2:** preregistered temporal and simple reference baselines.
@@ -130,7 +160,7 @@ same chemical and answer an easier, operationally irrelevant question.
   dose-smooth baseline on inner folds only. It was required by the integrity audit
   and is reported separately from the preregistered comparisons.
 
-### 3.4 Metrics and uncertainty
+### 4.4 Metrics and uncertainty
 
 The protocol reports DIV12 MAE, RMSE, and Spearman correlation, change-from-DIV7
 metrics, paired MAE difference, and relative MAE gain. Confidence intervals use
@@ -138,7 +168,13 @@ metrics, paired MAE difference, and relative MAE gain. Confidence intervals use
 independent observations. Nested group CV+ constructs nominal 90% intervals from
 training-fold residuals without using the outer test labels for calibration.
 
-## 4. Integrity gate
+## 5. Deviations and integrity audit
+
+BT+ was added as a registered deviation after the preregistered baseline set was
+found to omit dose-bin mean B0. BT++ was added only after the bounded integrity
+audit as a stricter comparison against a fixed dose-smooth model. Both are
+selected without outer-test labels. Neither change alters endpoints, splits,
+targets, M1 predictions, or the historical Gate S decision.
 
 The registered chemical-group permutation control unexpectedly showed a small but
 significant benefit for bursts versus BT+ (paired ΔMAE −0.525; 95% CI −0.969 to
@@ -163,7 +199,35 @@ The audit conclusion was `PASS_RESIDUAL_STRUCTURE_UNDER_NULL`, conditional on us
 of BT++ and retention of the original failed Gate S record. This is a registered
 audit resolution, not evidence that the initial control was irrelevant.
 
-## 5. Main held-out results
+## 6. Methods
+
+Each plate-well trajectory is joined across DIV5, DIV7, and DIV12, then normalized
+to its same-plate, same-DIV zero-dose control. M1 uses DIV5 and DIV7 neural
+measurements, missingness flags, log-transformed dose, cohort, 16 RDKit
+physicochemical descriptors, a 2,048-bit Morgan fingerprint, and a
+structure-missing indicator. Depending on inner validation, a boosted tree either
+predicts DIV12 directly or predicts the residual around a temporal baseline.
+
+The registered grid varies tree depth, learning rate, minimum child weight, and
+feature subsampling. Early stopping operates only on inner validation data.
+Missing measurements are explicit; there is no globally learned imputer or
+scaler. Confidence intervals and paired comparisons use chemicals, never wells,
+as the independent resampling unit.
+
+## 7. Implementation
+
+The implementation uses Python 3.11 with pinned scientific dependencies. Every
+training task writes a prediction checkpoint and tuning record. Fail-closed tests
+check time causality, chemical-group disjointness, prediction schemas, identity,
+terminology, claims, and result-only reproduction. `make reproduce-lite` reads
+saved evidence only and cannot import a training entry point.
+
+The demonstration consumes the versioned prediction schema and precomputed
+held-out predictions. It separates early observations, a prediction and interval,
+and research hypotheses. Its reliability badge renders the frozen abstention
+rule; it is not a laboratory instruction.
+
+## 8. Main results
 
 All values below aggregate the repeated chemical-disjoint outer-test predictions.
 Negative ΔMAE means M1 is better. Confidence intervals are chemical-level paired
@@ -185,7 +249,7 @@ M1 also improved over B3 significantly for active electrodes and coordinated
 activity; the M1–B3 intervals crossed zero for the other three endpoints. Thus the
 chemistry-augmented model is not claimed to dominate the simpler model everywhere.
 
-### 5.1 Dose and cohort robustness
+### 8.1 Dose and cohort robustness
 
 Dose cut points were learned on each outer training fold and applied unchanged to
 its test fold. At low and mid dose, all five endpoints had beneficial point
@@ -213,11 +277,21 @@ interval crossed zero despite a 13.8% point-estimate gain. These are within-stud
 subgroup results, not held-out cohort transfer and not external laboratory or
 device validation.
 
-## 6. Reliability and abstention
+![Dose-stratified performance](../artifacts/reproduce-lite/dose_strata.png)
+
+## 9. Calibration
 
 Nested group CV+ passed Gate M2 without switching to conformalized quantile
 regression. Empirical coverage for nominal 90% intervals was 91.03–92.40% overall;
 the lowest separate NTP/ToxCast coverage was 90.36%.
+
+![Calibration by endpoint](../artifacts/reproduce-lite/calibration.png)
+
+Coverage is reported with interval width because a trivially wide interval is not
+operationally useful. These retrospective intervals require local recalibration
+under a platform or population shift.
+
+## 10. Selective prediction / abstention
 
 At 70% retained coverage, the registered M3 requirement was at least 15% risk
 reduction with a chemical-bootstrap confidence interval below zero:
@@ -235,7 +309,9 @@ reported as limitations rather than omitted. The `r` result is also qualified:
 percent-control normalization has an extreme tail when the plate-control
 denominator is near zero.
 
-## 7. Time and practical-value analyses
+![Risk–coverage tradeoff](../artifacts/reproduce-lite/risk_coverage.png)
+
+## 11. Time ablation
 
 The frozen DIV5-only model is substantially weaker than DIV5+DIV7. DIV9 was run
 only after L1 lock and is an ablation, not a primary result.
@@ -248,13 +324,17 @@ only after L1 lock and is an ablation, not a primary result.
 | Network spikes | 45.78 | 40.72 | 15.6% | 37.28 |
 | Coordinated activity `r` | 58.83 | 48.61 | 22.7% | 48.74 |
 
-With the declared 70% acceptance policy, accepted cases receive a DIV12 forecast
-five days earlier, equal to 41.7% of the stated 12-day assay duration. Averaged
-over all predictions, this is about 3.5 expected decision-days saved. These are
-time quantities only—no monetary saving is claimed—and prospective workflow
-validation is required before operational use.
+![Time ablation](../artifacts/reproduce-lite/time_ablation.png)
 
-## 8. Interpretability
+## 12. Practical value
+
+DIV7 forecasts are available five days before the DIV12 endpoint for accepted
+cases. With the declared 70% policy, approximately 70% of retrospective held-out
+instances receive a forecast rather than an abstention. These are time quantities
+only—no monetary saving is claimed—and prospective workflow validation is
+required. A forecast can support prioritization but does not conclude the assay.
+
+## 13. Interpretability
 
 Exact XGBoost contribution values (`pred_contribs`, a TreeSHAP-style additive
 decomposition) were computed for the 25 frozen seed-0 outer models. DIV7 neural
@@ -269,19 +349,40 @@ rule: three low-error examples (Fluorene, Glycerol, Picoxystrobin) and two
 high-error failures (Tributyltin chloride, Mercuric chloride). They are descriptive
 and are not used to estimate generalization.
 
-## 9. Potency appendix
+## 14. External validation and cohort-shift robustness
 
-Official EPA EC50 values summarize ontogeny area under the curve, whereas this
-project predicts DIV12 outcomes. Missing official EC50 values mean no fitted
-threshold or an effect above the tested range; they are not zeros. A deterministic
-exploratory Hill-grid analysis found Spearman correlations of 0.773–0.868 between
-predicted DIV12 curve estimates and available official AUC EC50 values across
-54–61 comparable chemicals. Observed DIV12 values correlated 0.877–0.950 with the
-same official values. Because the targets differ, Gate P1 is
-`APPENDIX_TARGET_MISMATCH`; the project does **not** claim to predict potency five
-days earlier.
+F3b external refinement scoring was CUT before data acquisition. The six declared
+EPA files passed the amended file-level provenance rule, but the exact serialized
+historical outer-fold models required for a genuinely frozen ensemble were not
+available. Refitting would violate the registered definition. No external
+refinement file was downloaded, harmonized, or scored.
 
-## 10. Limitations and validity boundary
+The registered fallback held out each 2019 screening cohort in turn, excluded 11
+chemicals shared with the source cohort, and used fixed hyperparameters with no
+target-cohort tuning. M1 significantly beat source-selected BT++ on all five
+endpoints in both directions. Gains were 10.3–34.5% for ToxCast→NTP and
+15.1–50.3% for NTP→ToxCast; every paired chemical-bootstrap interval was below
+zero. This supports the narrow conclusion: **retained predictive value under a
+held-out NTP↔ToxCast cohort shift without model retuning.** It is not external
+laboratory/device transfer and does not replace the locked headline.
+
+## 15. Adoption path for neural organ-on-chip research
+
+MEACompass provides an evaluation and adaptation workflow that can be retrained,
+recalibrated, and prospectively validated on a laboratory's own longitudinal MEA
+dataset. It is not evidence that the frozen EPA model can be deployed directly on
+a new chip.
+
+A responsible adaptation maps local electrodes, activity features, timepoints,
+controls, and missingness to an explicit schema. Control normalization is checked
+for stability. Chemical- or intervention-disjoint splits reflect intended use,
+with all replicates grouped. The model is trained locally, intervals are calibrated
+only on local development data, and coverage is audited across batches, devices,
+cell donors, and exposure ranges. Drift triggers recalibration or abstention. A
+prospective study with predeclared criteria and human review is required before
+operational use.
+
+## 16. Limitations
 
 - The study is retrospective and covers 125–136 chemical groups by endpoint.
 - Rat cortical culture biology cannot establish human neural organ-on-chip transfer.
@@ -304,7 +405,32 @@ days earlier.
 - The prototype has not been prospectively validated, monitored under deployment
   drift, or approved for laboratory decisions.
 
-## 11. Reproduction
+## 17. Ethics and compliance
+
+MEACompass is a research decision-support system, not an autonomous
+assay-termination system. A low-confidence case continues to DIV12; a
+high-confidence forecast remains subject to expert review. The interface labels
+observations, predictions, and hypotheses separately to limit automation bias.
+No human participant data are used. Raw source data and derived per-well external
+files are not redistributed by this repository.
+
+Claims are bounded to rat cortical MEA data. Human relevance, regulatory
+acceptance, direct neural organ-on-chip performance, and causal mechanism are
+outside the evidence. The project does not imply EPA endorsement. Prospective
+validation, governance, drift monitoring, and a human escalation path are
+prerequisites for real laboratory use.
+
+## 18. AI-tool disclosure
+
+| Tool | Role | Human verification | Scientific-number source |
+|---|---|---|---|
+| USER CONFIRMATION REQUIRED | USER CONFIRMATION REQUIRED | Repository tests, source review, and final author review | Executed CSV/JSON result artifacts only |
+
+No AI assistant or service name is inferred. The final disclosure will list only
+tools and roles confirmed directly by the team. Human authors remain responsible
+for study design, code review, source checking, interpretation, and claims.
+
+## 19. Reproduction
 
 The result-only reproduction path is:
 
@@ -331,7 +457,22 @@ Key evidence artifacts are:
 - `results/potency_summary.csv` — explicitly non-primary potency appendix; and
 - `results/feature_importance.csv` and `results/case_studies.csv` — interpretation.
 
-## 12. Conclusion
+The environment is declared in `environment.yml`; package dependencies are pinned
+in `pyproject.toml`. Data acquisition is manifest-driven and verifies hashes. A
+clean-clone reproduction has passed tests and the result-only figure pipeline.
+Full training remains separate so judges can verify tables and figures without
+automatically retraining models.
+
+## 20. Sources and licenses
+
+Project code is Apache-2.0. The original EPA release is referenced by DOI and its
+catalog/ScienceHub terms; no raw EPA file is committed. PubChem provides structure
+lookups and RDKit computes local deterministic descriptors. The F3b refinement
+repository has no detected root license, so only the amended file-level provenance
+determination is recorded; no refinement file is redistributed. The file-oriented
+record is `docs/sources_and_licenses.md`.
+
+## 21. Conclusion
 
 MEACompass demonstrates a credible retrospective result: DIV7 information can
 forecast DIV12 neural MEA endpoints for unseen chemicals more accurately than
@@ -343,11 +484,54 @@ honest continuation path for uncertain cases. The correct next scientific step i
 a frozen, prospective external validation on human neural organ-on-chip data—not
 a claim that the current rat assay model is ready to control a laboratory.
 
-## 13. References
+## 22. References
 
 - EPA dataset and DOI: https://doi.org/10.23719/1503191
 - Data.gov catalog: https://catalog.data.gov/dataset/data-for-evaluation-of-chemical-effects-on-network-formation-in-cortical-neurons-grown-on-
 - Shafer et al. (2019): https://doi.org/10.1093/toxsci/kfz052
+- Frank et al. (2017): https://doi.org/10.1016/j.tiv.2017.09.016
+- EPA DNT NAM fact sheet: https://www.epa.gov/system/files/documents/2022-10/DNT_Factsheet_10_28_22_Final_1.pdf
+- OECD DNT in vitro battery recommendations: https://doi.org/10.1787/91964ef3-en
 - EPA ScienceHub license: https://pasteur.epa.gov/license/sciencehub-license.html
 - PubChem PUG REST: https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest
 - Project license: `LICENSE` (Apache-2.0)
+
+## 23. Appendix A — Endpoint and evidence map
+
+| Endpoint | Gain vs BT+ | Gain vs BT++ | M2 coverage | M3 at 70% |
+|---|---:|---:|---:|---|
+| Bursts/min | 17.0% | 16.2% | 91.08% | Limitation: 4.6% reduction |
+| Mean firing rate | 14.2% | 12.3% | 91.53% | Pass: 18.9% reduction |
+| Active electrodes | 39.0% | 42.9% | 92.13% | Pass: 18.0% reduction |
+| Network spikes | 15.6% | 14.2% | 91.03% | Limitation: 5.3%, CI crosses zero |
+| Coordinated activity `r` | 22.7% | 26.4% | 92.40% | Pass: 28.4%, normalization caveat |
+
+Primary rows trace to `results/main_results.csv`, BT++ rows to
+`results/bt_plus_plus.csv`, calibration to `results/m2_calibration.csv`, and
+risk–coverage to `results/m3_risk_coverage.csv`. F3 secondary results trace to
+`results/f3_cross_cohort/summary.csv`.
+
+### Appendix A.1 Potency target mismatch
+
+Official EPA EC50 values summarize ontogeny area under the curve, whereas this
+project predicts DIV12 outcomes. Missing official EC50 values are not zeros. An
+exploratory Hill-grid analysis found rank correlations of 0.773–0.868 between
+predicted DIV12 curve estimates and available official AUC EC50 values across
+54–61 chemicals. Because the targets differ, the result is appendix-only and the
+project does not claim to predict official potency five days earlier.
+
+## 24. Appendix B — Registered status ledger
+
+| Gate | Status | Meaning |
+|---|---|---|
+| Gate S | STOP, preserved | Initial block permutation showed a small bursts benefit |
+| Bounded integrity audit | PASS | No leakage; full shuffle clean; separation from 20 null runs |
+| M1 | PASS | Five-endpoint locked point-prediction result |
+| M2 | PASS | Nominal 90% coverage attained for every endpoint |
+| M3 | PASS, 3/5 | Passes for firing rate, active electrodes, and `r` |
+| L1 | LOCK | Primary model and reliability protocol frozen |
+| F3b | CUT | Exact serialized frozen models unavailable; no external data scored |
+| F3 | PASS, secondary | Five wins in both chemically disjoint cohort directions |
+
+This ledger preserves failures, deviations, and boundaries alongside positive
+results. No appendix result supersedes the locked primary evaluation.

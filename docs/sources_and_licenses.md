@@ -38,3 +38,13 @@ unanswered.
 Python dependencies and versions are declared in `pyproject.toml`,
 `requirements.txt`, and `environment.yml`. Each dependency retains its own
 license. No EPA seal, logo, or project affiliation is claimed or implied.
+
+## AI assistance
+
+The confirmed AI-tool disclosure is in `docs/ai_tool_disclosure.md`. Codex/the
+repository coding agent supported implementation and artifact preparation;
+ChatGPT supported planning and review; Claude supported independent review and
+source exploration. None was accepted as a source of scientific result values.
+All values came from executed code and saved artifacts, automated claim tests
+were used, and the author manually reviewed the public scientific claims and
+submission materials.

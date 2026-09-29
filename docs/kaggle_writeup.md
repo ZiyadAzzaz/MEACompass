@@ -5,7 +5,7 @@
 Ziyad Azzaz; College of Artificial Intelligence; Arab Academy for Science,
 Technology & Maritime Transport (AASTMT); Alamein Campus, Egypt.
 
-Team name: **USER CONFIRMATION REQUIRED**.
+Team name: **MEACompass**. Solo submission; no additional team members.
 
 ## Links
 
@@ -77,4 +77,4 @@ The repository provides `make test`, `make reproduce-lite`, and `make demo`. Lig
 
 The primary source is the public EPA neural network formation assay catalog recorded with URLs and SHA-256 hashes in `schemas/epa_downloads_v1.json`. It contains animal-derived assay measurements and no human or personal data. Raw source files are not redistributed. Project-authored code and documentation use Apache-2.0; third-party data and dependencies retain their own terms. PubChem supplies public structure lookups. No EPA endorsement is claimed or implied. Full provenance and limitations appear in [Sources and licenses](sources_and_licenses.md).
 
-**AI-tool disclosure — USER CONFIRMATION REQUIRED BEFORE PUBLICATION.** The final entry will name only the assistants and services the team confirms were actually used, their roles in code/writing/figures/translation, and the human verification performed. Every scientific number above comes from executed, tested result artifacts; no number is accepted from generated prose.
+**AI-tool disclosure.** Codex/the repository coding agent assisted with implementation, experiment execution, testing, reproducibility, result artifacts, documentation, the deck, and subtitles. ChatGPT assisted with planning, strategy, protocol/gate and claim review, prompt drafting, and submission planning. Claude provided independent review, source exploration, strategy/protocol feedback, and critique. Claude and generated prose were not sources of scientific result values. All scientific numbers came from executed code and stored artifacts; automated claim-consistency tests were used, and Ziyad Azzaz manually reviewed the public scientific claims, report, README, presentation, and submission materials.

@@ -379,9 +379,9 @@
 - PDF structure, page count, text extraction, required sections, figure embedding,
   and absence of local machine paths are automated tests. The full repository
   suite passed after generation.
-- Gate F6 is **BRANCH — publication content complete, user fields pending**.
-  Team information and AI-tool names/roles remain `USER CONFIRMATION REQUIRED`;
-  neither was guessed.
+- Gate F6 was **BRANCH — publication content complete, user fields pending**.
+  Those fields were later confirmed by the author on 2026-09-29 and are now
+  filled without inference.
 
 ## 2026-09-29 — Gate F7 deck and video package: BRANCH
 
@@ -404,7 +404,8 @@
   curated screenshot was substituted.
 - The video package now includes a 4:45 shot list, an early demo segment, a
   six-group spoken-number budget, and provisional English and Chinese SRT files.
-  The Chinese first mention uses “最强基线 BT+” and “平均绝对误差（MAE）”. Final
+  The Chinese first mention uses “经内部验证选择的强基线 BT+” and
+  “平均绝对误差（MAE）”. Final
   timings require the recorded narration and human translation review.
 
 ## 2026-09-29 — Gate F8 Kaggle writeup: BRANCH
@@ -465,8 +466,8 @@
   exclusion, 18-input/five-endpoint harmonization contract, bootstrap seed and
   draws, and STRONG/MIXED/FAIL/CUT rules.
 - Verified author identity is Ziyad Azzaz, College of Artificial Intelligence,
-  AASTMT, Alamein Campus, Egypt. Team name and AI-tool identities remain
-  `USER CONFIRMATION REQUIRED`; neither is inferred.
+  AASTMT, Alamein Campus, Egypt. Team and AI-tool fields were pending at this
+  registration step and were later confirmed by the author on 2026-09-29.
 - No refinement file was fetched, opened, harmonized, or scored while preparing
   this registration.
 - Immutable registration commit before external access:
@@ -523,3 +524,16 @@ new performance browsing:
 
 These labels are descriptive navigation aids. They do not change the embedded
 cohort-balanced subset, estimate performance, or select a new scientific result.
+
+## 2026-09-29 — Publication identity and AI disclosure confirmed
+
+- Team: **MEACompass**, a solo submission by Ziyad Azzaz; no additional members.
+- The author confirmed use of Codex/the repository coding agent, ChatGPT, and
+  Claude with the roles recorded in `docs/ai_tool_disclosure.md`.
+- Scientific numbers remain sourced only from executed code and saved result
+  artifacts. Automated claim tests and manual author review are explicitly
+  disclosed.
+- A complete current-tree, binary/package, and reachable-history scrub was rerun:
+  no secret, local path, raw data, checkpoint, other-project file, sensitive
+  filename, or blob over 10 MiB was found. Status: **SAFE TO PUBLISH**, subject
+  to authenticated GitHub identity equalling `ZiyadAzzaz` at creation time.

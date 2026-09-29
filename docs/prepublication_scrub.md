@@ -23,10 +23,10 @@ rewritten.
 | Public demo package | PASS | Self-contained 160,901-byte HTML; local HTTP 200; OBSERVED/PREDICTED/HYPOTHESIS and all three registered cases present; no external request |
 | License boundary | PASS | Apache-2.0 covers project-authored material; data/dependency terms and the limited EPA file-level rationale are separated |
 | Scientific boundaries | PASS | Failed Gate S, rat-MEA scope, 3/5 abstention limitation, F3b harmonization CUT, and non-autonomous-use wording remain visible |
-| AI disclosure | **BLOCKED — USER CONFIRMATION REQUIRED** | Template exists, but actual assistant/service identities and roles are not confirmed |
-| Team name | **BLOCKED — USER CONFIRMATION REQUIRED** | Verified author/institution are filled; competition team name is not verified |
+| AI disclosure | PASS | Author confirmed Codex/coding-agent, ChatGPT, and Claude roles; scientific-number and human-review boundaries are stated consistently |
+| Team identity | PASS | MEACompass; solo submission by Ziyad Azzaz with the verified AASTMT affiliation; no other members |
 | Deck screenshot | BRANCH | Final-named 12-slide deck retains a visible real-capture requirement; no mock screenshot was inserted |
-| GitHub authentication | **BLOCKED** | Expected account label is `ZiyadAzzaz`, but the stored GitHub CLI credential is invalid; authenticated API identity cannot yet be verified |
+| GitHub identity rule | PASS / runtime check required | Publication is authorized only if the authenticated API identity immediately before creation is exactly `ZiyadAzzaz` |
 
 ## External-validation handling
 
@@ -37,17 +37,11 @@ compatibility threshold. Only aggregate harmonization/audit evidence is tracked.
 
 ## Publication decision
 
-**PUBLICATION SECURITY: BLOCKED — NOT YET SAFE TO PUBLISH**
+**PUBLICATION SCRUB: PASS — SAFE TO PUBLISH**
 
-The repository content scan found no secret, raw-data, checkpoint, local-path,
-or oversized-history defect. Publication is nevertheless blocked until:
-
-1. the user confirms the actual AI tools/services and their roles;
-2. the user confirms the competition team name (or explicitly chooses no team
-   name beyond the project name, if the platform allows it);
-3. GitHub CLI is reauthenticated and `gh api user --jq .login` returns exactly
-   `ZiyadAzzaz`;
-4. the disclosure fields are filled and the complete scrub/tests are rerun.
-
-No public repository, Pages deployment, tag, or release may be created before
-this document is regenerated with the exact final status `SAFE TO PUBLISH`.
+The complete rerun found no secret, raw-data, checkpoint, local-path,
+other-project, malformed-package, or oversized-history defect. Team and AI-tool
+fields are confirmed and filled. The repository is safe for public creation and
+push, conditional on the final runtime identity command returning exactly
+`ZiyadAzzaz`. The slide-10 real screenshot and final video remain post-publication
+human/recording work and do not weaken repository security.

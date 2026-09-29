@@ -4,6 +4,7 @@
 
 Author: **Ziyad Azzaz**, College of Artificial Intelligence, Arab Academy for
 Science, Technology & Maritime Transport (AASTMT), Alamein Campus, Egypt.
+Team: **MEACompass** — solo submission; no additional team members.
 
 MEACompass uses measurements available by day in vitro 7 (DIV7) to forecast
 five DIV12 functional outcomes for unseen chemicals. It adds calibrated 90%
@@ -112,3 +113,15 @@ training, interval recalibration, and prospective human-reviewed validation.
 
 Project code is Apache-2.0. EPA data are not redistributed through Git and retain
 the terms linked from the data audit.
+
+## AI-tool disclosure
+
+Codex/the repository coding agent assisted with implementation, experiment
+execution, testing, reproducibility, result artifacts, documentation, the deck,
+and subtitles. ChatGPT assisted with planning, strategy, protocol/gate and claim
+review, prompt drafting, and submission strategy. Claude provided independent
+review, source exploration, strategy/protocol feedback, and critique. Claude and
+generated prose were not sources of scientific result values. Every number came
+from executed code and saved artifacts; automated claim tests were used, and the
+author manually reviewed all public-facing scientific claims and materials. See
+[`docs/ai_tool_disclosure.md`](docs/ai_tool_disclosure.md).

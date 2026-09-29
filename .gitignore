@@ -88,3 +88,4 @@ htmlcov/
 Thumbs.db
 ~$*.pptx
 docs/*_WORKING.pptx
+docs/media/*_DRAFT_SILENT.mp4

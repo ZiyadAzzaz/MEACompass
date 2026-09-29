@@ -550,5 +550,19 @@ cohort-balanced subset, estimate performance, or select a new scientific result.
 - Anonymous HTTP checks returned 200 for both repository and demo. The live HTML
   contains all three preregistered cases, OBSERVED/PREDICTED/HYPOTHESIS labels,
   and no external URL requests. Gate F5 is **PASS**.
-- The real logged-out neutral-case screenshot for slide 10 remains a human visual
-  capture; no mock or reconstructed image is substituted.
+- The author supplied a logged-out full-page PDF capture of the public demo. Its
+  embedded image was cropped without redrawing values and inserted into slide
+  10. The source PDF remained unchanged; no mock interface was substituted.
+
+## 2026-09-29 — Final media production boundary
+
+- The final 12-slide deck passed render and content QA with the authentic public
+  demo visible on slide 10.
+- The approved in-app browser was unavailable, so no new live selector run or
+  additional browser screenshots were represented as completed.
+- No paid service or synthetic narration was used. A free local 4:45, 1080p,
+  30-fps silent production draft was generated from the real rendered deck.
+- Final English narration must be recorded by Ziyad Azzaz. Both subtitle files
+  remain section-level guides until they are retimed to that actual audio.
+- The submission tag remains withheld until the narrated video, final subtitle
+  timing, public video URL, and final logged-out link checks are complete.

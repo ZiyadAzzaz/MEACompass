@@ -25,7 +25,7 @@ rewritten.
 | Scientific boundaries | PASS | Failed Gate S, rat-MEA scope, 3/5 abstention limitation, F3b harmonization CUT, and non-autonomous-use wording remain visible |
 | AI disclosure | PASS | Author confirmed Codex/coding-agent, ChatGPT, and Claude roles; scientific-number and human-review boundaries are stated consistently |
 | Team identity | PASS | MEACompass; solo submission by Ziyad Azzaz with the verified AASTMT affiliation; no other members |
-| Deck screenshot | BRANCH | Final-named 12-slide deck retains a visible real-capture requirement; no mock screenshot was inserted |
+| Deck screenshot | PASS | Final-named 12-slide deck contains an authentic crop of the supplied logged-out GitHub Pages capture; no mock screenshot or manually redrawn value was inserted |
 | GitHub identity and repository | PASS | `gh api user --jq .login` returned exactly `ZiyadAzzaz`; public `main` repository created at `https://github.com/ZiyadAzzaz/MEACompass` |
 
 ## External-validation handling
@@ -43,5 +43,6 @@ The complete rerun found no secret, raw-data, checkpoint, local-path,
 other-project, malformed-package, or oversized-history defect. Team and AI-tool
 fields are confirmed and filled. The runtime identity check returned exactly
 `ZiyadAzzaz`, the scrubbed history was pushed publicly, and the static demo was
-verified anonymously. The slide-10 real screenshot and final video remain
-post-publication human/recording work and do not weaken repository security.
+verified anonymously. Slide 10 now contains the authentic public-demo capture.
+The final English voice recording, subtitle retiming, video upload, and public
+video URL remain human publication work and do not weaken repository security.

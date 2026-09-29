@@ -12,6 +12,8 @@ Team name: **MEACompass**. Solo submission; no additional team members.
 1. Demo video: **VIDEO_URL_TO_BE_ADDED_AFTER_UPLOAD**
 2. Public repository: [github.com/ZiyadAzzaz/MEACompass](https://github.com/ZiyadAzzaz/MEACompass)
 3. Live demo: [ziyadazzaz.github.io/MEACompass/demo/](https://ziyadazzaz.github.io/MEACompass/demo/) — static and precomputed.
+4. Technical report: [MEACompass Technical Report](https://github.com/ZiyadAzzaz/MEACompass/blob/main/docs/MEACompass_Technical_Report.pdf)
+5. Competition deck: [MEACompass Competition Deck](https://github.com/ZiyadAzzaz/MEACompass/blob/main/docs/MEACompass_Competition_Deck.pptx)
 
 ## Project summary
 

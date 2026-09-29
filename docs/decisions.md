@@ -35,6 +35,29 @@
   preregistration before scoring.
 - Full record: `docs/f3b_external_validation.md`.
 
+## 2026-09-29 — F3b controlled provenance protocol registered
+
+- This registration does not reopen or modify the locked primary analysis.
+  External evaluation is post-lock secondary work only.
+- The user reports that permission clarification was requested by email and a
+  GitHub issue on 2026-09-29. No response or verification link is stored here;
+  this is not recorded as permission granted.
+- For files verified as EPA-authored U.S. Government works, document the
+  17 U.S.C. §105 public-domain rationale. Repository ownership alone is not
+  sufficient to classify every included file as public domain. Each downloaded
+  file must have documented provenance and a reuse basis before harmonization or
+  scoring.
+- Public GitHub access does not equal reuse permission. Unclear files are skipped.
+- The pre-acquisition manifest is `results/f3b/source_manifest.csv`. Only rows
+  marked `allowed_for_analysis=YES` may enter the pinned, checksum-verified fetch.
+- Required order after provenance approval: controlled fetch → committed
+  external preregistration → chemical-overlap exclusion → endpoint
+  harmonization → frozen M1 evaluation → STRONG/MIXED/FAIL interpretation.
+- No retraining, external tuning, or silent recalibration is allowed. Zero-shot
+  calibration and any locally recalibrated secondary analysis must remain separate.
+- Current decision remains **CUT** because every required data-bearing candidate
+  has unclear file-level provenance/reuse status.
+
 ## 2026-09-29 — Gate F5: BRANCH / PUBLICATION READY
 
 - Built a self-contained static fallback from precomputed outer-test predictions

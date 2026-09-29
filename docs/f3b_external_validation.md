@@ -1,8 +1,8 @@
-# F3b frozen external validation: source and license gate
+# F3b frozen external validation: controlled provenance gate
 
 ## Gate record
 
-**Status: SKIPPED BEFORE DATA ACQUISITION OR SCORING**
+**Status: CUT BEFORE DATA ACQUISITION OR SCORING**
 
 The approved F3b protocol requires a clearly public and reusable license before
 the external repository is obtained. The source audit was performed first and no
@@ -37,8 +37,59 @@ Per the registered F3b rule, license clarity is a prerequisite. Therefore:
 - the frozen M1 model was not scored on the refinement release;
 - no external-validation claim is permitted.
 
-F3b may resume only after the repository owner supplies an explicit license or
-written permission covering the required source data and derived evaluation.
-When that happens, the complete preregistration must be committed before any
-harmonization or scoring begins. Until then, frozen external validation remains
-future work rather than a positive or negative scientific result.
+## Controlled reconsideration registered 2026-09-29
+
+The user reports that permission clarification was requested by email and by a
+GitHub issue on 2026-09-29. No message contents, issue URL, recipient confirmation,
+or response were supplied to this repository, so this is recorded as a
+user-reported request rather than verified permission. Private correspondence is
+not copied into publication artifacts.
+
+Controlling rule:
+
+> For files verified as EPA-authored U.S. Government works, document the
+> 17 U.S.C. §105 public-domain rationale. Repository ownership alone is not
+> sufficient to classify every included file as public domain. Each downloaded
+> file must have a documented provenance and reuse basis before harmonization or
+> scoring.
+
+This is not a blanket license claim. Public GitHub access is not treated as reuse
+permission. A file with unclear provenance is skipped.
+
+### Registered execution sequence
+
+1. **Pre-acquisition manifest.** Every candidate appears in
+   `results/f3b/source_manifest.csv`. Only `allowed_for_analysis=YES` may be
+   fetched or analyzed.
+2. **Controlled fetch.** `scripts/fetch_f3b.py` accepts the pinned commit only,
+   downloads only declared files, requires a frozen SHA-256, refuses undeclared
+   local files, and writes under ignored `data/external/f3b/`.
+3. **Pre-registration.** Before outcomes, harmonization, or performance are
+   viewed, freeze endpoint/time mappings, transforms, controls, chemical
+   canonicalization, overlap exclusion, missingness, inclusion rules, metrics,
+   chemical bootstrap, calibration, abstention, and gate criteria in
+   `docs/f3b_preregistration.md`; commit it separately.
+4. **Chemical independence.** Exclude every CAS RN present in original model
+   development and report total, overlap-excluded, and remaining counts.
+5. **Harmonization.** Classify each endpoint as `EXACT MATCH`,
+   `COMPATIBLE WITH DECLARED TRANSFORM`, or `NOT COMPARABLE`; score only the first
+   two categories.
+6. **Frozen evaluation.** No retraining or tuning. Report MAE, RMSE, Spearman,
+   gain versus external BT+/BT++, chemical-bootstrap 95% intervals, and zero-shot
+   coverage if applicable. Any local recalibration is a separate secondary result.
+7. **Interpretation.** Classify as STRONG, MIXED, FAIL, or CUT. Even a successful
+   result is post-lock secondary evidence and does not imply human, organ-on-chip,
+   laboratory/device, or deployment transfer.
+
+### Current file-level result
+
+Pinned tree metadata identifies candidate data-bearing files, but no candidate
+currently has verified individual authorship plus a reuse grant or documented
+§105 basis. All are therefore marked `allowed_for_analysis=NO`. No raw external
+file was downloaded, no external outcome was viewed, and no preregistration or
+scoring phase was activated.
+
+F3b may resume only after explicit file-level permission or provenance evidence
+covers every required input. The full preregistration must then be committed
+before harmonization or scoring. Until then, external validation remains future
+work rather than a positive or negative scientific result.

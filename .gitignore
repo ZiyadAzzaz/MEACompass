@@ -1,7 +1,11 @@
 # Data and generated artifacts
 data/raw/
 data/derived/
+data/external/f3b/
 results/*
+!results/f3b/
+results/f3b/*
+!results/f3b/source_manifest.csv
 !results/baselines.csv
 !results/baseline_manifest.json
 !results/bt_plus.csv

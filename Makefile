@@ -2,6 +2,11 @@ PYTHON ?= python
 RESULTS_DIR ?= results
 ARTIFACTS_DIR ?= artifacts/reproduce-lite
 
+ifeq ($(OS),Windows_NT)
+SHELL := cmd.exe
+.SHELLFLAGS := /C
+endif
+
 .PHONY: setup fetch-results data train-all reproduce-lite demo test baselines bt-plus m1 audit
 
 setup:

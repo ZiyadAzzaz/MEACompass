@@ -13,7 +13,7 @@ code are committed. The registration commit SHA is recorded here immediately
 after that commit. External outcomes never select a feature, parameter, model,
 comparator, residual, interval, threshold, mapping, or endpoint.
 
-Registration commit: **PENDING THIS COMMIT**
+Registration commit: `4d2d5de553ee46909725d07910c361fc0e2106d8`
 
 ## Deterministic final M1
 

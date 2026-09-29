@@ -469,3 +469,5 @@
   `USER CONFIRMATION REQUIRED`; neither is inferred.
 - No refinement file was fetched, opened, harmonized, or scored while preparing
   this registration.
+- Immutable registration commit before external access:
+  `4d2d5de553ee46909725d07910c361fc0e2106d8`.

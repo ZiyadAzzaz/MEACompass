@@ -2,12 +2,13 @@
 
 ## Gate record
 
-**Status: CUT BEFORE DATA ACQUISITION OR SCORING**
+**Status: CUT AT FROZEN-MODEL AVAILABILITY GATE**
 
-The approved F3b protocol requires a clearly public and reusable license before
-the external repository is obtained. The source audit was performed first and no
-external predictions, harmonization statistics, or endpoint scores were viewed or
-computed.
+The amended F3b protocol provides a four-part, file-level provenance rule. The
+source audit was performed first. Six explicitly declared candidate files meet
+that rule, but the exact serialized historical M1 models required by the frozen
+evaluation definition are not present. No external data, predictions,
+harmonization statistics, or endpoint scores were viewed or computed.
 
 | Field | Frozen record |
 |---|---|
@@ -29,9 +30,9 @@ authorship of every included file are not established by the repository metadata
 
 ## Decision
 
-Per the registered F3b rule, license clarity is a prerequisite. Therefore:
+Per the registered F3b rule, model availability is also a prerequisite. Therefore:
 
-- no repository clone or bulk download was performed;
+- no repository clone or external data download was performed;
 - no external files were copied into this project;
 - no overlap or harmonization gate was computed;
 - the frozen M1 model was not scored on the refinement release;
@@ -81,15 +82,27 @@ permission. A file with unclear provenance is skipped.
    result is post-lock secondary evidence and does not imply human, organ-on-chip,
    laboratory/device, or deployment transfer.
 
-### Current file-level result
+### Amended file-level result
 
-Pinned tree metadata identifies candidate data-bearing files, but no candidate
-currently has verified individual authorship plus a reuse grant or documented
-§105 basis. All are therefore marked `allowed_for_analysis=NO`. No raw external
-file was downloaded, no external outcome was viewed, and no preregistration or
-scoring phase was activated.
+The official repository description associates the repository with the Vahanan
+et al. NFA-refinement manuscript. `ReadMe_MV_27June2025.txt` identifies
+`source_files` as inputs needed for the manuscript RMD and identifies the
+`tcplfit2_results` inputs/results. GitHub's per-path commit history traces all six
+candidate files to commit `ac86b693`, authored with an `epa.gov` address. No
+third-party dataset or separate license is stated for those candidate paths.
+Under the user-approved four-part rule they are marked
+`allowed_for_analysis=YES`. This conclusion is limited to the manifest files and
+is not a blanket license statement for the repository.
 
-F3b may resume only after explicit file-level permission or provenance evidence
-covers every required input. The full preregistration must then be committed
-before harmonization or scoring. Until then, external validation remains future
-work rather than a positive or negative scientific result.
+The controlled fetch still refuses to run because SHA-256 values have not been
+frozen, and acquisition is unnecessary while the model gate fails. The repository
+contains 75 tuning records and locked out-of-fold predictions, but no serialized
+M1 model artifacts. The amendment defines an external prediction as the mean of
+15 locked outer-fold models per endpoint and expressly forbids refitting. F3b is
+therefore CUT without scoring. The full registered specification is in
+`docs/f3b_preregistration.md`.
+
+F3b may resume only if the exact historical serialized models are supplied and
+their hashes verified. It remains future work rather than a positive or negative
+external-transfer result. The registered fallback is the post-lock, directional
+ToxCast-to-NTP and NTP-to-ToxCast analysis using frozen hyperparameters.

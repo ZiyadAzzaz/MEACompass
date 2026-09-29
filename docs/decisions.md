@@ -318,3 +318,29 @@
   established explanation; the intended early-triage use is exposed wells.
 - The locked title is restored in the report and README. Deck-title alignment is
   reserved for the required F7 deck rebuild.
+
+## 2026-09-29 — F3b provenance amendment and frozen-model definition
+
+- Replaced the earlier per-file-authorship requirement with the user-approved
+  four-part provenance rule. The six declared candidate files are in the
+  official USEPA repository, are described by the repository/readme as inputs or
+  outputs for the NFA-refinement manuscript, trace to commit `ac86b693` authored
+  with an `epa.gov` address, and have no third-party dataset license stated in
+  their repository path or provenance record. They are therefore marked
+  `allowed_for_analysis=YES`; this is not a blanket repository license claim.
+- Permission clarification requested by email and GitHub issue on 2026-09-29
+  remains recorded; no response has been supplied.
+- Frozen external prediction is now defined as the mean of 15 historical M1
+  outer-fold models per endpoint (five folds × seeds 0/1/2). Model file hashes
+  must be registered before acquisition or scoring. No refit or reconstruction
+  is permitted.
+- The repository contains the 75 tuning records and locked out-of-fold
+  predictions but no serialized M1 model artifacts. F3b therefore remains
+  **CUT at the model-availability gate**. Eligible external files were not
+  acquired, harmonized, or scored.
+- Inputs and endpoints are both covered by the overlap harmonization gate in
+  `docs/f3b_preregistration.md`. Any mapping must use overlapping recordings
+  only; new test conditions remain untouched.
+- Per the amendment fallback, frozen-hyperparameter ToxCast→NTP and NTP→ToxCast
+  evaluation is the next post-lock secondary scientific analysis, time-boxed to
+  one day.

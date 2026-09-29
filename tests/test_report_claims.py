@@ -72,6 +72,13 @@ def test_kaggle_summary_and_boundary_are_submission_ready() -> None:
     assert "VIDEO_URL_TO_BE_ADDED_AFTER_UPLOAD" in writeup
 
 
+def test_deck_uses_locked_title_and_subtitle() -> None:
+    deck = _deck_text()
+    assert "Reliability-Aware Early Prediction of Neural Network Development" in deck
+    assert "from Microelectrode-Array Assays" in deck
+    assert "Toward Functional Digital Twins for Neural Organ-on-Chip Screening" in deck
+
+
 def test_dose_claims_distinguish_point_estimates_and_intervals() -> None:
     dose = pd.read_csv(RESULTS / "dose_strata.csv")
     m1 = dose.loc[dose["model"].eq("M1")].copy()

@@ -344,3 +344,13 @@
 - Per the amendment fallback, frozen-hyperparameter ToxCast→NTP and NTP→ToxCast
   evaluation is the next post-lock secondary scientific analysis, time-boxed to
   one day.
+
+## 2026-09-29 — F3 directional cross-cohort protocol frozen
+
+- Registered the two directional analyses, chemical-overlap exclusion, frozen
+  M1 parameter aggregation, three-seed ensemble, source-only BT+/BT++ selection,
+  metrics, bootstrap unit, and PASS/MIXED/FAIL rule before execution.
+- This is post-lock secondary robustness analysis inside the 2019 EPA assay
+  release. It cannot change the locked result and is not external laboratory,
+  device, human, or organ-on-chip validation.
+- Full specification: `docs/f3_cross_cohort_preregistration.md`.

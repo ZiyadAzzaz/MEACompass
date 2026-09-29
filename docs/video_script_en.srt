@@ -14,6 +14,9 @@ and continue the assay when uncertainty is too high?
 
 4
 00:01:00,000 --> 00:01:40,000
+Across five preregistered endpoints, MEACompass reduced MAE by 14.2 to 39.0
+percent versus BT+, with every paired chemical-level 95 percent confidence
+interval excluding zero.
 Evaluation is chemical-disjoint. All doses, wells, replicates, and aliases
 of a chemical remain on one side of each split.
 

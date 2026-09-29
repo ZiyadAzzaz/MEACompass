@@ -22,6 +22,19 @@
   by quoting Python invocations and selecting `cmd.exe` only on Windows.
 - Evidence and timings: `docs/reproducibility.md`.
 
+## 2026-09-29 — Gate F3b: SKIPPED AT LICENSE GATE
+
+- Official source audited: `USEPA/CompTox-DNT-NFA-Refinement`, pinned at
+  `01adf3e1a0068c87fe221d60df36b9f96c4b4b1d`.
+- The repository is publicly visible but contains no root license file, its
+  README grants no reuse license, and GitHub reports no detected license.
+- Decision: do not clone, download, harmonize, or score the external release.
+  Public visibility is not treated as permission.
+- No F3b result or external-validation claim is permitted. Resume only after an
+  explicit license or written permission is available, and commit the full
+  preregistration before scoring.
+- Full record: `docs/f3b_external_validation.md`.
+
 ## 2026-09-28 — Gates N0/N1: data feasibility
 
 - Evidence: 136 unique CAS RNs, 4,344 per-well trajectories, DIV5/7/9/12,

@@ -62,6 +62,7 @@ htmlcov/
 
 # Environments and notebooks
 .venv/
+.venv-system/
 .env
 .ipynb_checkpoints/
 

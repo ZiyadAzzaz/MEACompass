@@ -537,3 +537,18 @@ cohort-balanced subset, estimate performance, or select a new scientific result.
   no secret, local path, raw data, checkpoint, other-project file, sensitive
   filename, or blob over 10 MiB was found. Status: **SAFE TO PUBLISH**, subject
   to authenticated GitHub identity equalling `ZiyadAzzaz` at creation time.
+
+## 2026-09-29 — Public repository and Gate F5: PASS
+
+- The runtime GitHub identity check returned exactly `ZiyadAzzaz`.
+- The scrubbed `main` history was published at
+  `https://github.com/ZiyadAzzaz/MEACompass` without ignored datasets, external
+  refinement files, checkpoints, caches, or other-project content.
+- GitHub Pages was configured from `main/docs`; build `1247895695` completed for
+  commit `4754fce` and the public demo is
+  `https://ziyadazzaz.github.io/MEACompass/demo/`.
+- Anonymous HTTP checks returned 200 for both repository and demo. The live HTML
+  contains all three preregistered cases, OBSERVED/PREDICTED/HYPOTHESIS labels,
+  and no external URL requests. Gate F5 is **PASS**.
+- The real logged-out neutral-case screenshot for slide 10 remains a human visual
+  capture; no mock or reconstructed image is substituted.

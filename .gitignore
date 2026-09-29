@@ -23,6 +23,7 @@ results/f3_cross_cohort/*
 !results/m1.csv
 !results/m1_gate.csv
 !results/m1_manifest.json
+!results/m1_tuning.json
 !results/gate_s_main.csv
 !results/gate_s_permutation.csv
 !results/gate_s_div5.csv

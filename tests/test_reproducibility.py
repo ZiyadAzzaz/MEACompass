@@ -18,7 +18,7 @@ def test_committed_result_bundle_is_small_and_verified() -> None:
     manifest_path = ROOT / "results" / "results_manifest.json"
     summary = verify_manifest(manifest_path, ROOT)
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    assert summary == {"files": 7, "bytes": 8_749_852}
+    assert summary == {"files": 8, "bytes": 8_778_602}
     assert summary["bytes"] < MAX_COMMITTED_ARTIFACT_BYTES
     assert max(item["bytes"] for item in manifest["files"]) < MAX_COMMITTED_ARTIFACT_BYTES
 

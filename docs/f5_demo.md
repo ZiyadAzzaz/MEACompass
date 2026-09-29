@@ -2,7 +2,7 @@
 
 ## Gate report
 
-**Status: BRANCH — publication-ready static demo; public URL pending GitHub authentication**
+**Status: PASS — public static demo verified anonymously**
 
 ### Objective
 
@@ -32,18 +32,16 @@ required fallback is a self-contained static page.
   - ordinary correct: `ToxCast|MW1147-5|E4` (Fluorene);
   - disclosed failure: `ToxCast|MW1160-23|B5` (tributyltin chloride).
 
-### Public-hosting blocker
+### Public deployment
 
-The project currently has no git remote, and the configured GitHub CLI token is
-invalid. Amendment B authorizes public repository creation and GitHub Pages, but
-the expected `ZiyadAzzaz` account must be successfully reauthenticated first.
-No live URL is claimed before logged-out verification.
+The static demo is published from `main/docs` at
+<https://ziyadazzaz.github.io/MEACompass/demo/>. GitHub Pages reported a
+successful build from commit `4754fce`. An unauthenticated HTTPS request returned
+HTTP 200 and confirmed all three registered case labels, the
+`OBSERVED`/`PREDICTED`/`HYPOTHESIS` sections, and zero external URL requests.
+Automated interface tests cover selector behavior and deterministic case loading.
 
-### Human completion step
+### Remaining human visual check
 
-After authentication and a SAFE scrub, publish `/docs` through GitHub Pages.
-Then open the resulting URL in a logged-out browser, test every control, confirm
-load time under 15 seconds, and add the verified URL to the README and writeup.
-
-Until that action is completed, the local Streamlit demo and static fallback are
-valid submission assets, but Gate F5 is not reported as a public PASS.
+Capture the required real logged-out neutral-case screenshot for slide 10. This
+is a deck-finalization step, not a blocker to the public demo gate.

@@ -20,13 +20,13 @@ rewritten.
 | Personal correspondence | PASS | No private email text or personal email address detected in tracked deliverables or history |
 | Structured/package validity | PASS | All checked JSON/YAML parses; PPTX ZIP CRC passes; report PDF opens as 18 pages; no tracked notebook |
 | URL syntax | PASS | 22 unique HTTP(S) references found across text artifacts; all parse as absolute URLs |
-| Public demo package | PASS | Self-contained 160,901-byte HTML; local HTTP 200; OBSERVED/PREDICTED/HYPOTHESIS and all three registered cases present; no external request |
+| Public demo package | PASS | Self-contained 160,901-byte HTML; live anonymous HTTP 200 at `https://ziyadazzaz.github.io/MEACompass/demo/`; OBSERVED/PREDICTED/HYPOTHESIS and all three registered cases present; no external request |
 | License boundary | PASS | Apache-2.0 covers project-authored material; data/dependency terms and the limited EPA file-level rationale are separated |
 | Scientific boundaries | PASS | Failed Gate S, rat-MEA scope, 3/5 abstention limitation, F3b harmonization CUT, and non-autonomous-use wording remain visible |
 | AI disclosure | PASS | Author confirmed Codex/coding-agent, ChatGPT, and Claude roles; scientific-number and human-review boundaries are stated consistently |
 | Team identity | PASS | MEACompass; solo submission by Ziyad Azzaz with the verified AASTMT affiliation; no other members |
 | Deck screenshot | BRANCH | Final-named 12-slide deck retains a visible real-capture requirement; no mock screenshot was inserted |
-| GitHub identity rule | PASS / runtime check required | Publication is authorized only if the authenticated API identity immediately before creation is exactly `ZiyadAzzaz` |
+| GitHub identity and repository | PASS | `gh api user --jq .login` returned exactly `ZiyadAzzaz`; public `main` repository created at `https://github.com/ZiyadAzzaz/MEACompass` |
 
 ## External-validation handling
 
@@ -41,7 +41,7 @@ compatibility threshold. Only aggregate harmonization/audit evidence is tracked.
 
 The complete rerun found no secret, raw-data, checkpoint, local-path,
 other-project, malformed-package, or oversized-history defect. Team and AI-tool
-fields are confirmed and filled. The repository is safe for public creation and
-push, conditional on the final runtime identity command returning exactly
-`ZiyadAzzaz`. The slide-10 real screenshot and final video remain post-publication
-human/recording work and do not weaken repository security.
+fields are confirmed and filled. The runtime identity check returned exactly
+`ZiyadAzzaz`, the scrubbed history was pushed publicly, and the static demo was
+verified anonymously. The slide-10 real screenshot and final video remain
+post-publication human/recording work and do not weaken repository security.

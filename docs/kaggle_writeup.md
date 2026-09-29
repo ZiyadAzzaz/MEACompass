@@ -10,8 +10,8 @@ Team name: **MEACompass**. Solo submission; no additional team members.
 ## Links
 
 1. Demo video: **VIDEO_URL_TO_BE_ADDED_AFTER_UPLOAD**
-2. Public repository: [github.com/ZiyadAzzaz/MEACompass](https://github.com/ZiyadAzzaz/MEACompass) — reserved publication URL; human publication is pending.
-3. Live demo: [ziyadazzaz.github.io/MEACompass/demo/](https://ziyadazzaz.github.io/MEACompass/demo/) — static, precomputed, and activated with the public repository.
+2. Public repository: [github.com/ZiyadAzzaz/MEACompass](https://github.com/ZiyadAzzaz/MEACompass)
+3. Live demo: [ziyadazzaz.github.io/MEACompass/demo/](https://ziyadazzaz.github.io/MEACompass/demo/) — static and precomputed.
 
 ## Project summary
 
@@ -29,7 +29,7 @@ For accepted cases, a DIV7 forecast is available five days before the DIV12 endp
 
 The audit identified 136 canonical chemicals, 4,192 complete DIV5/7/9/12 trajectories, and five functional endpoints: firing rate, bursts, active electrodes, network spikes, and coordinated activity. The primary model uses only DIV5 and DIV7 neural measurements; DIV9 appears solely in a declared post-lock ablation. Outer folds evaluate unseen chemical groups. Inner group folds choose model settings and the BT+ comparator. Confidence intervals resample chemicals rather than wells.
 
-Against the stricter post-audit BT++ comparator, the same frozen predictions improved MAE by 12.3–42.9% across all five endpoints, again with paired chemical-bootstrap intervals excluding zero. The full endpoint table and bootstrap intervals are in the [technical report](MEACompass_Technical_Report.pdf).
+Against the stricter post-audit BT++ comparator, the same frozen predictions improved MAE by 12.3–42.9% across all five endpoints, again with paired chemical-bootstrap intervals excluding zero. The full endpoint table and bootstrap intervals are in the [technical report](https://github.com/ZiyadAzzaz/MEACompass/blob/main/docs/MEACompass_Technical_Report.pdf).
 
 <!-- GENERATED_MAIN_RESULTS_START -->
 | Endpoint | M1 MAE | BT+ MAE | Gain vs BT+ | ΔMAE vs BT+ [95% CI] | BT++ Gain | ΔMAE vs BT++ [95% CI] |
@@ -47,15 +47,15 @@ A registered chemical-block permutation control unexpectedly showed a small bene
 
 ### Calibrated uncertainty and abstention
 
-![Calibration](../artifacts/reproduce-lite/calibration.png)
+![Calibration](https://raw.githubusercontent.com/ZiyadAzzaz/MEACompass/main/artifacts/reproduce-lite/calibration.png)
 
-![Selective risk](../artifacts/reproduce-lite/risk_coverage.png)
+![Selective risk](https://raw.githubusercontent.com/ZiyadAzzaz/MEACompass/main/artifacts/reproduce-lite/risk_coverage.png)
 
 Intervals are calibrated from training chemicals only. At the frozen 70% retained-coverage operating point, firing rate, active electrodes, and coordinated activity pass the registered risk-reduction rule. Bursts and network spikes do not. Uncertain cases continue to DIV12; MEACompass is a research decision-support system, not an autonomous assay-termination system.
 
 ### Time causality, interpretation, and robustness
 
-![Time ablation](../artifacts/reproduce-lite/time_ablation.png)
+![Time ablation](https://raw.githubusercontent.com/ZiyadAzzaz/MEACompass/main/artifacts/reproduce-lite/time_ablation.png)
 
 DIV5 alone is weaker; DIV7 is the earliest window with consistent primary gains. Frozen tree contributions assign 56.9–77.3% of absolute predictive contribution to DIV7 physiology and 11.2–31.8% to chemistry. These are predictive associations, not mechanisms, and the tributyltin chloride failure remains disclosed.
 

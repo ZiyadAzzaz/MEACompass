@@ -10,6 +10,10 @@ MEACompass uses measurements available by day in vitro 7 (DIV7) to forecast
 five DIV12 functional outcomes for unseen chemicals. It adds calibrated 90%
 intervals and abstains on the least certain 30% of cases.
 
+[Live demo](https://ziyadazzaz.github.io/MEACompass/demo/) ·
+[Technical report](https://github.com/ZiyadAzzaz/MEACompass/blob/main/docs/MEACompass_Technical_Report.pdf) ·
+[Competition deck](https://github.com/ZiyadAzzaz/MEACompass/blob/main/docs/MEACompass_Competition_Deck.pptx)
+
 The source is a **rat cortical neural MEA assay, not an organ-on-chip dataset**.
 This is a retrospective research decision-support prototype, not an autonomous
 assay-termination system. Human neural organ-on-chip transfer requires prospective

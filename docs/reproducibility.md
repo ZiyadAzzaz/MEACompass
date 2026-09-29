@@ -55,7 +55,28 @@ in parallel. No unlogged wall time is invented.
 
 ## Fresh-clone verification
 
-The clean-clone verification record is appended only after execution. It must
-use a new directory and environment, validate the committed bundle, run all tests,
-regenerate the five result-only outputs, and execute the Streamlit app test without
-copying files from the working tree.
+Final verification was executed on 2026-09-29 from commit `093d08e` in a new
+local clone at `repro_checks/meacompass-f2-20260929-c`. No files were copied from
+the working tree. A distinct `.venv-system` environment used Python 3.11.16 with
+the existing `ais` environment as its read-only system-package base; this was an
+isolation and packaging check, not a cold dependency-download benchmark.
+
+| Step | Result | Elapsed |
+|---|---:|---:|
+| Local clone | clean commit `093d08e` | 0.93 s |
+| Venv creation | distinct prefix resolved | 0.10 s |
+| `make setup` | editable package installed | 6.07 s |
+| `make fetch-results` | 7/7 hashes verified, 8.34 MiB | 0.19 s |
+| `make test` | 56/56 passed | 3.57 s |
+| `make reproduce-lite` | 5/5 artifacts regenerated | 1.39 s |
+| `make demo` smoke test | HTTP 200, 7,260-byte page | 0.04 s response |
+
+The five regenerated artifacts were `main_results.csv`, `risk_coverage.png`,
+`time_ablation.png`, `dose_strata.png`, and `calibration.png`. `git status
+--porcelain` was empty after setup and reproduction. The Streamlit process was
+stopped immediately after the HTTP check.
+
+The check exposed and fixed a Windows portability issue: Python executable paths
+were unquoted and GNU Make selected its MSYS shell. All Python invocations are now
+quoted, and the Makefile selects `cmd.exe` only on Windows while retaining the
+default POSIX shell elsewhere.

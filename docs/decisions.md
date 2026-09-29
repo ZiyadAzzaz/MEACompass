@@ -10,6 +10,18 @@
   README, deck, video assets, schemas, and documentation without modifying
   locked scientific values or result contents beyond identity strings.
 
+## 2026-09-29 — Gate F2: PASS
+
+- Result-only reproduction was verified from a fresh local clone at commit
+  `093d08e` with a distinct Python 3.11 environment.
+- The committed 8.34 MiB result bundle passed all seven SHA-256 checks; 56 tests
+  passed; five tables/figures regenerated without retraining; and the Streamlit
+  demo returned HTTP 200.
+- `git status --porcelain` remained empty after setup and reproduction.
+- A Windows path-with-spaces defect found during the clean-clone test was fixed
+  by quoting Python invocations and selecting `cmd.exe` only on Windows.
+- Evidence and timings: `docs/reproducibility.md`.
+
 ## 2026-09-28 — Gates N0/N1: data feasibility
 
 - Evidence: 136 unique CAS RNs, 4,344 per-well trajectories, DIV5/7/9/12,

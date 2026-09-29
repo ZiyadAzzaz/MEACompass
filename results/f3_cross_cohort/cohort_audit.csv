@@ -1,0 +1,3 @@
+direction,source_rows,source_chemicals,target_rows_before_exclusion,target_chemicals_before_exclusion,overlap_chemicals_excluded,target_rows_after_exclusion,target_chemicals_after_exclusion
+ToxCast->NTP,2832,97,1440,50,11,1032,39
+NTP->ToxCast,1440,50,2832,97,11,2496,86

@@ -6,6 +6,12 @@ results/*
 !results/f3b/
 results/f3b/*
 !results/f3b/source_manifest.csv
+!results/f3_cross_cohort/
+results/f3_cross_cohort/*
+!results/f3_cross_cohort/summary.csv
+!results/f3_cross_cohort/selections.csv
+!results/f3_cross_cohort/cohort_audit.csv
+!results/f3_cross_cohort/decision.json
 !results/baselines.csv
 !results/baseline_manifest.json
 !results/bt_plus.csv

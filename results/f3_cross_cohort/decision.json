@@ -1,0 +1,11 @@
+{
+  "gate": "F3",
+  "status": "PASS",
+  "post_lock_secondary": true,
+  "wins_vs_bt_plus_plus": {
+    "NTP->ToxCast": 5,
+    "ToxCast->NTP": 5
+  },
+  "external_laboratory_transfer": false,
+  "model_retuning": false
+}

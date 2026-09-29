@@ -354,3 +354,17 @@
   release. It cannot change the locked result and is not external laboratory,
   device, human, or organ-on-chip validation.
 - Full specification: `docs/f3_cross_cohort_preregistration.md`.
+
+## 2026-09-29 — F3 directional cross-cohort result: PASS
+
+- Frozen-hyperparameter M1 beat source-selected BT++ on all five endpoints in
+  both directions, with all paired chemical-bootstrap confidence intervals below
+  zero. Registered PASS required at least three wins in each direction.
+- Eleven shared chemicals were excluded from each target direction. Eligible
+  target sets contained 39 NTP chemicals and 86 ToxCast chemicals before
+  endpoint-specific completeness filtering.
+- This supports the narrow statement: “Retained predictive value under a
+  held-out NTP↔ToxCast cohort shift without model retuning.” It is not external
+  laboratory/device transfer, and it does not alter the locked primary headline.
+- Full evidence: `docs/f3_cross_cohort_results.md` and aggregate files under
+  `results/f3_cross_cohort/`.

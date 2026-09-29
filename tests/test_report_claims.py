@@ -22,7 +22,10 @@ def _flat_text(path: Path) -> str:
 
 
 def _deck_text() -> str:
-    decks = list((ROOT / "outputs").rglob("MEACompass_Competition_Deck.pptx"))
+    published = DOCS / "MEACompass_Competition_Deck_WORKING.pptx"
+    decks = [published] if published.exists() else list(
+        (ROOT / "outputs").rglob("MEACompass_Competition_Deck.pptx")
+    )
     assert len(decks) == 1
     with ZipFile(decks[0]) as archive:
         slide_names = sorted(
@@ -48,10 +51,25 @@ def test_all_five_headline_claims_are_supported() -> None:
             _text(ROOT / "README.md"),
             _text(DOCS / "report_draft.md"),
             _text(DOCS / "video_script.md"),
+            _text(DOCS / "kaggle_writeup.md"),
             _deck_text(),
         ]
     )
     assert "all five" in corpus.lower()
+
+
+def test_kaggle_summary_and_boundary_are_submission_ready() -> None:
+    writeup = _text(DOCS / "kaggle_writeup.md")
+    summary = writeup.split("## Project summary", 1)[1].split("## Technical approach", 1)[0]
+    words = summary.split()
+
+    assert 200 <= len(words) <= 300
+    assert "14.2–39.0%" in summary
+    assert "91.0–92.4%" in summary
+    assert "three of five" in summary
+    assert "not organ-on-chip or human data" in summary
+    assert "autonomous assay termination" in summary
+    assert "VIDEO_URL_TO_BE_ADDED_AFTER_UPLOAD" in writeup
 
 
 def test_dose_claims_distinguish_point_estimates_and_intervals() -> None:

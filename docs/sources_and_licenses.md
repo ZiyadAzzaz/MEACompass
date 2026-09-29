@@ -24,10 +24,12 @@ REST service. Users must follow PubChem's current usage and attribution guidance
 The post-lock external-validation candidate is pinned at commit
 `01adf3e1a0068c87fe221d60df36b9f96c4b4b1d` of
 `USEPA/CompTox-DNT-NFA-Refinement`. The repository has no detected root license or
-repository-wide reuse grant. Repository ownership alone is not used to classify
-individual files as U.S. Government works. The file-level provenance gate is in
-`results/f3b/source_manifest.csv`; all candidates are currently disallowed, no
-raw refinement file is redistributed, and F3b remains CUT.
+repository-wide reuse grant. Under the registered four-part file-level provenance
+rule, the six declared EPA analysis files are marked `allowed_for_analysis=YES` in
+`results/f3b/source_manifest.csv`; this is not a blanket repository license claim.
+No refinement file was downloaded or redistributed because the exact serialized
+frozen-model ensemble was unavailable, so F3b remains CUT. The recorded license
+clarification request remains unanswered.
 
 ## Dependencies
 

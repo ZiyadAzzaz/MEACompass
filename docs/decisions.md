@@ -406,3 +406,23 @@
   six-group spoken-number budget, and provisional English and Chinese SRT files.
   The Chinese first mention uses “最强基线 BT+” and “平均绝对误差（MAE）”. Final
   timings require the recorded narration and human translation review.
+
+## 2026-09-29 — Gate F8 Kaggle writeup: BRANCH
+
+- Created `docs/kaggle_writeup.md` in the required order: links, a 231-word
+  project summary, technical evidence with figures, use-on-your-own-data recipe,
+  sources/licenses, and AI-tool disclosure.
+- The summary carries the three locked headline groups: 14.2–39.0% MAE gain
+  versus BT+, 91.0–92.4% empirical interval coverage, and three of five
+  abstention endpoints passing. All five endpoint names and both abstention
+  limitations remain explicit.
+- Added automated checks for the summary word count, locked numbers, scientific
+  boundary, decision-support wording, and deck text. The full suite passes 69/69.
+- Corrected the refinement-source license note to match the registered provenance
+  amendment: six files are eligible for analysis, but none was downloaded or
+  redistributed because F3b was cut at frozen-model availability.
+- Gate F8 is **BRANCH — writeup content complete; human publication fields
+  pending**. The video URL is the allowed placeholder. The intended GitHub and
+  Pages URLs do not resolve until the user performs the human-only publication
+  action, and the AI-tool disclosure cannot be finalized until the user confirms
+  the actual tools and roles. No tool identity was guessed.

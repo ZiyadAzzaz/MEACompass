@@ -90,9 +90,17 @@ def test_locked_claims_remain_consistent_in_core_public_materials() -> None:
 
 def test_final_gate_is_ready_except_video_and_registration_is_recorded() -> None:
     final = _read(DOCS / "final_competition_compliance.md")
+    reproducibility = _read(DOCS / "reproducibility.md")
     writeup = _read(DOCS / "kaggle_writeup.md")
     assert "FINAL STATUS: READY EXCEPT VIDEO" in final
     assert "PENDING HUMAN UPLOAD" in final
+    assert "84 passed" in final
+    assert "89/89 passed" in final
+    assert "77 passes" not in final
+    assert "84 passed and 5 skipped" in reproducibility
+    assert "89/89 passed" in reproducibility
+    assert "Historical fresh-clone verification" in reproducibility
+    assert "77 passed" not in reproducibility
     assert "Required external registration completed." in writeup
     assert "cross-disciplinary bonus" not in writeup.lower()
 

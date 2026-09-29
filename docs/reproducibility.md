@@ -13,10 +13,15 @@ make demo
 ```
 
 The result manifest verified eight committed artifacts (8.37 MiB) without a
-download. Tests reported **77 passed and 5 skipped**. The skips are expected when
+download. The latest public fresh-clone run, from commit `cea8965`, reported
+**84 passed and 5 skipped**. The skips are expected when
 the optional official EPA raw data are absent: one time-causality test and four
 split/data tests. `reproduce-lite` regenerated figures without retraining. The
 Streamlit server and health endpoint returned HTTP 200 before manual shutdown.
+
+The latest full local suite reported **89/89 passed**. These are the authoritative
+current-state test counts; earlier counts below are retained only as historical
+verification records tied to their stated commits.
 
 This result-only path requires no paid API, proprietary hardware, private data,
 or original workstation. Package installation requires ordinary access to public
@@ -75,13 +80,16 @@ task-hours) for the retained baseline tuning records. These are sums of logged
 task runtimes, not a measured end-to-end wall clock, because multiple workers ran
 in parallel. No unlogged wall time is invented.
 
-## Fresh-clone verification
+## Historical fresh-clone verification (commit `093d08e`)
 
 Final verification was executed on 2026-09-29 from commit `093d08e` in a new
 local clone at `repro_checks/meacompass-f2-20260929-c`. No files were copied from
 the working tree. A distinct `.venv-system` environment used Python 3.11.16 with
 the existing `ais` environment as its read-only system-package base; this was an
 isolation and packaging check, not a cold dependency-download benchmark.
+
+The `56/56`, `7/7`, and `5/5` values in this table are historical results for
+commit `093d08e`; they are not the current suite or current public-clone counts.
 
 | Step | Result | Elapsed |
 |---|---:|---:|

@@ -13,7 +13,7 @@ Audit date: **2026-09-29**
 | AI TOOL DISCLOSURE | **PASS** | Confirmed roles only; executed artifacts and human review are the evidence boundary |
 | TEAM | **PASS** | MEACompass; Ziyad Azzaz; AASTMT Alamein; solo; no bonus claimed |
 | PUBLIC ACCESS | **PASS** | Repository, images, demo, report, deck, licenses, reproduction files anonymous |
-| REPRODUCIBILITY | **PASS** | Fresh clone: setup, offline manifest, 77 passes/5 raw-data skips, figures, demo health |
+| REPRODUCIBILITY | **PASS** | Latest fresh public clone: setup, offline manifest, 84 passed/5 expected raw-EPA-dependent skips, figures, demo health; latest local suite: 89/89 passed |
 | SECURITY | **PASS** | 65 commits: no secret, sensitive filename, raw/checkpoint path, private email, or workstation path |
 | CLAIM CONSISTENCY | **PASS** | Tests bind public headline ranges and scientific boundaries to saved artifacts |
 | KAGGLE WRITEUP | **WAITING VIDEO URL** | Category, team, 231-word summary, required sections; sole placeholder is video URL |

@@ -566,3 +566,14 @@ cohort-balanced subset, estimate performance, or select a new scientific result.
   remain section-level guides until they are retimed to that actual audio.
 - The submission tag remains withheld until the narrated video, final subtitle
   timing, public video URL, and final logged-out link checks are complete.
+
+## 2026-09-29 — Final test-count consistency patch
+
+- The latest executed local suite is **89/89 passed**.
+- The latest fresh public clone at commit `cea8965` is **84 passed and 5 expected
+  raw-EPA-dependent skips**.
+- Earlier `69/69`, `71/71`, and other commit-specific counts in this append-only
+  log are historical gate records, not current-state verification counts.
+- Current judge-facing compliance and reproducibility documents were aligned to
+  the latest executed results. No scientific result, model, threshold, or claim
+  was changed.

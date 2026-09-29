@@ -71,6 +71,19 @@
   action under the approved protocol.
 - Full record and completion instructions: `docs/f5_demo.md`.
 
+## 2026-09-29 — Pre-publication scrub: DO NOT PUSH
+
+- Current tree, public HTML, PowerPoint XML, and reachable git history were
+  scanned for local paths, machine identifiers, secrets, personal email, raw or
+  external data, CellTwin-X material, checkpoints, temporary outputs, sensitive
+  filenames, and oversized blobs; no violation was detected.
+- License, source record, reproduction instructions, and `docs/.nojekyll` are
+  present.
+- Publication remains blocked because the actual AI assistants/services and
+  their roles require user confirmation. The template is not a final disclosure.
+- No history rewrite is required. Do not push until the disclosure is confirmed,
+  tests are rerun, and `docs/prepublication_scrub.md` is updated to SAFE TO PUSH.
+
 ## 2026-09-28 — Gates N0/N1: data feasibility
 
 - Evidence: 136 unique CAS RNs, 4,344 per-well trajectories, DIV5/7/9/12,

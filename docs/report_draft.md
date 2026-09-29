@@ -83,12 +83,13 @@ The full lineage, checksums, exclusions, and limitations are recorded in
 
 ### 2.3 Sources and licenses
 
-The EPA catalog provides public access and links the EPA ScienceHub license.
-Unless otherwise specified, works produced by U.S. EPA employees are public
-domain under 17 U.S.C. §105. The source carries no warranty, and EPA names, seals,
-or logos must not imply endorsement. Project code is Apache-2.0. Chemical
-structures were resolved with the public PubChem PUG REST service. Raw EPA data,
-caches, and checkpoints are excluded from Git.
+The EPA catalog provides public access and links the EPA ScienceHub terms for the
+original NFA release. A U.S. Government-work rationale under 17 U.S.C. §105 is
+applied only when file-level EPA authorship is verified; repository ownership is
+not treated as proof for every file. The source carries no warranty, and EPA
+names, seals, or logos must not imply endorsement. Project code is Apache-2.0.
+Chemical structures were resolved with the public PubChem PUG REST service. Raw
+EPA data, external-refinement files, caches, and checkpoints are excluded from Git.
 
 ## 3. Preregistered protocol and registered deviations
 

@@ -88,6 +88,8 @@ See `docs/reproducibility.md` for the fresh-clone test and recorded runtime scop
   `results/practical_value.csv`
 - Interpretation and cases: `results/feature_importance.csv`,
   `results/case_studies.csv`
+- Sources and licenses: `docs/sources_and_licenses.md`
+- AI-tool disclosure template: `docs/ai_tool_disclosure.md`
 
 ## License
 

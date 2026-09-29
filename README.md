@@ -1,9 +1,8 @@
-# NeuroChip-Twin
+# MEACompass: Reliability-Aware Early Prediction of Neural Network Development from Microelectrode-Array Assays
 
-**Reliability-Aware Early Prediction of Neural Network Development from
-Microelectrode-Array Assays**
+**Toward Functional Digital Twins for Neural Organ-on-Chip Screening**
 
-NeuroChip-Twin uses measurements available by day in vitro 7 (DIV7) to forecast
+MEACompass uses measurements available by day in vitro 7 (DIV7) to forecast
 five DIV12 functional outcomes for unseen chemicals. It adds calibrated 90%
 intervals and abstains on the least certain 30% of cases.
 
@@ -70,7 +69,7 @@ See `docs/reproducibility.md` for the fresh-clone test and recorded runtime scop
 
 ## Evidence map
 
-- Data provenance and license: `docs/neurochip_data_audit.md`
+- Data provenance and license: `docs/meacompass_data_audit.md`
 - Preregistration and append-only decisions: `docs/preregistration.md`,
   `docs/decisions.md`
 - Main and stricter comparator results: `results/gate_s_main.csv`,

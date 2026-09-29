@@ -3,8 +3,8 @@
 from __future__ import annotations
 import argparse
 from pathlib import Path
-from neurochip.figures import plot_calibration, plot_dose_strata, plot_risk_coverage, plot_time_ablation, write_main_table
-from neurochip.result_schema import load_prediction_file
+from meacompass.figures import plot_calibration, plot_dose_strata, plot_risk_coverage, plot_time_ablation, write_main_table
+from meacompass.result_schema import load_prediction_file
 
 REQUIRED = {
     "main_results": "main_results.csv",

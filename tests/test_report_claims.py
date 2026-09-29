@@ -22,7 +22,7 @@ def _flat_text(path: Path) -> str:
 
 
 def _deck_text() -> str:
-    decks = list((ROOT / "outputs").rglob("NeuroChip-Twin_Competition_Deck.pptx"))
+    decks = list((ROOT / "outputs").rglob("MEACompass_Competition_Deck.pptx"))
     assert len(decks) == 1
     with ZipFile(decks[0]) as archive:
         slide_names = sorted(

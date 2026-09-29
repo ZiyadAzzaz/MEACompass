@@ -1,4 +1,9 @@
-# NeuroChip-Twin competition deck outline
+# MEACompass competition deck outline
+
+Full title: **MEACompass: Reliability-Aware Early Prediction of Neural Network
+Development from Microelectrode-Array Assays**
+
+Subtitle: **Toward Functional Digital Twins for Neural Organ-on-Chip Screening**
 
 ## Slide 1 — A five-day earlier decision, with permission to wait
 

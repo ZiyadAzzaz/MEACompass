@@ -3,9 +3,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from neurochip.data import validate_time_causal_features
-from neurochip.integrity_audit import block_permute, full_shuffle, lineage_table
-from neurochip.splits import assert_group_disjoint, outer_folds
+from meacompass.data import validate_time_causal_features
+from meacompass.integrity_audit import block_permute, full_shuffle, lineage_table
+from meacompass.splits import assert_group_disjoint, outer_folds
 
 
 def test_audit_lineage_rejects_every_forbidden_future_family() -> None:

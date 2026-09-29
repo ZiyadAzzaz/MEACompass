@@ -3,7 +3,7 @@ from pathlib import Path
 import pandas as pd
 
 from app.data import load_demo_table
-from neurochip.result_schema import load_prediction_file
+from meacompass.result_schema import load_prediction_file
 
 
 RESULTS = Path("results")

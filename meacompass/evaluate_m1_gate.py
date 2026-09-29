@@ -11,9 +11,9 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import mean_absolute_error
 
-from neurochip.evaluate import bootstrap_paired_mae
-from neurochip.train_baselines import summarize
-from neurochip.train_baselines import file_sha256
+from meacompass.evaluate import bootstrap_paired_mae
+from meacompass.train_baselines import summarize
+from meacompass.train_baselines import file_sha256
 
 
 JOIN_KEYS = ["sample_id", "casrn", "cohort", "endpoint", "seed", "outer_fold"]

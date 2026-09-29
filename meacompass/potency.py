@@ -9,8 +9,8 @@ import numpy as np
 import pandas as pd
 import yaml
 
-from neurochip.data import PRIMARY_ENDPOINTS, build_treatment_crosswalk, normalize_chemical_name
-from neurochip.evaluate import safe_spearman
+from meacompass.data import PRIMARY_ENDPOINTS, build_treatment_crosswalk, normalize_chemical_name
+from meacompass.evaluate import safe_spearman
 
 
 OFFICIAL_FILES = {

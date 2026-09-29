@@ -1,12 +1,15 @@
-# NeuroChip-Twin five-minute demo script
+# MEACompass: Reliability-Aware Early Prediction of Neural Network Development from Microelectrode-Array Assays
+
+**Toward Functional Digital Twins for Neural Organ-on-Chip Screening**
 
 ## 0:00–0:20 — The decision problem
 
-“A neural assay reaches its functional endpoint at day 12. NeuroChip-Twin asks a
+“A neural assay reaches its functional endpoint at day 12. MEACompass asks a
 simple question: by day 7, can we forecast that outcome for a chemical the model
 has never seen—and can we refuse when the forecast is unsafe?”
 
-On screen: title and one-line subtitle, “Forecast early. Quantify uncertainty.
+On screen: the full title and subtitle, “Toward Functional Digital Twins for
+Neural Organ-on-Chip Screening.” Then: “Forecast early. Quantify uncertainty.
 Continue when uncertain.”
 
 ## 0:20–1:00 — Show the working prototype first
@@ -87,7 +90,7 @@ prospective external study.”
 
 ## 4:45–5:00 — Close
 
-“NeuroChip-Twin’s contribution is not an automatic lab decision. It is an audited,
+“MEACompass’s contribution is not an automatic lab decision. It is an audited,
 reproducible path from early neural measurements to a forecast, a calibrated
 uncertainty estimate, and an honest option to wait. Forecast when evidence is
 strong; continue the assay when it is not.”

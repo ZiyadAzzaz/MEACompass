@@ -6,12 +6,12 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from neurochip.figures import (
+from meacompass.figures import (
     load_required,
     write_main_table,
 )
-from neurochip.reproduce_lite import reproduce
-from neurochip.result_schema import REQUIRED_COLUMNS, adapt_baseline_predictions, validate_prediction_frame
+from meacompass.reproduce_lite import reproduce
+from meacompass.result_schema import REQUIRED_COLUMNS, adapt_baseline_predictions, validate_prediction_frame
 
 
 def test_b0_b3_legacy_predictions_match_frozen_schema() -> None:
@@ -62,6 +62,6 @@ def test_result_only_figure_inputs_accept_frozen_contracts() -> None:
 def test_reproduce_lite_fails_explicitly_and_never_trains() -> None:
     with pytest.raises(FileNotFoundError, match="never retrains"):
         reproduce(Path("artifacts/intentionally-missing-results"), Path("artifacts/test-output"))
-    source = Path("neurochip/reproduce_lite.py").read_text(encoding="utf-8")
+    source = Path("meacompass/reproduce_lite.py").read_text(encoding="utf-8")
     assert "train_baselines" not in source
     assert "train_m1" not in source

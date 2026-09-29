@@ -1,8 +1,10 @@
-# NeuroChip-Twin: Reliability-Aware Early Prediction of Neural Network Development from Microelectrode-Array Assays
+# MEACompass: Reliability-Aware Early Prediction of Neural Network Development from Microelectrode-Array Assays
+
+**Toward Functional Digital Twins for Neural Organ-on-Chip Screening**
 
 ## Abstract
 
-Late functional readouts slow developmental-neurotoxicity triage. NeuroChip-Twin
+Late functional readouts slow developmental-neurotoxicity triage. MEACompass
 forecasts day-in-vitro 12 (DIV12) neural microelectrode-array outcomes from
 information available by DIV7, attaches a calibrated interval, and abstains on
 the least certain 30% of cases. Evaluation is chemical-disjoint: all doses,
@@ -33,7 +35,7 @@ but whether an unseen chemical can be forecast using only information already
 available by DIV7, whether the forecast beats strong dose- and time-informed
 comparators, and whether the system knows when not to predict.
 
-NeuroChip-Twin is a research prototype for that question. It forecasts five
+MEACompass is a research prototype for that question. It forecasts five
 functional endpoints as percent of same-plate, same-DIV zero-dose control:
 
 - mean firing rate;
@@ -77,7 +79,7 @@ The stable experimental key is `(cohort, Plate.SN, well)`. Treatment aliases and
 biological replicates are canonicalized to CAS RN before splitting. Missing
 burst-conditional measurements are retained with explicit missingness indicators.
 The full lineage, checksums, exclusions, and limitations are recorded in
-`docs/neurochip_data_audit.md`.
+`docs/meacompass_data_audit.md`.
 
 ### 2.3 Sources and licenses
 
@@ -330,7 +332,7 @@ Key evidence artifacts are:
 
 ## 12. Conclusion
 
-NeuroChip-Twin demonstrates a credible retrospective result: DIV7 information can
+MEACompass demonstrates a credible retrospective result: DIV7 information can
 forecast DIV12 neural MEA endpoints for unseen chemicals more accurately than
 strong inner-selected baselines, with nominal 90% intervals that attain coverage
 and an abstention mechanism that reduces error materially on three endpoints. Its

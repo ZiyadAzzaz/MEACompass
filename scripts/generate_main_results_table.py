@@ -1,7 +1,7 @@
 from __future__ import annotations
 import argparse
 from pathlib import Path
-from neurochip.figures import write_main_table
+from meacompass.figures import write_main_table
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--input", type=Path, required=True)

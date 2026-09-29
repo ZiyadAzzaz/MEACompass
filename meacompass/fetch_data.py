@@ -40,7 +40,7 @@ def download(item: dict[str, object], destination: Path) -> Path:
     destination.mkdir(parents=True, exist_ok=True)
     partial = target.with_suffix(target.suffix + ".part")
     request = urllib.request.Request(
-        str(item["url"]), headers={"User-Agent": "NeuroChip-Twin reproducibility/1.0"}
+        str(item["url"]), headers={"User-Agent": "MEACompass reproducibility/1.0"}
     )
     try:
         with urllib.request.urlopen(request, timeout=120) as response, partial.open("wb") as out:

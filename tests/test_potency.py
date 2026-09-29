@@ -1,6 +1,6 @@
 import numpy as np
 
-from neurochip.potency import estimate_div12_ec50
+from meacompass.potency import estimate_div12_ec50
 
 
 def test_potency_recovers_simple_decreasing_curve() -> None:

@@ -1,4 +1,4 @@
-# NeuroChip data feasibility audit
+# MEACompass data feasibility audit
 
 Audit date: 2026-09-28  
 Decision gate: N0/N1 project selection  
@@ -7,13 +7,13 @@ Status: **FULL PASS**, with claim narrowing required
 ## Decision
 
 The public EPA Network Formation Assay data support a real per-well early-to-late
-prediction task. NeuroChip should replace CellTwin-X as the primary competition
+prediction task. MEACompass should replace CellTwin-X as the primary competition
 project, while CellTwin-X remains the measured fallback. The submission must call
 the source a rat cortical neural MEA assay, not an organ-on-chip dataset.
 
 Approved working title:
 
-> **NeuroChip-Twin: Reliability-Aware Early Prediction of Neural Network
+> **MEACompass: Reliability-Aware Early Prediction of Neural Network
 > Development from Microelectrode-Array Assays**
 
 Subtitle:
@@ -184,7 +184,7 @@ The task is feasible, but a random well split would be invalid. Required control
 
 ## Competition comparison
 
-| Dimension | CellTwin-X | NeuroChip-Twin |
+| Dimension | CellTwin-X | MEACompass |
 |---|---|---|
 | Sponsor alignment | Moderate: phenotype transfer is relevant but generic | High: neural functional data and forecasting match the sponsor’s stated direction |
 | Direct neural relevance | None | High |
@@ -207,7 +207,7 @@ The task is feasible, but a random well split would be invalid. Required control
 **DATA DOWNLOAD:** PASS  
 **EARLY→LATE TASK:** FEASIBLE  
 **DATA THRESHOLDS:** FULL PASS  
-**PROJECT DECISION:** SWITCH PRIMARY DEVELOPMENT TO NEUROCHIP  
+**PROJECT DECISION:** SWITCH PRIMARY DEVELOPMENT TO MEACOMPASS  
 
 Main risk: strong within-well temporal autocorrelation may make DIV12 prediction
 look easy without demonstrating generalization to unseen chemicals. The primary
@@ -216,7 +216,7 @@ chemical-disjoint folds, not against a weak global-mean baseline.
 
 Kill condition: after pre-registered feature engineering, if early-to-late
 Spearman is below 0.20, classification AUROC is below 0.60, and abstention does not
-lower accepted-case error, stop NeuroChip and return to CellTwin-X.
+lower accepted-case error, stop MEACompass and return to CellTwin-X.
 
 ## Reproduction
 

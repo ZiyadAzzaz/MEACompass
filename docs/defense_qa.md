@@ -1,4 +1,4 @@
-# NeuroChip-Twin defense Q&A
+# MEACompass defense Q&A
 
 ## What is the single defensible claim?
 

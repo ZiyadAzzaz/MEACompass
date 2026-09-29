@@ -1,4 +1,4 @@
-schema_name: neurochip_prediction
+schema_name: meacompass_prediction
 schema_version: 1.0.0
 frozen: 2026-09-28
 identity_columns:

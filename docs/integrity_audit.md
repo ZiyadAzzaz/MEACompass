@@ -187,7 +187,7 @@ not erase the registered failure or the stated `r` limitation.
 
 ## Reproduction
 
-The audit implementation is `neurochip/integrity_audit.py`; regression tests are
+The audit implementation is `meacompass/integrity_audit.py`; regression tests are
 in `tests/test_integrity_audit.py`. Required outputs are:
 
 - `results/audit/feature_lineage.csv`

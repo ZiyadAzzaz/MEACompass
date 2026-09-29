@@ -5,7 +5,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from neurochip.data import propose_treatment_crosswalk
+from meacompass.data import propose_treatment_crosswalk
 
 
 def main() -> None:

@@ -13,16 +13,16 @@ import pandas as pd
 import yaml
 from sklearn.metrics import mean_absolute_error
 
-from neurochip.baselines import endpoint_frame, fit_baseline, predict_baseline
-from neurochip.chem import attach_chemistry
-from neurochip.data import (
+from meacompass.baselines import endpoint_frame, fit_baseline, predict_baseline
+from meacompass.chem import attach_chemistry
+from meacompass.data import (
     PRIMARY_ENDPOINTS,
     build_longitudinal_table,
     primary_feature_columns,
     validate_time_causal_features,
 )
-from neurochip.splits import outer_folds
-from neurochip.train_baselines import (
+from meacompass.splits import outer_folds
+from meacompass.train_baselines import (
     feature_matrix,
     file_sha256,
     make_xgb,

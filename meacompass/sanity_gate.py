@@ -12,11 +12,11 @@ import pandas as pd
 import yaml
 from sklearn.metrics import mean_absolute_error
 
-from neurochip.baselines import endpoint_frame, fit_baseline, predict_baseline
-from neurochip.data import PRIMARY_ENDPOINTS, build_longitudinal_table, primary_feature_columns
-from neurochip.evaluate import bootstrap_paired_mae
-from neurochip.splits import outer_folds
-from neurochip.train_baselines import (
+from meacompass.baselines import endpoint_frame, fit_baseline, predict_baseline
+from meacompass.data import PRIMARY_ENDPOINTS, build_longitudinal_table, primary_feature_columns
+from meacompass.evaluate import bootstrap_paired_mae
+from meacompass.splits import outer_folds
+from meacompass.train_baselines import (
     feature_matrix,
     make_xgb,
     prediction_records,

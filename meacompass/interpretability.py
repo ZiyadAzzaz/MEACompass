@@ -11,13 +11,13 @@ import pandas as pd
 import xgboost as xgb
 import yaml
 
-from neurochip.baselines import endpoint_frame, fit_baseline, predict_baseline
-from neurochip.chem import attach_chemistry
-from neurochip.data import PRIMARY_ENDPOINTS, build_longitudinal_table, primary_feature_columns
-from neurochip.sanity_gate import attach_identity
-from neurochip.splits import outer_folds
-from neurochip.train_baselines import feature_matrix, make_xgb
-from neurochip.train_m1 import m1_training_target
+from meacompass.baselines import endpoint_frame, fit_baseline, predict_baseline
+from meacompass.chem import attach_chemistry
+from meacompass.data import PRIMARY_ENDPOINTS, build_longitudinal_table, primary_feature_columns
+from meacompass.sanity_gate import attach_identity
+from meacompass.splits import outer_folds
+from meacompass.train_baselines import feature_matrix, make_xgb
+from meacompass.train_m1 import m1_training_target
 
 
 CASE_ENDPOINTS = ("meanfiringrate", "nAE", "r")

@@ -2,7 +2,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 import pandas as pd
-from neurochip.result_schema import adapt_baseline_predictions, load_prediction_file
+from meacompass.result_schema import adapt_baseline_predictions, load_prediction_file
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--input", type=Path, required=True)

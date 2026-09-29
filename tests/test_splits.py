@@ -3,13 +3,13 @@ from pathlib import Path
 import pandas as pd
 import pytest
 
-from neurochip.data import (
+from meacompass.data import (
     EXCLUDED_RAW_TREATMENTS,
     attach_canonical_cas,
     build_treatment_crosswalk,
     load_raw,
 )
-from neurochip.splits import outer_folds
+from meacompass.splits import outer_folds
 
 
 DATA_ROOT = Path("data/raw/epa_nfa/extracted")

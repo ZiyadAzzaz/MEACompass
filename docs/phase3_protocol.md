@@ -44,7 +44,7 @@ full five-endpoint results table.
 - M3 passes when 70%-coverage accepted-case MAE is at least 15% below full
   coverage with a beneficial chemical-bootstrap confidence interval; a reduction
   whose interval crosses zero is WEAK.
-- Lock NeuroChip after Gate S PASS/WEAK and Gate M3 PASS/WEAK. Gate S PASS with
+- Lock MEACompass after Gate S PASS/WEAK and Gate M3 PASS/WEAK. Gate S PASS with
   M3 FAIL also locks with the reduced early-prediction headline. Any other state
   stops for user review.
 

@@ -12,14 +12,14 @@ import pandas as pd
 import yaml
 from sklearn.metrics import mean_absolute_error
 
-from neurochip.baselines import endpoint_frame, fit_baseline, predict_baseline
-from neurochip.chem import attach_chemistry
-from neurochip.data import NETWORK_METRICS, PRIMARY_ENDPOINTS, build_longitudinal_table, primary_feature_columns, validate_time_causal_features
-from neurochip.evaluate import bootstrap_paired_mae
-from neurochip.sanity_gate import KEYS, attach_identity, load_complete_predictions, paired_summary
-from neurochip.splits import assert_group_disjoint, outer_folds
-from neurochip.train_baselines import feature_matrix, make_xgb
-from neurochip.train_m1 import compose_m1_prediction, m1_training_target
+from meacompass.baselines import endpoint_frame, fit_baseline, predict_baseline
+from meacompass.chem import attach_chemistry
+from meacompass.data import NETWORK_METRICS, PRIMARY_ENDPOINTS, build_longitudinal_table, primary_feature_columns, validate_time_causal_features
+from meacompass.evaluate import bootstrap_paired_mae
+from meacompass.sanity_gate import KEYS, attach_identity, load_complete_predictions, paired_summary
+from meacompass.splits import assert_group_disjoint, outer_folds
+from meacompass.train_baselines import feature_matrix, make_xgb
+from meacompass.train_m1 import compose_m1_prediction, m1_training_target
 
 
 AUDIT_SEED = 20260928

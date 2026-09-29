@@ -18,11 +18,11 @@ from scipy import sparse
 from sklearn.metrics import mean_absolute_error
 from xgboost import XGBRegressor
 
-from neurochip.baselines import TRIVIAL_MODELS, endpoint_frame, fit_baseline, predict_baseline
-from neurochip.chem import attach_chemistry
-from neurochip.data import PRIMARY_ENDPOINTS, build_longitudinal_table, primary_feature_columns
-from neurochip.evaluate import bootstrap_delta_mae, prediction_metrics
-from neurochip.splits import outer_folds
+from meacompass.baselines import TRIVIAL_MODELS, endpoint_frame, fit_baseline, predict_baseline
+from meacompass.chem import attach_chemistry
+from meacompass.data import PRIMARY_ENDPOINTS, build_longitudinal_table, primary_feature_columns
+from meacompass.evaluate import bootstrap_delta_mae, prediction_metrics
+from meacompass.splits import outer_folds
 
 
 ALL_MODELS = ("B0", "B1", "B1b", "B2", "B3", "B4")

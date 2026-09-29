@@ -10,13 +10,13 @@ import pandas as pd
 import yaml
 from sklearn.metrics import mean_absolute_error
 
-from neurochip.baselines import endpoint_frame
-from neurochip.chem import attach_chemistry
-from neurochip.data import NETWORK_METRICS, PRIMARY_ENDPOINTS, build_longitudinal_table
-from neurochip.integrity_audit import fit_fixed
-from neurochip.reliability import ALPHA, cvplus_bounds, fit_cvplus_fold, load_m1_settings
-from neurochip.sanity_gate import KEYS, attach_identity
-from neurochip.splits import outer_folds
+from meacompass.baselines import endpoint_frame
+from meacompass.chem import attach_chemistry
+from meacompass.data import NETWORK_METRICS, PRIMARY_ENDPOINTS, build_longitudinal_table
+from meacompass.integrity_audit import fit_fixed
+from meacompass.reliability import ALPHA, cvplus_bounds, fit_cvplus_fold, load_m1_settings
+from meacompass.sanity_gate import KEYS, attach_identity
+from meacompass.splits import outer_folds
 
 
 WINDOWS = {

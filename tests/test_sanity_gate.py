@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-from neurochip.sanity_gate import paired_summary, permute_targets_by_chemical
+from meacompass.sanity_gate import paired_summary, permute_targets_by_chemical
 
 
 def test_group_permutation_moves_whole_chemical_blocks() -> None:

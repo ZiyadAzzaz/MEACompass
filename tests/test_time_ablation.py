@@ -1,6 +1,6 @@
 import pandas as pd
 
-from neurochip.time_ablation import add_div9_missingness, window_features
+from meacompass.time_ablation import add_div9_missingness, window_features
 
 
 def test_window_features_respect_decision_day() -> None:
@@ -24,7 +24,7 @@ def test_window_features_respect_decision_day() -> None:
 def test_div9_missingness_is_row_local() -> None:
     frame = pd.DataFrame({"div9_metric": [1.0, None]})
     # Use the production metric name set without constructing a full raw table.
-    from neurochip import time_ablation
+    from meacompass import time_ablation
 
     original = time_ablation.NETWORK_METRICS
     time_ablation.NETWORK_METRICS = ["metric"]

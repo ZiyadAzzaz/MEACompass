@@ -1,4 +1,4 @@
-# NeuroChip-Twin Phase 2 pre-registration
+# MEACompass Phase 2 pre-registration
 
 Frozen: 2026-09-28, before any predictive model result  
 Protocol version: 1.0  
@@ -213,7 +213,7 @@ width threshold and `CONTINUE TO DIV12` otherwise.
 
 If B3 and M1 fail to improve on BT, delta Spearman is below 0.20, classification
 AUROC is below 0.60 when a verified official hit label is available, and
-abstention does not lower risk, NeuroChip receives a FAIL flag at Gate L1. No
+abstention does not lower risk, MEACompass receives a FAIL flag at Gate L1. No
 automatic pivot or test-set tuning is allowed.
 
 ## Reporting and claims

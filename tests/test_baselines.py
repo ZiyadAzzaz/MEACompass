@@ -1,10 +1,10 @@
 import numpy as np
 import pandas as pd
 
-from neurochip.baselines import endpoint_frame, fit_baseline, predict_baseline
-from neurochip.evaluate import bootstrap_paired_mae, prediction_metrics
-from neurochip.evaluate_m1_gate import gate_m1_decision
-from neurochip.train_m1 import compose_m1_prediction, m1_training_target
+from meacompass.baselines import endpoint_frame, fit_baseline, predict_baseline
+from meacompass.evaluate import bootstrap_paired_mae, prediction_metrics
+from meacompass.evaluate_m1_gate import gate_m1_decision
+from meacompass.train_m1 import compose_m1_prediction, m1_training_target
 
 
 def synthetic_frame() -> pd.DataFrame:

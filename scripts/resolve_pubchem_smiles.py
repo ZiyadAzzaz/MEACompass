@@ -49,7 +49,7 @@ def resolve(casrn: str, attempts: int = 3) -> dict[str, object]:
     )
     for attempt in range(attempts):
         try:
-            request = urllib.request.Request(url, headers={"User-Agent": "NeuroChip-Twin/0.1"})
+            request = urllib.request.Request(url, headers={"User-Agent": "MEACompass/0.1"})
             with urllib.request.urlopen(request, timeout=30) as response:
                 record = json.load(response)["PropertyTable"]["Properties"][0]
             return {

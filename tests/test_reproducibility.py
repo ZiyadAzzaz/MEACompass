@@ -7,8 +7,8 @@ from pathlib import Path
 
 import pytest
 
-from neurochip.fetch_results import MAX_COMMITTED_ARTIFACT_BYTES, verify_manifest
-from neurochip.train_all import COMMANDS
+from meacompass.fetch_results import MAX_COMMITTED_ARTIFACT_BYTES, verify_manifest
+from meacompass.train_all import COMMANDS
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -60,22 +60,22 @@ def test_epa_manifest_uses_public_https_and_audit_hashes() -> None:
 def test_train_all_is_guarded_and_complete() -> None:
     modules = " ".join(" ".join(command) for command in COMMANDS)
     for required in [
-        "neurochip.train_baselines",
-        "neurochip.train_m1",
-        "neurochip.integrity_audit",
-        "neurochip.reliability",
-        "neurochip.time_ablation",
-        "neurochip.submission_artifacts",
+        "meacompass.train_baselines",
+        "meacompass.train_m1",
+        "meacompass.integrity_audit",
+        "meacompass.reliability",
+        "meacompass.time_ablation",
+        "meacompass.submission_artifacts",
     ]:
         assert required in modules
     result = subprocess.run(
-        [sys.executable, "-m", "neurochip.train_all", "--dry-run"],
+        [sys.executable, "-m", "meacompass.train_all", "--dry-run"],
         cwd=ROOT,
         check=True,
         capture_output=True,
         text=True,
     )
-    assert "neurochip.train_m1" in result.stdout
+    assert "meacompass.train_m1" in result.stdout
 
 
 def test_makefile_exposes_required_reproduction_targets() -> None:

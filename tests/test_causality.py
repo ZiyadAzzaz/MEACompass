@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from neurochip.data import (
+from meacompass.data import (
     build_longitudinal_table,
     primary_feature_columns,
     validate_time_causal_features,

@@ -13,9 +13,13 @@ ENDPOINT_LABELS = {
     "r": "Coordinated activity (r)",
 }
 
-st.set_page_config(page_title="NeuroChip-Twin", page_icon="🧠", layout="wide")
-st.title("NeuroChip-Twin")
-st.caption("Reliability-aware early forecasting for rat cortical neural MEA assays")
+st.set_page_config(page_title="MEACompass", page_icon="🧠", layout="wide")
+st.title("MEACompass")
+st.subheader(
+    "Reliability-Aware Early Prediction of Neural Network Development "
+    "from Microelectrode-Array Assays"
+)
+st.caption("Toward Functional Digital Twins for Neural Organ-on-Chip Screening")
 
 try:
     predictions = load_demo_table(Path("results/demo_predictions.csv"))

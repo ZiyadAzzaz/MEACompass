@@ -1,13 +1,23 @@
 # Decision log
 
+## 2026-09-29 — Project identity lock
+
+- Identity: MEACompass (formerly NeuroChip-Twin).
+- Full title: **MEACompass: Reliability-Aware Early Prediction of Neural Network
+  Development from Microelectrode-Array Assays**.
+- Subtitle: **Toward Functional Digital Twins for Neural Organ-on-Chip Screening**.
+- Scope: rename repository, package/module imports, CLI commands, app, report,
+  README, deck, video assets, schemas, and documentation without modifying
+  locked scientific values or result contents beyond identity strings.
+
 ## 2026-09-28 — Gates N0/N1: data feasibility
 
 - Evidence: 136 unique CAS RNs, 4,344 per-well trajectories, DIV5/7/9/12,
   96.5% complete trajectories, 95.6% PubChem SMILES resolution.
-- Decision: make NeuroChip the primary project, while keeping CellTwin-X as the
+- Decision: make MEACompass the primary project, while keeping CellTwin-X as the
   measured fallback until Gate L1.
 - Claim constraint: EPA NFA is a rat cortical neural MEA assay, not OoC data.
-- Full evidence: `docs/neurochip_data_audit.md`.
+- Full evidence: `docs/meacompass_data_audit.md`.
 
 ## 2026-09-28 — Phase 2 protocol corrections
 

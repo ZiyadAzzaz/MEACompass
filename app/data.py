@@ -1,7 +1,7 @@
 from __future__ import annotations
 from pathlib import Path
 import pandas as pd
-from neurochip.result_schema import load_prediction_file
+from meacompass.result_schema import load_prediction_file
 
 DEMO_COLUMNS = {
     "sample_id", "casrn", "trt", "cohort", "dose", "endpoint",

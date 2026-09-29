@@ -11,15 +11,15 @@ import pandas as pd
 import yaml
 from sklearn.metrics import mean_absolute_error
 
-from neurochip.baselines import endpoint_frame, fit_baseline, predict_baseline
-from neurochip.chem import attach_chemistry
-from neurochip.data import PRIMARY_ENDPOINTS, build_longitudinal_table, primary_feature_columns
-from neurochip.evaluate import bootstrap_paired_mae
-from neurochip.integrity_audit import fit_fixed, load_fixed_settings
-from neurochip.sanity_gate import KEYS, attach_identity
-from neurochip.splits import outer_folds
-from neurochip.train_baselines import feature_matrix, make_xgb
-from neurochip.train_m1 import compose_m1_prediction, m1_training_target
+from meacompass.baselines import endpoint_frame, fit_baseline, predict_baseline
+from meacompass.chem import attach_chemistry
+from meacompass.data import PRIMARY_ENDPOINTS, build_longitudinal_table, primary_feature_columns
+from meacompass.evaluate import bootstrap_paired_mae
+from meacompass.integrity_audit import fit_fixed, load_fixed_settings
+from meacompass.sanity_gate import KEYS, attach_identity
+from meacompass.splits import outer_folds
+from meacompass.train_baselines import feature_matrix, make_xgb
+from meacompass.train_m1 import compose_m1_prediction, m1_training_target
 
 
 ALPHA = 0.10

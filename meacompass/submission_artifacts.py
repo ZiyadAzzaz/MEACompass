@@ -8,9 +8,9 @@ from pathlib import Path
 import pandas as pd
 import yaml
 
-from neurochip.data import build_longitudinal_table
-from neurochip.result_schema import REQUIRED_COLUMNS, validate_prediction_frame
-from neurochip.sanity_gate import KEYS, attach_identity
+from meacompass.data import build_longitudinal_table
+from meacompass.result_schema import REQUIRED_COLUMNS, validate_prediction_frame
+from meacompass.sanity_gate import KEYS, attach_identity
 
 
 def build_publication_tables(results_dir: Path) -> None:

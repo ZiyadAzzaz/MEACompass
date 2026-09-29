@@ -1,6 +1,6 @@
 import numpy as np
 
-from neurochip.reliability import cvplus_bounds
+from meacompass.reliability import cvplus_bounds
 
 
 def test_cvplus_bounds_use_only_supplied_oof_residuals() -> None:

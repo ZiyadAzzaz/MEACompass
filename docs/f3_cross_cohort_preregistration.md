@@ -54,7 +54,8 @@ BT+ is the best of B0, B1, B1b, and B2 selected using three chemical-disjoint
 folds inside the source cohort only. BT++ is the better of source-selected BT+
 and fixed DOSE-SMOOTH, again selected using source-only chemical-disjoint folds.
 Both selected comparators are fit on the full source cohort and applied unchanged
-to the target. Target labels never select a model or parameter.
+to the target. Comparator selection uses fixed split seed 0. Target labels never
+select a model or parameter.
 
 ## Metrics and decision
 

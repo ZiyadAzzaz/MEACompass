@@ -426,3 +426,21 @@
   Pages URLs do not resolve until the user performs the human-only publication
   action, and the AI-tool disclosure cannot be finalized until the user confirms
   the actual tools and roles. No tool identity was guessed.
+
+## 2026-09-29 — Gate F4 fallback: schema and recipe shipped
+
+- Applied the approved time-box fallback instead of shipping a partially tested
+  adaptation CLI. Added `schemas/mea_input_v1.yaml` and
+  `docs/adoption_recipe.md`.
+- The schema requires chemical, dose, plate, well, DIV, and all five reference
+  endpoint columns; SMILES, cohort, and replicate are optional. It fails closed
+  on duplicate keys, missing time points, missing plate/DIV controls, mixed dose
+  units, invalid control denominators, or time-causality violations.
+- The recipe covers endpoint harmonization, same-plate zero-dose normalization,
+  chemical-disjoint nested evaluation, training-only selection/calibration,
+  chemical bootstrap, drift checks, and frozen prospective validation.
+- Wording is deliberately bounded: this is a local evaluation/adaptation toolkit,
+  not evidence that the frozen EPA model deploys directly on a new chip. New
+  platforms require local validation and recalibration.
+- Gate F4 is **CUT TO APPROVED FALLBACK — schema + recipe complete; no CLI**.
+  Automated schema/boundary tests pass; the full suite is 71/71.

@@ -91,6 +91,17 @@ See `docs/reproducibility.md` for the fresh-clone test and recorded runtime scop
 - Sources and licenses: `docs/sources_and_licenses.md`
 - AI-tool disclosure template: `docs/ai_tool_disclosure.md`
 
+## Use on your own MEA data
+
+Start with [`schemas/mea_input_v1.yaml`](schemas/mea_input_v1.yaml) and the
+[`local adaptation recipe`](docs/adoption_recipe.md). They define a fail-closed
+mapping, same-plate zero-dose normalization, chemical-disjoint evaluation,
+training-only calibration, drift checks, and prospective validation.
+
+This is a local evaluation/adaptation toolkit, not evidence that the frozen EPA
+model can be deployed directly on a new chip. New platforms require local model
+training, interval recalibration, and prospective human-reviewed validation.
+
 ## License
 
 Project code is Apache-2.0. EPA data are not redistributed through Git and retain

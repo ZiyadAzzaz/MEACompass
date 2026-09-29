@@ -1,0 +1,86 @@
+schema_name: meacompass_mea_input
+schema_version: 1.0.0
+purpose: local_evaluation_and_adaptation
+unit_of_observation: one_plate_well_div_measurement
+
+required_columns:
+  chemical_id:
+    type: string
+    description: Stable local chemical identifier; use CAS RN when available.
+  dose:
+    type: number
+    constraints: {minimum: 0}
+    description: Exposure concentration in one consistent unit declared by the user.
+  plate:
+    type: string
+    description: Plate or recording-batch identifier.
+  well:
+    type: string
+    description: Well identifier unique within plate.
+  DIV:
+    type: integer
+    description: Day in vitro for this measurement.
+  burst.per.min:
+    type: number
+    nullable: true
+    description: Bursts per minute.
+  meanfiringrate:
+    type: number
+    nullable: true
+    description: Mean firing rate.
+  nAE:
+    type: number
+    nullable: true
+    description: Number of active electrodes.
+  ns.n:
+    type: number
+    nullable: true
+    description: Network-spike count or locally harmonized equivalent.
+  r:
+    type: number
+    nullable: true
+    description: Coordinated-activity measure or locally harmonized equivalent.
+
+optional_columns:
+  smiles:
+    type: string
+    nullable: true
+    description: Canonical or isomeric SMILES used only for structure-derived descriptors.
+  cohort:
+    type: string
+    nullable: true
+    description: Screening program, laboratory, device, or acquisition cohort.
+  replicate:
+    type: string
+    nullable: true
+    description: Biological or technical replicate identifier.
+
+required_divs:
+  primary_inputs: [5, 7]
+  target: 12
+
+validation_rules:
+  - The tuple [plate, well, DIV] must be unique.
+  - Each modeled plate-well trajectory must contain DIV5, DIV7, and DIV12.
+  - Each plate and DIV used for normalization must contain at least one dose-zero control.
+  - Dose units must be consistent and recorded outside the numeric dose field.
+  - Canonical chemical_id is the group for every train, validation, test, and bootstrap split.
+  - All aliases, doses, wells, plates, and replicates for one chemical stay in one split.
+  - Preprocessing, baseline selection, calibration, and thresholds are fit on training groups only.
+  - DIV9 and DIV12 measurements are forbidden as primary-model inputs.
+
+normalization:
+  method: same_plate_same_div_zero_dose_percent_control
+  fit_scope: within_plate_and_div
+  zero_control_required: true
+  zero_denominator_policy: fail_closed
+
+deployment_boundary:
+  frozen_epa_model_direct_deployment: prohibited
+  required_before_operational_use:
+    - local endpoint harmonization
+    - local chemical-disjoint evaluation
+    - local interval calibration
+    - drift assessment across plates, dates, and devices
+    - prospective validation with human review
+

@@ -2,9 +2,8 @@
 
 **Toward Functional Digital Twins for Neural Organ-on-Chip Screening**
 
-Author: **Ziyad Azzaz**, College of Artificial Intelligence, Arab Academy for
-Science, Technology & Maritime Transport (AASTMT), Alamein Campus, Egypt.
-Team: **MEACompass** — solo submission; no additional team members.
+**Can DIV7 neural physiology forecast DIV12 outcomes for unseen chemicals—and
+know when the forecast is too uncertain to trust?**
 
 MEACompass uses measurements available by day in vitro 7 (DIV7) to forecast
 five DIV12 functional outcomes for unseen chemicals. It adds calibrated 90%
@@ -12,14 +11,36 @@ intervals and abstains on the least certain 30% of cases.
 
 [Live demo](https://ziyadazzaz.github.io/MEACompass/demo/) ·
 [Technical report](https://github.com/ZiyadAzzaz/MEACompass/blob/main/docs/MEACompass_Technical_Report.pdf) ·
-[Competition deck](https://github.com/ZiyadAzzaz/MEACompass/blob/main/docs/MEACompass_Competition_Deck.pptx)
+[Competition deck](https://github.com/ZiyadAzzaz/MEACompass/blob/main/docs/MEACompass_Competition_Deck.pptx) ·
+[Public repository](https://github.com/ZiyadAzzaz/MEACompass)
+
+![Public MEACompass demo showing observed early measurements, predicted DIV12 outcomes, calibrated intervals, and reliability verdict](docs/assets/demo_public_neutral.png)
+
+*Public MEACompass demo — observed early measurements, predicted DIV12 outcome,
+calibrated interval, and reliability verdict.*
+
+## Headline evidence
+
+- **14.2–39.0% lower MAE** versus inner-selected BT+ across all five endpoints.
+- **12.3–42.9% lower MAE** versus the stricter post-audit BT++ comparator.
+- **91.0–92.4% empirical coverage** for nominal 90% prediction intervals.
+- Selective prediction passes the registered risk criterion on **3/5 endpoints**;
+  the other two remain explicit limitations.
 
 The source is a **rat cortical neural MEA assay, not an organ-on-chip dataset**.
 This is a retrospective research decision-support prototype, not an autonomous
 assay-termination system. Human neural organ-on-chip transfer requires prospective
 external validation.
 
-## Locked result
+Author: **Ziyad Azzaz**, College of Artificial Intelligence, Arab Academy for
+Science, Technology & Maritime Transport (AASTMT), Alamein Campus, Egypt. Team:
+**MEACompass** — solo submission; no additional team members.
+
+## Locked result and limitations
+
+![Five-endpoint locked chemical-disjoint primary result](docs/assets/main_results_locked.png)
+
+*Locked chemical-disjoint primary result.*
 
 - M1 improves MAE versus inner-selected BT+ by 14.2–39.0% on all five endpoints;
   every chemical-bootstrap paired interval excludes zero.
@@ -45,6 +66,11 @@ interpretation is that control normalization makes simple baselines competitive
 there; this is not established as a causal explanation. The intended early-triage
 use is exposed wells.
 
+![Frozen risk–coverage curves for all five endpoints](artifacts/reproduce-lite/risk_coverage.png)
+
+*Frozen risk–coverage behavior. Lower accepted-case MAE is better; the registered
+decision passes three of five endpoints, not five of five.*
+
 Read the integrated [report](docs/report_draft.md), [integrity audit](docs/integrity_audit.md),
 [defense Q&A](docs/defense_qa.md), [video script](docs/video_script.md), and
 [competition deck outline](docs/slides_outline.md).
@@ -68,8 +94,10 @@ precomputed held-out predictions.
 For hosting without a Python server, `make static-demo` rebuilds the self-contained
 [`docs/demo/index.html`](docs/demo/index.html) fallback. It embeds a deterministic,
 cohort-balanced subset of the same precomputed outer-test predictions and makes no
-network request. Public hosting is pending the required human action to create or
-make a repository public; no public URL is claimed yet.
+network request. The verified public repository is
+[github.com/ZiyadAzzaz/MEACompass](https://github.com/ZiyadAzzaz/MEACompass), and
+the live static demo is available at
+[ziyadazzaz.github.io/MEACompass/demo/](https://ziyadazzaz.github.io/MEACompass/demo/).
 
 The seven required result/demo files total 8.34 MiB and are committed with a
 SHA-256 manifest, so `make fetch-results` is an offline integrity check rather
@@ -100,7 +128,7 @@ See `docs/reproducibility.md` for the fresh-clone test and recorded runtime scop
 - Interpretation and cases: `results/feature_importance.csv`,
   `results/case_studies.csv`
 - Sources and licenses: `docs/sources_and_licenses.md`
-- AI-tool disclosure template: `docs/ai_tool_disclosure.md`
+- Final AI-tool disclosure: `docs/ai_tool_disclosure.md`
 
 ## Use on your own MEA data
 

@@ -1,4 +1,5 @@
 import json
+import hashlib
 from pathlib import Path
 
 import yaml
@@ -29,3 +30,21 @@ def test_final_model_rule_does_not_reference_external_outcomes() -> None:
     source = (ROOT / "meacompass" / "final_model.py").read_text(encoding="utf-8")
     assert "data/external/f3b" not in source
     assert "refinement" not in source.lower()
+
+
+def test_final_model_manifest_records_three_models_per_endpoint() -> None:
+    manifest = json.loads(
+        (ROOT / "schemas" / "final_model_manifest.json").read_text(encoding="utf-8")
+    )
+    models = [item for item in manifest["artifacts"] if "/m1_" in item["path"] and "residual_baseline" not in item["path"]]
+    assert manifest["training_chemicals"] == 136
+    assert manifest["seeds"] == [0, 1, 2]
+    assert len(models) == 15
+    assert all(len(item["sha256"]) == 64 for item in manifest["artifacts"])
+
+    local_artifacts = ROOT / "results" / "final_model"
+    if local_artifacts.exists():
+        for item in manifest["artifacts"]:
+            path = ROOT / item["path"]
+            assert path.stat().st_size == item["bytes"]
+            assert hashlib.sha256(path.read_bytes()).hexdigest() == item["sha256"]

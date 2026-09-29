@@ -471,3 +471,22 @@
   this registration.
 - Immutable registration commit before external access:
   `4d2d5de553ee46909725d07910c361fc0e2106d8`.
+
+## 2026-09-29 — Amendment B final 2019 models built
+
+- `make final-model` completed without refinement-data access and trained 15
+  final M1 models: five endpoints × seeds 0/1/2, using all eligible 2019
+  development chemicals and the preregistered aggregate settings.
+- Saved 79 local artifacts (4.26 MiB): model JSON files, fitted baseline
+  parameters, frozen comparator selections, feature order, descriptor settings,
+  training chemical list, grouped out-of-fold calibration pool, calibration
+  rule, and seed metadata. Checkpoint/model bytes remain ignored and will not be
+  pushed or redistributed.
+- `schemas/final_model_manifest.json` records 136 training chemicals, 2,139
+  ordered features, raw-training-file hashes, package versions, and SHA-256 plus
+  byte size for every final-model artifact.
+- Final 2019-only comparator selection chose B0 as BT+ for firing, bursts, and
+  network spikes; B2 for active electrodes and `r`. BT++ chose dose-smooth for
+  the first four endpoints and BT+ for `r`, consistently across all three seeds.
+- No external/refinement outcome or file influenced model construction,
+  comparator selection, calibration, or abstention thresholds.

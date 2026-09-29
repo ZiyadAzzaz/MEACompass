@@ -7,7 +7,7 @@ SHELL := cmd.exe
 .SHELLFLAGS := /C
 endif
 
-.PHONY: setup fetch-results data train-all reproduce-lite demo test baselines bt-plus m1 audit
+.PHONY: setup fetch-results data train-all reproduce-lite demo static-demo test baselines bt-plus m1 audit
 
 setup:
 	"$(PYTHON)" -m pip install -e ".[test,demo]"
@@ -29,6 +29,9 @@ reproduce-lite:
 
 demo:
 	"$(PYTHON)" -m streamlit run app/streamlit_app.py
+
+static-demo:
+	"$(PYTHON)" scripts/build_static_demo.py
 
 audit:
 	"$(PYTHON)" scripts/audit_epa_nfa.py

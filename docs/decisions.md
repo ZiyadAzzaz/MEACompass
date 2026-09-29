@@ -35,6 +35,19 @@
   preregistration before scoring.
 - Full record: `docs/f3b_external_validation.md`.
 
+## 2026-09-29 — Gate F5: BRANCH / PUBLICATION READY
+
+- Built a self-contained static fallback from precomputed outer-test predictions
+  at `docs/demo/index.html`; the generator is `scripts/build_static_demo.py`.
+- The deterministic cohort-balanced subset contains 100 held-out wells and does
+  not select cases using outcomes, errors, uncertainty, or verdicts.
+- Local delivery returned HTTP 200 in 0.16 seconds with no external requests;
+  automated tests cover schema completeness and required scope labels.
+- A public URL is not yet claimed: the repository has no remote, GitHub
+  authentication is invalid, and making a repository public is a human-only
+  action under the approved protocol.
+- Full record and completion instructions: `docs/f5_demo.md`.
+
 ## 2026-09-28 — Gates N0/N1: data feasibility
 
 - Evidence: 136 unique CAS RNs, 4,344 per-well trajectories, DIV5/7/9/12,

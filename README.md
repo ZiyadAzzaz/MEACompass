@@ -46,12 +46,19 @@ make fetch-results
 make test
 make reproduce-lite
 make demo
+make static-demo
 ```
 
 `reproduce-lite` validates the frozen prediction schema and regenerates tables and
 figures from saved result artifacts only. It never launches training and fails
 explicitly if required files are missing. The Streamlit demo likewise uses only
 precomputed held-out predictions.
+
+For hosting without a Python server, `make static-demo` rebuilds the self-contained
+[`docs/demo/index.html`](docs/demo/index.html) fallback. It embeds a deterministic,
+cohort-balanced subset of the same precomputed outer-test predictions and makes no
+network request. Public hosting is pending the required human action to create or
+make a repository public; no public URL is claimed yet.
 
 The seven required result/demo files total 8.34 MiB and are committed with a
 SHA-256 manifest, so `make fetch-results` is an offline integrity check rather

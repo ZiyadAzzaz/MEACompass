@@ -506,3 +506,20 @@
   MAE, interval coverage, or showcase case was inspected or reported.
 - Required fallback: retain the completed post-lock NTP↔ToxCast held-out cohort
   analysis with its existing narrow, non-device-transfer wording.
+
+## 2026-09-29 — F5 demo case-selection rule registered
+
+Before rebuilding the public demo, three judge-facing cases are fixed without
+new performance browsing:
+
+- **Neutral:** the lexically first complete three-endpoint sample from the first
+  cohort in lexical order. This yields `NTP|MW1139-19|A1` and is independent of
+  targets, prediction errors, uncertainty, and verdict.
+- **Ordinary correct:** the first `correct` row in the already-locked
+  `results/case_studies.csv` ordering, which was produced by the disclosed
+  endpoint-scaled error rule. This yields `ToxCast|MW1147-5|E4` (Fluorene).
+- **Disclosed failure:** the already-published tributyltin chloride failure in
+  that locked table, `ToxCast|MW1160-23|B5`.
+
+These labels are descriptive navigation aids. They do not change the embedded
+cohort-balanced subset, estimate performance, or select a new scientific result.

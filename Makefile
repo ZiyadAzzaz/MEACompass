@@ -7,7 +7,7 @@ SHELL := cmd.exe
 .SHELLFLAGS := /C
 endif
 
-.PHONY: setup fetch-results data train-all reproduce-lite demo static-demo test baselines bt-plus m1 final-model f3b-audit audit f3-cross-cohort report
+.PHONY: setup fetch-results data train-all reproduce-lite demo static-demo writeup test baselines bt-plus m1 final-model f3b-audit audit f3-cross-cohort report
 
 setup:
 	"$(PYTHON)" -m pip install -e ".[test,demo,docs,f3b]"
@@ -32,6 +32,9 @@ demo:
 
 static-demo:
 	"$(PYTHON)" scripts/build_static_demo.py
+
+writeup:
+	"$(PYTHON)" scripts/update_kaggle_writeup.py
 
 audit:
 	"$(PYTHON)" scripts/audit_epa_nfa.py

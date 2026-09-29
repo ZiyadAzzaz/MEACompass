@@ -86,3 +86,4 @@ htmlcov/
 .DS_Store
 Thumbs.db
 ~$*.pptx
+docs/*_WORKING.pptx

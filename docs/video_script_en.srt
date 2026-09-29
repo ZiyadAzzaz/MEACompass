@@ -12,7 +12,7 @@ HYPOTHESIS marks claims not validated by this study.
 3
 00:00:58,000 --> 00:01:30,000
 The study has 136 chemicals and about 4,200 trajectories.
-All five endpoints improved by 14.2 to 39.0 percent versus the strongest baseline BT+,
+All five endpoints improved by 14.2 to 39.0 percent versus a strong inner-selected baseline, BT+,
 and by 12.3 to 42.9 percent versus the stricter BT++.
 Every paired chemical-level 95 percent confidence interval excluded zero.
 
@@ -24,7 +24,7 @@ and the failure remains visible.
 
 5
 00:02:05,000 --> 00:02:45,000
-Nominal intervals achieved 91.0% to 92.4% coverage.
+Nominal 90% intervals achieved 91.0% to 92.4% empirical coverage.
 Abstention passed on three of five endpoints; the other two remain limitations.
 
 6

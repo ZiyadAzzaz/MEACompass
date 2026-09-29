@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from scripts.build_static_demo import DISPLAY_ENDPOINTS, select_rows
+from scripts.build_static_demo import CASE_IDS, DISPLAY_ENDPOINTS, select_rows
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,7 +15,15 @@ def test_static_demo_selection_is_complete_and_deterministic() -> None:
     pd.testing.assert_frame_equal(first, second)
     assert set(first["endpoint"]) == set(DISPLAY_ENDPOINTS)
     assert first.groupby("sample_id")["endpoint"].nunique().eq(3).all()
-    assert first.groupby("cohort")["sample_id"].nunique().eq(3).all()
+    assert first.groupby("cohort")["sample_id"].nunique().ge(3).all()
+
+
+def test_static_demo_contains_all_preregistered_cases() -> None:
+    source = pd.read_csv(ROOT / "results" / "demo_predictions.csv")
+    selected = select_rows(source, per_cohort=3)
+    assert set(CASE_IDS.values()).issubset(set(selected["sample_id"]))
+    labels = selected.loc[selected["demo_case"].ne(""), ["demo_case", "sample_id"]]
+    assert dict(labels.drop_duplicates().itertuples(index=False, name=None)) == CASE_IDS
 
 
 def test_static_demo_is_self_contained_and_scope_safe() -> None:
@@ -28,3 +36,7 @@ def test_static_demo_is_self_contained_and_scope_safe() -> None:
     assert "http://" not in html
     assert "https://" not in html
     assert "__DATA__" not in html
+    assert "Neutral - fixed lexical sample" in html
+    assert "Ordinary correct - locked rule" in html
+    assert "Disclosed failure - tributyltin chloride" in html
+    assert "Nominal 90% low" in html

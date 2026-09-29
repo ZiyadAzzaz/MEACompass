@@ -22,10 +22,9 @@ def _flat_text(path: Path) -> str:
 
 
 def _deck_text() -> str:
-    published = DOCS / "MEACompass_Competition_Deck_WORKING.pptx"
-    decks = [published] if published.exists() else list(
-        (ROOT / "outputs").rglob("MEACompass_Competition_Deck.pptx")
-    )
+    published = DOCS / "MEACompass_Competition_Deck.pptx"
+    working = DOCS / "MEACompass_Competition_Deck_WORKING.pptx"
+    decks = [published] if published.exists() else ([working] if working.exists() else [])
     assert len(decks) == 1
     with ZipFile(decks[0]) as archive:
         slide_names = sorted(
@@ -70,6 +69,15 @@ def test_kaggle_summary_and_boundary_are_submission_ready() -> None:
     assert "not organ-on-chip or human data" in summary
     assert "autonomous assay termination" in summary
     assert "VIDEO_URL_TO_BE_ADDED_AFTER_UPLOAD" in writeup
+
+
+def test_kaggle_endpoint_table_matches_frozen_results() -> None:
+    from scripts.update_kaggle_writeup import generated_table
+
+    writeup = _text(DOCS / "kaggle_writeup.md")
+    expected = generated_table(RESULTS)
+    assert expected in writeup
+    assert expected.count("\n|") == 6
 
 
 def test_deck_uses_locked_title_and_subtitle() -> None:

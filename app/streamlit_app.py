@@ -7,6 +7,11 @@ from app.data import load_demo_table
 
 
 DISPLAY_ENDPOINTS = ["meanfiringrate", "nAE", "r"]
+CASE_IDS = {
+    "Neutral - fixed lexical sample": "NTP|MW1139-19|A1",
+    "Ordinary correct - locked rule": "ToxCast|MW1147-5|E4",
+    "Disclosed failure - tributyltin chloride": "ToxCast|MW1160-23|B5",
+}
 ENDPOINT_LABELS = {
     "meanfiringrate": "Mean firing rate",
     "nAE": "Active electrodes",
@@ -36,22 +41,32 @@ predictions = predictions.loc[
 ]
 
 st.sidebar.header("Held-out assay example")
+case_label = st.sidebar.selectbox("Registered case", [*CASE_IDS, "Browse all held-out wells"])
+case_sample = CASE_IDS.get(case_label)
+case_row = (
+    predictions.loc[predictions["sample_id"].eq(case_sample)].iloc[0]
+    if case_sample is not None
+    else None
+)
 chemicals = (
     predictions[["casrn", "trt"]]
     .drop_duplicates()
     .assign(label=lambda frame: frame["trt"] + " · " + frame["casrn"])
     .sort_values("label")
 )
-chemical_label = st.sidebar.selectbox("Chemical", chemicals["label"].tolist())
+chemical_options = chemicals["label"].tolist()
+case_chemical_label = f"{case_row['trt']} Â· {case_row['casrn']}" if case_row is not None else None
+chemical_index = chemical_options.index(case_chemical_label) if case_chemical_label in chemical_options else 0
+chemical_label = st.sidebar.selectbox("Chemical", chemical_options, index=chemical_index)
 chemical = chemicals.loc[chemicals["label"].eq(chemical_label), "casrn"].iloc[0]
 chemical_rows = predictions.loc[predictions["casrn"].eq(chemical)]
-dose = st.sidebar.selectbox(
-    "Dose", sorted(chemical_rows["dose"].dropna().unique().tolist())
-)
+dose_options = sorted(chemical_rows["dose"].dropna().unique().tolist())
+dose_index = dose_options.index(case_row["dose"]) if case_row is not None and case_row["dose"] in dose_options else 0
+dose = st.sidebar.selectbox("Dose", dose_options, index=dose_index)
 dose_rows = chemical_rows.loc[chemical_rows["dose"].eq(dose)]
-sample_id = st.sidebar.selectbox(
-    "Held-out well", sorted(dose_rows["sample_id"].unique().tolist())
-)
+sample_options = sorted(dose_rows["sample_id"].unique().tolist())
+sample_index = sample_options.index(case_sample) if case_sample in sample_options else 0
+sample_id = st.sidebar.selectbox("Held-out well", sample_options, index=sample_index)
 include_div9 = st.sidebar.toggle("What if we wait until DIV9?", value=False)
 reveal = st.sidebar.checkbox("Reveal observed DIV12", value=False)
 
@@ -97,8 +112,8 @@ with predicted:
             columns={
                 "label": "Endpoint",
                 "day9_prediction": "DIV12 forecast",
-                "day9_lower": "90% low",
-                "day9_upper": "90% high",
+                "day9_lower": "Nominal 90% low",
+                "day9_upper": "Nominal 90% high",
             }
         )
         verdict = "DIV9 RETROSPECTIVE FORECAST"
@@ -109,8 +124,8 @@ with predicted:
             columns={
                 "label": "Endpoint",
                 "prediction": "DIV12 forecast",
-                "uncertainty_lower": "90% low",
-                "uncertainty_upper": "90% high",
+                "uncertainty_lower": "Nominal 90% low",
+                "uncertainty_upper": "Nominal 90% high",
             }
         )
         verdict = (
@@ -145,7 +160,7 @@ with hypothesis:
         )
         st.dataframe(comparator, hide_index=True, width="stretch")
         st.caption(
-            "Strongest dose-informed comparator chosen without outer-test labels."
+            "A strong dose-informed comparator chosen without outer-test labels."
         )
 
 if reveal:

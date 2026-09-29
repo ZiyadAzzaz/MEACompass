@@ -31,6 +31,16 @@ The audit identified 136 canonical chemicals, 4,192 complete DIV5/7/9/12 traject
 
 Against the stricter post-audit BT++ comparator, the same frozen predictions improved MAE by 12.3–42.9% across all five endpoints, again with paired chemical-bootstrap intervals excluding zero. The full endpoint table and bootstrap intervals are in the [technical report](MEACompass_Technical_Report.pdf).
 
+<!-- GENERATED_MAIN_RESULTS_START -->
+| Endpoint | M1 MAE | BT+ MAE | Gain vs BT+ | ΔMAE vs BT+ [95% CI] | BT++ Gain | ΔMAE vs BT++ [95% CI] |
+|---|---:|---:|---:|---:|---:|---:|
+| Bursts/min | 27.17 | 32.74 | 17.0% | -5.57 [-7.51, -3.77] | 16.2% | -5.25 [-7.26, -3.41] |
+| Mean firing rate | 39.29 | 45.79 | 14.2% | -6.50 [-11.59, -1.50] | 12.3% | -5.49 [-10.48, -0.21] |
+| Active electrodes | 20.42 | 33.50 | 39.0% | -13.08 [-17.47, -9.52] | 42.9% | -15.33 [-25.82, -7.75] |
+| Network spikes | 40.72 | 48.26 | 15.6% | -7.54 [-10.20, -4.56] | 14.2% | -6.75 [-9.48, -3.76] |
+| Coordinated activity (`r`) | 48.61 | 62.91 | 22.7% | -14.30 [-17.56, -11.05] | 26.4% | -17.41 [-24.51, -12.32] |
+<!-- GENERATED_MAIN_RESULTS_END -->
+
 ### Integrity before momentum
 
 A registered chemical-block permutation control unexpectedly showed a small beneficial bursts result, so the registered gate stopped. We did not erase that outcome. A bounded audit found no future-derived feature, a clean full-target shuffle, no alignment defect, and residual dose/trajectory structure in the original null construction. Real M1 then exceeded every one of 20 independent block-null runs for every endpoint. Continuation was conditional on retaining the failed gate and adding BT++ as a stricter comparator.

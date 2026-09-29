@@ -8,6 +8,11 @@ import pandas as pd
 
 
 DISPLAY_ENDPOINTS = ["meanfiringrate", "nAE", "r"]
+CASE_IDS = {
+    "Neutral - fixed lexical sample": "NTP|MW1139-19|A1",
+    "Ordinary correct - locked rule": "ToxCast|MW1147-5|E4",
+    "Disclosed failure - tributyltin chloride": "ToxCast|MW1160-23|B5",
+}
 REQUIRED = {
     "sample_id", "casrn", "trt", "cohort", "dose", "endpoint",
     "observed_div5", "observed_div7", "observed_div9", "target12",
@@ -28,7 +33,14 @@ def select_rows(frame: pd.DataFrame, per_cohort: int = 50) -> pd.DataFrame:
     for cohort in sorted(display["cohort"].dropna().unique()):
         ids = sorted(display.loc[display["cohort"].eq(cohort), "sample_id"].unique())
         chosen.extend(ids[:per_cohort])
+    available = set(display["sample_id"])
+    missing_cases = set(CASE_IDS.values()) - available
+    if missing_cases:
+        raise ValueError(f"Registered demo cases are missing: {sorted(missing_cases)}")
+    chosen.extend(CASE_IDS.values())
     selected = display.loc[display["sample_id"].isin(chosen), sorted(REQUIRED)].copy()
+    reverse_cases = {sample_id: label for label, sample_id in CASE_IDS.items()}
+    selected["demo_case"] = selected["sample_id"].map(reverse_cases).fillna("")
     selected = selected.sort_values(["cohort", "sample_id", "endpoint"])
     if selected.empty:
         raise ValueError("No complete three-endpoint samples are available")
@@ -48,7 +60,7 @@ HTML = r'''<!doctype html>
     header h1{font-family:Georgia,serif;font-size:clamp(34px,5vw,60px);margin:0 0 6px} header h2{font:700 clamp(17px,2.2vw,26px) Georgia,serif;max-width:980px;margin:0}
     header p{color:#b9d7d1;margin:12px 0 0;font-weight:700}.shell{max-width:1180px;margin:28px auto;padding:0 22px 42px}
     .notice{border-left:5px solid var(--blue);background:var(--white);padding:14px 18px;margin-bottom:22px;font-weight:700}
-    .controls{display:grid;grid-template-columns:2fr 1fr 1.4fr;gap:16px;padding:20px;background:var(--white);border:1px solid var(--rule)}
+    .controls{display:grid;grid-template-columns:1.5fr 2fr 1fr 1.4fr;gap:16px;padding:20px;background:var(--white);border:1px solid var(--rule)}
     label{display:block;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);margin-bottom:6px}
     select{width:100%;padding:11px;border:1px solid #aeb8ba;background:white;color:var(--ink);font-weight:700}.toggles{display:flex;gap:20px;margin:18px 0;flex-wrap:wrap}.toggles label{letter-spacing:0;text-transform:none;font-size:14px;color:var(--ink)}
     .context{margin:18px 0;padding:12px 16px;background:#dfe9f7;border-left:5px solid var(--blue);font-weight:700}
@@ -68,6 +80,7 @@ HTML = r'''<!doctype html>
 <main class="shell">
   <div class="notice">Static, privacy-safe demonstration. Every value is a precomputed outer-test prediction; this page performs no model training and makes no network request.</div>
   <section class="controls">
+    <div><label for="case">Registered case</label><select id="case"></select></div>
     <div><label for="chemical">Chemical</label><select id="chemical"></select></div>
     <div><label for="dose">Dose</label><select id="dose"></select></div>
     <div><label for="well">Held-out well</label><select id="well"></select></div>
@@ -95,6 +108,8 @@ function setOptions(el,values,label=v=>v){el.innerHTML="";values.forEach(v=>{con
 function table(headers,body){return `<table><thead><tr>${headers.map(h=>`<th>${h}</th>`).join("")}</tr></thead><tbody>${body.map(r=>`<tr>${r.map(v=>`<td>${v}</td>`).join("")}</tr>`).join("")}</tbody></table>`}
 const chemicals=unique(rows.map(r=>`${r.casrn}|${r.trt}`)).sort((a,b)=>a.split("|")[1].localeCompare(b.split("|")[1]));
 setOptions(byId("chemical"),chemicals,v=>`${v.split("|")[1]} · ${v.split("|")[0]}`);
+const cases=rows.filter(r=>r.demo_case).reduce((out,r)=>(out[r.demo_case]=r.sample_id,out),{});
+setOptions(byId("case"),Object.keys(cases));
 function chemicalRows(){return rows.filter(r=>r.casrn===byId("chemical").value.split("|")[0])}
 function updateDose(){setOptions(byId("dose"),unique(chemicalRows().map(r=>r.dose)).sort((a,b)=>a-b));updateWell()}
 function updateWell(){const dose=Number(byId("dose").value);setOptions(byId("well"),unique(chemicalRows().filter(r=>Number(r.dose)===dose).map(r=>r.sample_id)).sort());render()}
@@ -102,14 +117,15 @@ function render(){
   const selected=rows.filter(r=>r.sample_id===byId("well").value).sort((a,b)=>endpointOrder.indexOf(a.endpoint)-endpointOrder.indexOf(b.endpoint)); if(!selected.length)return;
   const d9=byId("div9").checked; byId("context").textContent=`Unseen during training · ${selected[0].cohort} cohort · dose ${selected[0].dose} · deterministic non-cherry-picked subset`;
   const oh=["Endpoint","DIV5","DIV7"].concat(d9?["DIV9"]:[]); const ob=selected.map(r=>[labels[r.endpoint],fmt(r.observed_div5),fmt(r.observed_div7)].concat(d9?[fmt(r.observed_div9)]:[]));byId("observed").innerHTML=table(oh,ob);
-  const pb=selected.map(r=>[labels[r.endpoint],fmt(d9?r.day9_prediction:r.prediction),fmt(d9?r.day9_lower:r.uncertainty_lower),fmt(d9?r.day9_upper:r.uncertainty_upper)]);byId("predicted").innerHTML=table(["Endpoint","DIV12 forecast","90% low","90% high"],pb);
+  const pb=selected.map(r=>[labels[r.endpoint],fmt(d9?r.day9_prediction:r.prediction),fmt(d9?r.day9_lower:r.uncertainty_lower),fmt(d9?r.day9_upper:r.uncertainty_upper)]);byId("predicted").innerHTML=table(["Endpoint","DIV12 forecast","Nominal 90% low","Nominal 90% high"],pb);
   const verdict=d9?"DIV9 RETROSPECTIVE FORECAST":(selected.every(r=>r.verdict==="EARLY DECISION POSSIBLE")?"EARLY DECISION POSSIBLE":"CONTINUE TO DIV12");byId("badge").textContent=verdict;byId("badge").className="badge"+(verdict.includes("CONTINUE")?" wait":"");
   if(d9){const hb=selected.map(r=>[labels[r.endpoint],fmt(r.uncertainty_upper-r.uncertainty_lower),fmt(r.day9_upper-r.day9_lower)]);byId("hypothesis").innerHTML=table(["Endpoint","DIV7 width","DIV9 width"],hb);byId("hypothesis-note").textContent="Retrospective scenario: added DIV9 evidence, not a prospective deployment claim."}
-  else{const hb=selected.map(r=>[labels[r.endpoint],fmt(r.bt_plus_plus_prediction)]);byId("hypothesis").innerHTML=table(["Endpoint","BT++ forecast"],hb);byId("hypothesis-note").textContent="Strongest dose-informed comparator chosen without outer-test labels."}
+  else{const hb=selected.map(r=>[labels[r.endpoint],fmt(r.bt_plus_plus_prediction)]);byId("hypothesis").innerHTML=table(["Endpoint","BT++ forecast"],hb);byId("hypothesis-note").textContent="A strong dose-informed comparator chosen without outer-test labels."}
   byId("reveal-panel").hidden=!byId("reveal").checked;byId("revealed").innerHTML=table(["Endpoint","Observed DIV12"],selected.map(r=>[labels[r.endpoint],fmt(r.target12)]));
 }
-byId("chemical").addEventListener("change",updateDose);byId("dose").addEventListener("change",updateWell);byId("well").addEventListener("change",render);byId("div9").addEventListener("change",render);byId("reveal").addEventListener("change",render);
-byId("count").textContent=` ${unique(rows.map(r=>r.sample_id)).length} held-out wells are embedded from a deterministic cohort-balanced subset.`;updateDose();
+function selectCase(){const sample=cases[byId("case").value];const row=rows.find(r=>r.sample_id===sample);byId("chemical").value=`${row.casrn}|${row.trt}`;updateDose();byId("dose").value=String(row.dose);updateWell();byId("well").value=sample;render()}
+byId("case").addEventListener("change",selectCase);byId("chemical").addEventListener("change",updateDose);byId("dose").addEventListener("change",updateWell);byId("well").addEventListener("change",render);byId("div9").addEventListener("change",render);byId("reveal").addEventListener("change",render);
+byId("count").textContent=` ${unique(rows.map(r=>r.sample_id)).length} held-out wells are embedded from a deterministic cohort-balanced subset plus the three registered cases.`;selectCase();
 </script>
 </body></html>'''
 

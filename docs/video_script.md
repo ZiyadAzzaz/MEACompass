@@ -22,7 +22,7 @@ Change the endpoint once. Show the prediction, interval, comparator, and verdict
 
 Show the chemical-disjoint evaluation design and the main-results figure.
 
-“The study contains 136 chemicals and about 4,200 complete longitudinal trajectories. Every dose, replicate, well, and alias of one chemical stays on one side of each split. Across all five preregistered endpoints—firing, bursts, active electrodes, network spikes, and coordinated activity—the frozen model reduced mean absolute error by 14.2 to 39.0 percent versus the strongest baseline BT+. Against the stricter BT++, gains remained 12.3 to 42.9 percent. Every paired chemical-level confidence interval excluded zero.”
+“The study contains 136 chemicals and about 4,200 complete longitudinal trajectories. Every dose, replicate, well, and alias of one chemical stays on one side of each split. Across all five preregistered endpoints—firing, bursts, active electrodes, network spikes, and coordinated activity—the frozen model reduced mean absolute error by 14.2 to 39.0 percent versus a strong inner-selected baseline, BT+. Against the stricter BT++, gains remained 12.3 to 42.9 percent. Every paired chemical-level confidence interval excluded zero.”
 
 ## 1:30–2:05 — Integrity before momentum
 
@@ -34,7 +34,7 @@ Show the audit decision graphic.
 
 Show calibration and selective-prediction figures.
 
-“Nominal intervals achieved 91.0 to 92.4 percent coverage. At the frozen acceptance level, abstention passed the registered risk threshold on three of five endpoints. Bursts and network spikes did not pass, and we report both as limitations. This is research decision support: uncertainty means continue, not terminate.”
+“Nominal 90% intervals achieved 91.0 to 92.4 percent empirical coverage. At the frozen acceptance level, abstention passed the registered risk threshold on three of five endpoints. Bursts and network spikes did not pass, and we report both as limitations. This is research decision support: uncertainty means continue, not terminate.”
 
 ## 2:45–3:20 — Why DIV7 matters
 

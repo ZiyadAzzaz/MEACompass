@@ -1,51 +1,53 @@
 1
-00:00:00,000 --> 00:00:12,000
-MEACompass: Reliability-Aware Early Prediction of Neural Network Development
-from Microelectrode-Array Assays
+00:00:00,000 --> 00:00:18,000
+Can day-seven physiology forecast the day-twelve endpoint for an unseen chemical—
+and can the system refuse when the forecast is unsafe?
 
 2
-00:00:12,000 --> 00:00:20,000
-Toward Functional Digital Twins for Neural Organ-on-Chip Screening
+00:00:18,000 --> 00:00:58,000
+The demo uses precomputed held-out evidence. OBSERVED shows early measurements.
+PREDICTED shows the later forecast and calibrated interval.
+HYPOTHESIS marks claims not validated by this study.
 
 3
-00:00:20,000 --> 00:01:00,000
-By DIV7, can we forecast the DIV12 outcome for an unseen chemical—
-and continue the assay when uncertainty is too high?
+00:00:58,000 --> 00:01:30,000
+The study has 136 chemicals and about 4,200 trajectories.
+All five endpoints improved by 14.2 to 39.0 percent versus the strongest baseline BT+,
+and by 12.3 to 42.9 percent versus the stricter BT++.
+Every paired chemical-level 95 percent confidence interval excluded zero.
 
 4
-00:01:00,000 --> 00:01:40,000
-Across five preregistered endpoints, MEACompass reduced MAE by 14.2 to 39.0
-percent versus BT+, with every paired chemical-level 95 percent confidence
-interval excluding zero.
-Evaluation is chemical-disjoint. All doses, wells, replicates, and aliases
-of a chemical remain on one side of each split.
+00:01:30,000 --> 00:02:05,000
+A registered negative control stopped the pipeline.
+The bounded audit found no future-derived feature or alignment defect,
+and the failure remains visible.
 
 5
-00:01:40,000 --> 00:02:20,000
-The registered negative control stopped the pipeline. A bounded integrity audit
-found no future-derived feature or alignment defect; the failure stays visible.
+00:02:05,000 --> 00:02:45,000
+Nominal intervals achieved 91.0% to 92.4% coverage.
+Abstention passed on three of five endpoints; the other two remain limitations.
 
 6
-00:02:20,000 --> 00:03:05,000
-Nominal 90% intervals attained 91.0% to 92.4% coverage.
-At 70% retained coverage, abstention passed on three of five endpoints.
+00:02:45,000 --> 00:03:20,000
+For accepted cases, DIV7 forecasts are available five days before DIV12.
+DIV7 physiology is the dominant predictive family; this is not a causal claim.
 
 7
-00:03:05,000 --> 00:03:40,000
-DIV7 forecasts are available five days before the DIV12 endpoint
-for accepted cases.
+00:03:20,000 --> 00:03:50,000
+The demo shows a representative correct case and a disclosed failure case.
+The interval and abstention decision remain visible in both.
 
 8
-00:03:40,000 --> 00:04:15,000
-DIV7 physiology is the dominant contribution family.
-Chemistry adds complementary context, but not for every endpoint.
+00:03:50,000 --> 00:04:22,000
+Predictive value was retained under a held-out NTP↔ToxCast cohort shift
+without model retuning. This is not external laboratory or device transfer.
 
 9
-00:04:15,000 --> 00:04:45,000
+00:04:22,000 --> 00:04:35,000
 This is rat cortical neural MEA data, not organ-on-chip data.
-Human neural organ-on-chip transfer requires prospective external validation.
+A new platform requires local validation and recalibration.
 
 10
-00:04:45,000 --> 00:05:00,000
+00:04:35,000 --> 00:04:45,000
 Forecast when evidence is strong; continue the assay when it is not.
 Research decision support—not autonomous assay termination.

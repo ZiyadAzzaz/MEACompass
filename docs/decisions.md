@@ -382,3 +382,27 @@
 - Gate F6 is **BRANCH — publication content complete, user fields pending**.
   Team information and AI-tool names/roles remain `USER CONFIRMATION REQUIRED`;
   neither was guessed.
+
+## 2026-09-29 — Gate F7 deck and video package: BRANCH
+
+- Rebuilt the competition narrative as a 12-slide editorial deck with the
+  required problem, concept, scientific boundary, chemical-disjoint evaluation,
+  locked results, integrity audit, calibration, selective prediction, time
+  causality, interface, adoption, and reproduction sequence.
+- Interpretability is merged into the locked-results and time-causality slides:
+  DIV7 contributes 56.9–77.3%, chemistry contributes 11.2–31.8%, and the
+  tributyltin chloride failure remains explicit.
+- The deck reports all five preregistered endpoints, the three passing abstention
+  endpoints, and the two limitations. The F3 cohort-shift evidence uses the
+  approved narrow wording and explicitly denies external laboratory/device
+  transfer.
+- Automated presentation-layout QA reports 0 errors and 0 warnings. The
+  comeback score is 43/45.
+- Gate F7 is **BRANCH — content and layout complete; real demo capture pending**.
+  Slide 10 contains a visible capture requirement because the mandated in-app
+  browser connection was unavailable. No synthetic, drawn, or selectively
+  curated screenshot was substituted.
+- The video package now includes a 4:45 shot list, an early demo segment, a
+  six-group spoken-number budget, and provisional English and Chinese SRT files.
+  The Chinese first mention uses “最强基线 BT+” and “平均绝对误差（MAE）”. Final
+  timings require the recorded narration and human translation review.

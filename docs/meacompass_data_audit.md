@@ -7,8 +7,8 @@ Status: **FULL PASS**, with claim narrowing required
 ## Decision
 
 The public EPA Network Formation Assay data support a real per-well early-to-late
-prediction task. MEACompass should replace CellTwin-X as the primary competition
-project, while CellTwin-X remains the measured fallback. The submission must call
+prediction task. MEACompass should replace the earlier imaging project as the
+primary competition project, while that work remains the measured fallback. The submission must call
 the source a rat cortical neural MEA assay, not an organ-on-chip dataset.
 
 Approved working title:
@@ -184,13 +184,13 @@ The task is feasible, but a random well split would be invalid. Required control
 
 ## Competition comparison
 
-| Dimension | CellTwin-X | MEACompass |
+| Dimension | Earlier imaging project | MEACompass |
 |---|---|---|
 | Sponsor alignment | Moderate: phenotype transfer is relevant but generic | High: neural functional data and forecasting match the sponsor’s stated direction |
 | Direct neural relevance | None | High |
 | Organ-on-chip relevance | Indirect; JUMP is not OoC | Indirect but closer; neural MEA is not automatically OoC |
 | Data certainty | High: one downloaded JUMP plate and measured Gate 1 | High after this audit: clean longitudinal keys and public source |
-| Licensing clarity | Public JUMP source documented in CellTwin repo | Explicit EPA public-domain terms and public access |
+| Licensing clarity | Public JUMP source documented in its repository | Explicit EPA public-domain terms and public access |
 | Scientific novelty | Moderate; brightfield-to-phenotype transfer is competitive | Moderate-to-high only if chemical-held-out early prediction and reliability succeed |
 | Practical value | Reduces staining burden in principle | Clear early-assay triage and “continue to DIV12” decision |
 | Validation strength today | Measured one-plate CV; no external OoC result | No model result yet, but 136 chemical groups and 99 plates permit stronger tests |
@@ -216,7 +216,7 @@ chemical-disjoint folds, not against a weak global-mean baseline.
 
 Kill condition: after pre-registered feature engineering, if early-to-late
 Spearman is below 0.20, classification AUROC is below 0.60, and abstention does not
-lower accepted-case error, stop MEACompass and return to CellTwin-X.
+lower accepted-case error, stop MEACompass and return to the earlier imaging project.
 
 ## Reproduction
 

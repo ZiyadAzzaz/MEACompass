@@ -75,7 +75,7 @@
 
 - Current tree, public HTML, PowerPoint XML, and reachable git history were
   scanned for local paths, machine identifiers, secrets, personal email, raw or
-  external data, CellTwin-X material, checkpoints, temporary outputs, sensitive
+  external data, earlier-project material, checkpoints, temporary outputs, sensitive
   filenames, and oversized blobs; no violation was detected.
 - License, source record, reproduction instructions, and `docs/.nojekyll` are
   present.
@@ -88,8 +88,8 @@
 
 - Evidence: 136 unique CAS RNs, 4,344 per-well trajectories, DIV5/7/9/12,
   96.5% complete trajectories, 95.6% PubChem SMILES resolution.
-- Decision: make MEACompass the primary project, while keeping CellTwin-X as the
-  measured fallback until Gate L1.
+- Decision: make MEACompass the primary project, while keeping the earlier
+  imaging project as the measured fallback until Gate L1.
 - Claim constraint: EPA NFA is a rat cortical neural MEA assay, not OoC data.
 - Full evidence: `docs/meacompass_data_audit.md`.
 
@@ -164,7 +164,7 @@
   with a confidence interval excluding zero, or disappearance of gain across
   endpoints, triggers an immediate stop and report.
 - Gate L1 may lock early only after M1 evaluation, Gate S PASS, and Gate M3 PASS
-  or WEAK. CellTwin-X remains frozen only after that lock.
+  or WEAK. The earlier imaging project remains frozen only after that lock.
 - Full deviation protocol: `docs/phase2_addendum.md`.
 
 ## 2026-09-28 — Phase 3 protocol registered before M1 completion

@@ -271,7 +271,7 @@ def build() -> int:
         str(OUTPUT), pagesize=A4, leftMargin=16 * mm, rightMargin=16 * mm,
         topMargin=18 * mm, bottomMargin=16 * mm,
         title="MEACompass: Reliability-Aware Early Prediction of Neural Network Development from Microelectrode-Array Assays",
-        author="USER CONFIRMATION REQUIRED",
+        author="Ziyad Azzaz",
         subject="AI4S competition technical report",
     )
     cover_frame = Frame(0, 0, A4[0], A4[1], id="cover")

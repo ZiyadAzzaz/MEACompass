@@ -71,7 +71,7 @@ All five endpoints and all original BT comparisons remain mandatory.
 ## Early lock and reporting
 
 Declare Gate L1 LOCK immediately only after M1 is complete and evaluated, Gate S
-passes, and Gate M3 is PASS or WEAK. After lock, freeze CellTwin-X and begin the
+passes, and Gate M3 is PASS or WEAK. After lock, freeze the earlier imaging project and begin the
 Streamlit demo. Report Gate S and Gate M3 using the Phase 2 Section 9 format.
 
 ## Safety and deferred work

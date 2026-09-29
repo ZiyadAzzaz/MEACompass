@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "dataset": "EPA Network Formation Assay",
+  "doi": "10.23719/1503191",
+  "catalog": "https://catalog.data.gov/dataset/data-for-evaluation-of-chemical-effects-on-network-formation-in-cortical-neurons-grown-on-",
+  "destination": "data/raw/epa_nfa",
+  "files": [
+    {
+      "name": "NTP_TC_Analysis.zip",
+      "url": "https://pasteur.epa.gov/uploads/10.23719/1503191/NTP_TC_Analysis.zip",
+      "bytes": 159560650,
+      "sha256": "fd92c1339bb764ee9b96c935bf31867c12640505e5c3f065ad5956a7eea08cfb",
+      "extract": true
+    },
+    {
+      "name": "Excel_scatter_plot_potency_vs_viability_Nov_26_2018.xlsx",
+      "url": "https://pasteur.epa.gov/uploads/10.23719/1503191/Excel%20scatter%20plot%20potency%20vs%20viability_Nov_26_2018.xlsx",
+      "bytes": 71755,
+      "sha256": "04d7759e3bbb7d3f1334bb5c78175e53c9ff57d25d5a5f99e2e97bf0f056f0cc",
+      "extract": false
+    },
+    {
+      "name": "Excel_selectivity_Oct_26_2018_alt.xlsx",
+      "url": "https://pasteur.epa.gov/uploads/10.23719/1503191/Excel_selectivity_Oct%2026_2018_alt.xlsx",
+      "bytes": 49394,
+      "sha256": "f3504f94feac531c62762494cac11000c7e42542c7419ac50f5474720889e7f9",
+      "extract": false
+    },
+    {
+      "name": "MEA_and_ToxCast_and_AEDs_for_TC_NTP_25Oct2018.xlsx",
+      "url": "https://pasteur.epa.gov/uploads/10.23719/1503191/MEA_and_ToxCast_and%20AEDs_for_TC_NTP_25Oct2018.xlsx",
+      "bytes": 40352,
+      "sha256": "9e4d76320cb6926c331f3ebd5cbc01e19c8cd56b1644cdb72bed2d54be335d17",
+      "extract": false
+    }
+  ]
+}

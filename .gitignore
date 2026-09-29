@@ -36,6 +36,7 @@ results/*
 !results/feature_importance.csv
 !results/case_studies.csv
 !results/case_contributions.csv
+!results/results_manifest.json
 !results/audit/
 results/audit/*
 !results/audit/feature_lineage.csv
@@ -69,3 +70,4 @@ htmlcov/
 .idea/
 .DS_Store
 Thumbs.db
+~$*.pptx

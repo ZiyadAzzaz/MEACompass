@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "description": "Compact, committed artifacts required by reproduce-lite and the offline demo.",
+  "files": [
+    {
+      "path": "results/calibration.csv",
+      "bytes": 624,
+      "sha256": "62ff6f1f4517351af113dda07ef55726561536f83f65d2478a9a745afbc3bd4c"
+    },
+    {
+      "path": "results/demo_predictions.csv",
+      "bytes": 5811523,
+      "sha256": "7c0c4a2f7c7a08485b3bbddade935041f7436a6be409505ee4a7c8f647e0c0e6"
+    },
+    {
+      "path": "results/dose_strata.csv",
+      "bytes": 9646,
+      "sha256": "a92cc6c6eaa00bc4c5e63ba3a312990ea54ae7c166b8beafb6033ead231b9fa9"
+    },
+    {
+      "path": "results/main_results.csv",
+      "bytes": 10653,
+      "sha256": "4d7e4df42821516e87b64ab0a8de2d20f69358cc7d3b9e771d6b38dd7d4503ff"
+    },
+    {
+      "path": "results/risk_coverage.csv",
+      "bytes": 4232,
+      "sha256": "fb7c8e4dbd94f3517adab19ee88f6be7991d91bfc5c55f5f9283bfb289b77227"
+    },
+    {
+      "path": "results/standardized_predictions.csv",
+      "bytes": 2909998,
+      "sha256": "424dfca918698488c46ed0f54d582328c2f20f0c9020baa547bd6278c9282c4e"
+    },
+    {
+      "path": "results/time_ablation.csv",
+      "bytes": 3176,
+      "sha256": "8b2da6c16fbd2b24ae03de2043541a984fda43d555e5b95aa221dd4340ce8f39"
+    }
+  ]
+}

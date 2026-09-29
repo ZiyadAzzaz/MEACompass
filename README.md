@@ -43,6 +43,7 @@ Read the integrated [report](docs/report_draft.md), [integrity audit](docs/integ
 
 ```bash
 make setup
+make fetch-results
 make test
 make reproduce-lite
 make demo
@@ -52,6 +53,20 @@ make demo
 figures from saved result artifacts only. It never launches training and fails
 explicitly if required files are missing. The Streamlit demo likewise uses only
 precomputed held-out predictions.
+
+The seven required result/demo files total 8.34 MiB and are committed with a
+SHA-256 manifest, so `make fetch-results` is an offline integrity check rather
+than a network download. To rebuild from the official EPA source instead:
+
+```bash
+make data
+make train-all CONFIRM_LOCKED_REBUILD=1
+```
+
+`make data` uses only the four public EPA files listed in the official catalog
+and verifies the audit SHA-256 values before extraction. `train-all` is guarded
+because it regenerates locked results and is not part of the lightweight path.
+See `docs/reproducibility.md` for the fresh-clone test and recorded runtime scope.
 
 ## Evidence map
 

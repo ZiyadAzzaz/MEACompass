@@ -2,10 +2,19 @@ PYTHON ?= python
 RESULTS_DIR ?= results
 ARTIFACTS_DIR ?= artifacts/reproduce-lite
 
-.PHONY: setup reproduce-lite demo test baselines bt-plus m1 audit
+.PHONY: setup fetch-results data train-all reproduce-lite demo test baselines bt-plus m1 audit
 
 setup:
 	$(PYTHON) -m pip install -e ".[test,demo]"
+
+fetch-results:
+	$(PYTHON) -m neurochip.fetch_results --manifest results/results_manifest.json
+
+data:
+	$(PYTHON) -m neurochip.fetch_data --manifest schemas/epa_downloads_v1.json
+
+train-all:
+	$(PYTHON) -m neurochip.train_all $(if $(filter 1,$(CONFIRM_LOCKED_REBUILD)),--confirm-locked-rebuild,)
 
 test:
 	$(PYTHON) -m pytest -q -p no:cacheprovider

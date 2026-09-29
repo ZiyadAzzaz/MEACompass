@@ -59,7 +59,7 @@ def test_all_five_headline_claims_are_supported() -> None:
 
 def test_kaggle_summary_and_boundary_are_submission_ready() -> None:
     writeup = _text(DOCS / "kaggle_writeup.md")
-    summary = writeup.split("## Project summary", 1)[1].split("## Technical approach", 1)[0]
+    summary = writeup.split("## Project summary", 1)[1].split("## Method", 1)[0]
     words = summary.split()
 
     assert 200 <= len(words) <= 300
@@ -69,6 +69,14 @@ def test_kaggle_summary_and_boundary_are_submission_ready() -> None:
     assert "not organ-on-chip or human data" in summary
     assert "autonomous assay termination" in summary
     assert "VIDEO_URL_TO_BE_ADDED_AFTER_UPLOAD" in writeup
+
+
+def test_kaggle_category_is_declared_at_the_beginning() -> None:
+    writeup = _text(DOCS / "kaggle_writeup.md")
+    first_nonempty = next(line for line in writeup.splitlines() if line.strip())
+    assert first_nonempty == "**Submission Category: Model & Algorithm**"
+    assert writeup.index("Submission Category") < writeup.index("## Links")
+    assert writeup.index("## Links") < writeup.index("## Team")
 
 
 def test_kaggle_endpoint_table_matches_frozen_results() -> None:

@@ -40,3 +40,19 @@ The final recording should include live, logged-out interaction with the three
 fixed demo cases where practical. The silent draft does not claim to replace
 that interaction: live browser control was unavailable during automated media
 production.
+
+## Final video rights and access checklist
+
+- [x] Target duration is 4:45 and below the five-minute maximum.
+- [x] Current visuals are project-authored slides, figures, or authentic
+  MEACompass public-demo footage.
+- [x] No fabricated UI, manually redrawn value, stock image, third-party logo,
+  or external clip is used.
+- [x] No background music or other copyrighted audio is used.
+- [x] The workflow, outputs, reliability decision, practical value, and
+  rat-MEA/not-human/not-OoC boundary are in the approved script.
+- [x] Production uses free local tools; no paid service is required.
+- [ ] Add the final human English narration and retime both subtitle files.
+- [ ] Export and QA the final MP4, then upload it to a public URL requiring no
+  login, payment, or permission request.
+- [ ] Verify that URL logged out and replace the sole video placeholder.

@@ -46,3 +46,23 @@ fields are confirmed and filled. The runtime identity check returned exactly
 verified anonymously. Slide 10 now contains the authentic public-demo capture.
 The final English voice recording, subtitle retiming, video upload, and public
 video URL remain human publication work and do not weaken repository security.
+
+## Final competition compliance re-audit — 2026-09-29
+
+- Scanned all 65 reachable commits by filename and file content: no credential,
+  API-key, bearer-token, or private-key pattern; no historical `.env`, credential,
+  key, raw-data, external-data, or checkpoint path.
+- The only history match for a workstation-path pattern was the test code that
+  bans `localhost`; it is not a stored path. A binary email-pattern match in the
+  report produced no extracted email address.
+- Largest reachable blob is `results/demo_predictions.csv` at 5,811,523 bytes.
+- Committed PNGs contain no EXIF/text metadata. The PPTX has no external
+  relationship, embedded object, or private path; its only media object is the
+  authentic demo capture. PDF metadata contains the confirmed author/title and
+  open-source ReportLab producer only.
+- No notebook, font file, audio/video file, browser cache, raw dataset, external
+  refinement file, checkpoint, or secret is tracked.
+
+Status remains **PUBLICATION SCRUB: PASS — SAFE TO PUBLISH**. This is not the
+submission hard freeze because the final narrated video and timed subtitles are
+still pending.

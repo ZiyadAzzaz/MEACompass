@@ -1,11 +1,6 @@
+**Submission Category: Model & Algorithm**
+
 # MEACompass
-
-## Team
-
-Ziyad Azzaz; College of Artificial Intelligence; Arab Academy for Science,
-Technology & Maritime Transport (AASTMT); Alamein Campus, Egypt.
-
-Team name: **MEACompass**. Solo submission; no additional team members.
 
 ## Links
 
@@ -14,6 +9,16 @@ Team name: **MEACompass**. Solo submission; no additional team members.
 3. Live demo: [ziyadazzaz.github.io/MEACompass/demo/](https://ziyadazzaz.github.io/MEACompass/demo/) — static and precomputed.
 4. Technical report: [MEACompass Technical Report](https://github.com/ZiyadAzzaz/MEACompass/blob/main/docs/MEACompass_Technical_Report.pdf)
 5. Competition deck: [MEACompass Competition Deck](https://github.com/ZiyadAzzaz/MEACompass/blob/main/docs/MEACompass_Competition_Deck.pptx)
+
+## Team
+
+Ziyad Azzaz; College of Artificial Intelligence; Arab Academy for Science,
+Technology & Maritime Transport (AASTMT); Alamein Campus, Egypt.
+
+Team name: **MEACompass**. Solo submission; no additional team members.
+
+Required external registration completed. No private registration information is
+published in this repository.
 
 ## Project summary
 
@@ -25,11 +30,13 @@ Three numbers summarize the locked evidence. First, mean absolute error improved
 
 For accepted cases, a DIV7 forecast is available five days before the DIV12 endpoint. This supports earlier research triage, not autonomous assay termination. The data are rat cortical MEA recordings, not organ-on-chip or human data. Transfer to a new neural organ-on-chip platform is a hypothesis requiring local retraining, recalibration, and prospective validation.
 
-## Technical approach and evidence
+## Method
 
 ### Data and evaluation
 
 The audit identified 136 canonical chemicals, 4,192 complete DIV5/7/9/12 trajectories, and five functional endpoints: firing rate, bursts, active electrodes, network spikes, and coordinated activity. The primary model uses only DIV5 and DIV7 neural measurements; DIV9 appears solely in a declared post-lock ablation. Outer folds evaluate unseen chemical groups. Inner group folds choose model settings and the BT+ comparator. Confidence intervals resample chemicals rather than wells.
+
+## Results and validation
 
 Against the stricter post-audit BT++ comparator, the same frozen predictions improved MAE by 12.3–42.9% across all five endpoints, again with paired chemical-bootstrap intervals excluding zero. The full endpoint table and bootstrap intervals are in the [technical report](https://github.com/ZiyadAzzaz/MEACompass/blob/main/docs/MEACompass_Technical_Report.pdf).
 
@@ -42,6 +49,8 @@ Against the stricter post-audit BT++ comparator, the same frozen predictions imp
 | Network spikes | 40.72 | 48.26 | 15.6% | -7.54 [-10.20, -4.56] | 14.2% | -6.75 [-9.48, -3.76] |
 | Coordinated activity (`r`) | 48.61 | 62.91 | 22.7% | -14.30 [-17.56, -11.05] | 26.4% | -17.41 [-24.51, -12.32] |
 <!-- GENERATED_MAIN_RESULTS_END -->
+
+## Reliability and limitations
 
 ### Integrity before momentum
 
@@ -63,7 +72,17 @@ DIV5 alone is weaker; DIV7 is the earliest window with consistent primary gains.
 
 Post-lock secondary analysis retained predictive value under a held-out NTP↔ToxCast cohort shift without model retuning. This is not external laboratory or device transfer. A later refinement release was audited with deterministic final-refit models frozen before access, but external scoring was cut at harmonization: two required inputs were absent and `r` failed the registered compatibility threshold. No external outcomes were scored.
 
-## Use on your own data
+## Practical value
+
+For accepted cases, DIV7 forecasts are available five days before the DIV12
+endpoint. This supports earlier research triage while uncertain cases continue to
+DIV12. It does not authorize autonomous assay termination. Deployment on a new
+neural platform requires local mapping, retraining, recalibration, and prospective
+human-reviewed validation.
+
+## Reproduction
+
+### Use on your own data
 
 MEACompass is an evaluation and adaptation recipe, not a frozen model to deploy directly on a new chip.
 
@@ -75,8 +94,10 @@ MEACompass is an evaluation and adaptation recipe, not a frozen model to deploy 
 
 The repository provides `make test`, `make reproduce-lite`, and `make demo`. Lightweight reproduction regenerates tables, figures, and the demo from checked saved predictions without retraining.
 
-## Sources, licenses, and AI-tool disclosure
+## Sources and licenses
 
 The primary source is the public EPA neural network formation assay catalog recorded with URLs and SHA-256 hashes in `schemas/epa_downloads_v1.json`. It contains animal-derived assay measurements and no human or personal data. Raw source files are not redistributed. Project-authored code and documentation use Apache-2.0; third-party data and dependencies retain their own terms. PubChem supplies public structure lookups. No EPA endorsement is claimed or implied. Full provenance and limitations appear in [Sources and licenses](sources_and_licenses.md).
+
+## AI-tool disclosure
 
 **AI-tool disclosure.** Codex/the repository coding agent assisted with implementation, experiment execution, testing, reproducibility, result artifacts, documentation, the deck, and subtitles. ChatGPT assisted with planning, strategy, protocol/gate and claim review, prompt drafting, and submission planning. Claude provided independent review, source exploration, strategy/protocol feedback, and critique. Claude and generated prose were not sources of scientific result values. All scientific numbers came from executed code and stored artifacts; automated claim-consistency tests were used, and Ziyad Azzaz manually reviewed the public scientific claims, report, README, presentation, and submission materials.

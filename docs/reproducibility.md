@@ -1,5 +1,27 @@
 # Reproducibility record
 
+## Final public-clone compliance run — 2026-09-29
+
+A new shallow clone from `https://github.com/ZiyadAzzaz/MEACompass` completed:
+
+```bash
+make setup
+make fetch-results
+make test
+make reproduce-lite
+make demo
+```
+
+The result manifest verified eight committed artifacts (8.37 MiB) without a
+download. Tests reported **77 passed and 5 skipped**. The skips are expected when
+the optional official EPA raw data are absent: one time-causality test and four
+split/data tests. `reproduce-lite` regenerated figures without retraining. The
+Streamlit server and health endpoint returned HTTP 200 before manual shutdown.
+
+This result-only path requires no paid API, proprietary hardware, private data,
+or original workstation. Package installation requires ordinary access to public
+Python package channels on a fresh machine.
+
 ## Two supported paths
 
 ### Result-only path

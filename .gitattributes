@@ -1,0 +1,11 @@
+# Result-manifest entries are byte-hashed evidence artifacts. Disable Git's
+# line-ending conversion so their recorded sizes and SHA-256 values are stable
+# on Windows, macOS, and Linux clones.
+results/calibration.csv -text
+results/demo_predictions.csv -text
+results/dose_strata.csv -text
+results/main_results.csv -text
+results/m1_tuning.json -text
+results/risk_coverage.csv -text
+results/standardized_predictions.csv -text
+results/time_ablation.csv -text

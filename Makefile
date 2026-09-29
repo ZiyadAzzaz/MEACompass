@@ -7,7 +7,7 @@ SHELL := cmd.exe
 .SHELLFLAGS := /C
 endif
 
-.PHONY: setup fetch-results data train-all reproduce-lite demo static-demo test baselines bt-plus m1 audit f3-cross-cohort report
+.PHONY: setup fetch-results data train-all reproduce-lite demo static-demo test baselines bt-plus m1 final-model audit f3-cross-cohort report
 
 setup:
 	"$(PYTHON)" -m pip install -e ".[test,demo,docs]"
@@ -44,6 +44,9 @@ bt-plus:
 
 m1:
 	"$(PYTHON)" -m meacompass.train_m1 --config configs/baselines.yaml
+
+final-model:
+	"$(PYTHON)" -m meacompass.final_model --config configs/baselines.yaml
 
 f3-cross-cohort:
 	"$(PYTHON)" -m meacompass.cross_cohort --config configs/baselines.yaml

@@ -1,0 +1,45 @@
+schema_version: 1.0.0
+status: frozen_before_external_access
+identity_keys: [plate, well, DIV]
+chemical_key: canonical_CAS_RN
+input_divs: [5, 7]
+target_div: 12
+normalization: same_plate_same_DIV_zero_dose_percent_control
+zero_dose_value: 0
+missingness: preserve_raw_missingness_and_apply_frozen_missing_flags
+name_mapping:
+  meanfiringrate: meanfiringrate
+  burst.per.min: burst.per.min
+  mean.isis: mean.isis
+  per.spikes.in.burst: per.spikes.in.burst
+  mean.dur: mean.dur
+  mean.IBIs: mean.IBIs
+  nAE: nAE
+  nABE: nABE
+  ns.n: ns.n
+  ns.peak.m: ns.peak.m
+  ns.durn.m: ns.durn.m
+  ns.percent.of.spikes.in.ns: ns.percent.of.spikes.in.ns
+  ns.mean.insis: ns.mean.insis
+  ns.durn.sd: ns.durn.sd
+  ns.mean.spikes.in.ns: ns.mean.spikes.in.ns
+  r: r
+  cv.time: cv.time
+  cv.network: cv.network
+endpoint_mapping:
+  meanfiringrate: meanfiringrate
+  burst.per.min: burst.per.min
+  nAE: nAE
+  ns.n: ns.n
+  r: r
+compatibility_gate:
+  spearman_minimum: 0.95
+  median_new_old_ratio_minimum: 0.9
+  median_new_old_ratio_maximum: 1.1
+  missingness_report_required: true
+allowed_mapping:
+  family: monotone
+  fit_rows: overlapping_2019_recordings_only
+  external_test_rows_allowed: false
+not_comparable_rule: exclude_affected_endpoint_if_any_required_input_or_target_is_not_comparable
+

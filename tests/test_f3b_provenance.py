@@ -15,8 +15,9 @@ def test_f3b_manifest_is_pinned_and_provenance_reviewed() -> None:
     assert frame["pinned_commit"].eq(PINNED_COMMIT).all()
     assert frame["source_url"].str.contains(PINNED_COMMIT, regex=False).all()
     assert frame["allowed_for_analysis"].eq("YES").all()
-    assert frame["provenance_basis"].str.len().gt(0).all()
+    assert frame["author/provenance"].str.len().gt(0).all()
     assert frame["reuse_basis"].str.len().gt(0).all()
+    assert frame["SHA256"].str.len().gt(0).all()
 
 
 def test_f3b_fetch_refuses_until_sha256_is_frozen() -> None:

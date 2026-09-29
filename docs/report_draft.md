@@ -4,10 +4,11 @@
 
 ## Team information
 
-**Team name, members, and affiliations:** USER CONFIRMATION REQUIRED.
+**Author:** Ziyad Azzaz — College of Artificial Intelligence, Arab Academy for
+Science, Technology & Maritime Transport (AASTMT), Alamein Campus, Egypt.
 
-This field will be replaced only from the team's direct confirmation before final
-publication; identity is not guessed.
+**Team name:** USER CONFIRMATION REQUIRED. No additional team member or
+affiliation is inferred.
 
 ## Abstract
 

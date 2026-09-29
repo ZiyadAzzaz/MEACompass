@@ -444,3 +444,28 @@
   platforms require local validation and recalibration.
 - Gate F4 is **CUT TO APPROVED FALLBACK — schema + recipe complete; no CLI**.
   Automated schema/boundary tests pass; the full suite is 71/71.
+
+## 2026-09-29 — Amendment B F3b final-refit protocol registered
+
+- Amendment B supersedes only the earlier prohibition on reconstructing a final
+  model. The primary locked analysis and every headline result remain immutable.
+- Before any new refinement byte is fetched or opened, registered a deterministic
+  final M1 rule from the 75 preserved tuning records: median aggregation for
+  numeric settings, deterministic valid rounding, categorical mode with lexical
+  tie-breaking, all eligible 2019 chemicals, seeds 0/1/2, and a three-seed mean.
+- Frozen endpoint settings are stored in
+  `schemas/final_model_hyperparameters.json`; the feature and descriptor contract
+  remains DIV5/DIV7-only and unchanged from locked M1.
+- Final BT+ and BT++ selection, the grouped 2019 out-of-fold residual pool,
+  finite-sample nominal-90% interval rule, and 70%-policy seed-disagreement
+  threshold are fixed using 2019 data only. External outcomes cannot select,
+  calibrate, or fit any component.
+- Registered the pinned source allowlist, file-level EPA provenance rule,
+  controlled first-fetch hash initialization, chemical/plate/date/batch overlap
+  exclusion, 18-input/five-endpoint harmonization contract, bootstrap seed and
+  draws, and STRONG/MIXED/FAIL/CUT rules.
+- Verified author identity is Ziyad Azzaz, College of Artificial Intelligence,
+  AASTMT, Alamein Campus, Egypt. Team name and AI-tool identities remain
+  `USER CONFIRMATION REQUIRED`; neither is inferred.
+- No refinement file was fetched, opened, harmonized, or scored while preparing
+  this registration.

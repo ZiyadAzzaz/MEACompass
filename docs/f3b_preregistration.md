@@ -1,104 +1,146 @@
-# F3b frozen external-validation preregistration
+# F3b Amendment B: final-refit external-validation preregistration
 
-Registered 2026-09-29 before acquisition, harmonization, or scoring of external
-outcomes. This is a post-lock secondary analysis and cannot change the locked
-primary result.
+Registered on 2026-09-29 before fetching, opening, harmonizing, or scoring any
+refinement-release file under Amendment B. This protocol supersedes only the old
+prohibition on refitting. F3b remains post-lock secondary evidence and cannot
+change the locked primary analysis, endpoints, splits, predictions, or claims.
 
-## Source and permission boundary
+## Data firewall and registration commit
 
-- Source: `USEPA/CompTox-DNT-NFA-Refinement` at commit
-  `01adf3e1a0068c87fe221d60df36b9f96c4b4b1d`.
-- Only the explicit files in `results/f3b/source_manifest.csv` are eligible.
-- A file is eligible only when it is in the official USEPA repository, the
-  repository description or readme identifies it as NFA manuscript data or an
-  analysis output, the commit author is EPA-affiliated or the repository
-  attributes the work to the EPA manuscript team, and no third-party dataset
-  with a separate stated license is included.
-- Repository visibility is not a blanket reuse grant. Permission clarification
-  was requested by email and GitHub issue on 2026-09-29.
-- Raw files remain untracked and are never redistributed.
+No refinement bytes may be fetched until this document, the deterministic final
+settings, source manifest, harmonization contract, and executable final-model
+code are committed. The registration commit SHA is recorded here immediately
+after that commit. External outcomes never select a feature, parameter, model,
+comparator, residual, interval, threshold, mapping, or endpoint.
 
-## Frozen model definition and availability gate
+Registration commit: **PENDING THIS COMMIT**
 
-For each endpoint, an eligible external prediction is the arithmetic mean of
-the 15 locked outer-fold M1 models: five folds for each of seeds 0, 1, and 2.
-No model may be refit, reconstructed, retuned, or selected using the external
-release. Before acquisition, every required serialized model must exist and its
-SHA-256 must be recorded in a model manifest.
+## Deterministic final M1
 
-The current repository contains 75 endpoint/fold/seed tuning records and locked
-out-of-fold predictions, but no serialized M1 model artifacts. Therefore the
-availability gate currently fails. F3b scoring is **CUT** unless the exact
-historical model artifacts are supplied and verified. Retraining an equivalent
-model is not an acceptable substitute.
+For each endpoint, the 15 locked outer-fit configurations (five outer folds ×
+seeds 0/1/2) in `results/m1_tuning.json` are aggregated without external data:
 
-## Frozen comparators
+- registered-grid numeric parameters: median, then nearest allowed grid value;
+  an exact-distance tie chooses the smaller value;
+- `n_estimators`: median, then `floor(x + 0.5)`, minimum one;
+- categorical parameters (`variant`, residual baseline): mode; a count tie uses
+  lexical JSON order;
+- final training uses every eligible 2019 development chemical and seeds 0, 1,
+  and 2; the external prediction is the arithmetic mean of the three seed
+  predictions.
 
-BT+ and BT++ candidate definitions and their final selection rule are fixed from
-the 2019 development release only. If F3b becomes eligible, candidate selection
-is applied using all 2019 development data and no external values. No baseline
-component is fitted, selected, or recalibrated on the external test set.
+The frozen settings in `schemas/final_model_hyperparameters.json` are:
 
-## Frozen intervals
+| Endpoint | Variant | Residual baseline | Depth | Learning rate | Min child | Column sample | Trees |
+|---|---|---|---:|---:|---:|---:|---:|
+| Bursts/min | direct | B2 | 4 | 0.08 | 1 | 0.7 | 100 |
+| Mean firing rate | BT residual | B2 | 4 | 0.03 | 1 | 1.0 | 87 |
+| Active electrodes | BT residual | B2 | 4 | 0.03 | 1 | 0.7 | 47 |
+| Network spikes | direct | B2 | 4 | 0.03 | 1 | 1.0 | 86 |
+| Coordinated activity (`r`) | BT residual | B2 | 4 | 0.03 | 1 | 1.0 | 33 |
 
-The primary external interval uses the frozen 2019 CV+ residual pool and reports
-zero-shot coverage. Any later local recalibration is labeled secondary, uses a
-separate calibration subset, and is never mixed with zero-shot results.
+The feature contract is unchanged: DIV5/DIV7 neural measurements and missingness
+flags, log10(1+dose), cohort, 16 RDKit descriptors, 2,048 Morgan bits at radius
+two, and a structure-missing flag. DIV9/DIV12 measurements, late viability,
+potency, and outcome-derived features are forbidden. `make final-model` saves the
+feature order, descriptor configuration, seed metadata, training chemical list,
+models, baseline parameters, package versions, and SHA-256 hashes.
 
-## Inclusion and chemical independence
+## Final BT+, BT++, calibration, and abstention
 
-External test conditions must have both an experiment date absent from the 2019
-release and a canonical CAS RN absent from all 2019 development data. Conditions
-are excluded by CAS and by plate/date. The audit must report total external
-conditions, CAS overlaps excluded, plate/date overlaps excluded, and unique
-eligible chemicals remaining.
+For each endpoint and seed, BT+ is selected from B0/B1/B1b/B2 by three-fold
+chemical-group validation on all eligible 2019 data, then fitted on all eligible
+2019 rows. BT++ compares that BT+ with the fixed dose-smooth candidate by the
+registered three-fold chemical-group validation rule on 2019 data only. Ties
+select BT+. The external set never selects or fits a comparator. Three seed
+predictions are averaged for each final comparator.
 
-## Time, endpoint, and control mapping
+The external zero-shot calibration pool is the 2019 locked chemical-disjoint
+outer-fold M1 prediction set, averaged across seeds per sample. For each endpoint,
+the absolute-residual quantile uses the finite-sample rank
+`ceil((n + 1) × 0.90)`, capped at `n`. The external nominal-90% interval is the
+final three-seed mean prediction plus/minus that frozen residual quantile. This is
+a grouped out-of-fold conformal residual pool derived from the locked CV design;
+it is not recalibrated on external outcomes.
 
-- Inputs are the same DIV5 and DIV7 variables used by locked M1; DIV9 and DIV12
-  inputs remain forbidden.
-- Targets are the same five DIV12 endpoints: mean firing rate, bursts per minute,
-  active electrodes, network spikes, and coordinated activity (`r`).
-- Values use the locked percent-of-same-plate, same-DIV zero-dose-control
-  transform. No external normalization change is permitted without a declared
-  overlap-only mapping.
-- Chemical identifiers are canonicalized to CAS RN before overlap exclusion.
-- Missing values follow the locked M1 missingness-indicator contract. No external
-  outcome-based imputation is permitted.
+The frozen abstention uncertainty is the standard deviation across the three
+final seed predictions. The endpoint threshold is the 70th percentile (`higher`
+quantile) of seed disagreement in the 2019 out-of-fold ensemble. External cases
+at or below that threshold are accepted. Any recalibration is a separately
+labelled secondary analysis and requires a chemical-disjoint external calibration
+partition that does not overlap final external test chemicals.
 
-## Harmonization gate
+## Source and reuse boundary
 
-Recordings present in both releases are matched by plate, well, and DIV and are
-used only for harmonization, never as external test observations. For every
-required M1 input feature and each endpoint, report Spearman correlation, median
-new/old ratio, and missingness rates in both releases.
+- Repository: `USEPA/CompTox-DNT-NFA-Refinement`.
+- Pinned commit: `01adf3e1a0068c87fe221d60df36b9f96c4b4b1d`.
+- Only files explicitly marked `allowed_for_analysis=YES` in
+  `results/f3b/source_manifest.csv` may be fetched.
+- Eligibility requires the official USEPA repository, README/manuscript
+  attribution to EPA NFA data or analysis output, EPA-affiliated authorship or
+  EPA-team attribution, and no stated third-party dataset license.
+- Repository ownership is not a blanket license. The 17 U.S.C. §105 rationale is
+  used only where file-level EPA/U.S. Government provenance supports it.
+- The permission clarification requested by email and GitHub issue on
+  2026-09-29 remains recorded. If EPA later denies the intended use, F3b is
+  removed from public materials.
+- Raw refinement files remain ignored and are never committed or redistributed.
 
-- `EXACT/COMPATIBLE`: Spearman at least 0.95 and median ratio from 0.9 to 1.1.
-- `MAPPED`: a prespecified monotone mapping is fitted only on overlapping
-  recordings and logged as a deviation.
-- `NOT COMPARABLE`: thresholds fail and no defensible overlap-only mapping exists.
+## Controlled fetch and integrity
 
-If any required input is `NOT COMPARABLE`, the affected endpoint is not scored.
-No mapping may use new-chemical test conditions.
+The fetcher uses the pinned commit and explicit manifest allowlist only. It does
+not clone or ingest the repository recursively. The first authorized fetch
+records SHA-256 for every file. Subsequent bytes must match; a mismatch fails
+closed and never overwrites the local file automatically.
 
-## Metrics and uncertainty
+## External inclusion and independence
 
-Eligible endpoints report MAE, RMSE, Spearman correlation, paired gain versus
-BT+ and BT++, and a 95% paired chemical-level bootstrap confidence interval.
-Zero-shot interval coverage and width are reported at nominal 90% coverage.
-M3 risk reduction is evaluated at the frozen 70% retained coverage rule. Results
-are also reported by experiment date where sample size permits.
+CAS identifiers are normalized conservatively and aliases require an explicit
+mapping. The final external test set contains only chemicals absent from the
+entire 2019 development release and conditions from experiment dates absent from
+that release. Rows are excluded for any CAS, plate, date, batch, well, or record
+overlap. The audit reports total chemicals and rows, development overlaps,
+duplicate records, excluded plates/dates/batches, and external-only chemicals and
+rows remaining. Overlap recordings may be used for harmonization only and never
+for scoring.
 
-## Interpretation rule
+## Frozen harmonization contract
 
-- **STRONG:** gain versus BT++ has a confidence interval excluding zero on at
-  least three comparable endpoints, with no material provenance, leakage, or
-  calibration problem.
-- **MIXED:** some endpoints retain value while others degrade, or interval
-  calibration shifts.
-- **FAIL:** little or no predictive value is retained.
-- **CUT:** provenance, model availability, or harmonization prevents a valid
-  evaluation.
+`schemas/f3b_harmonization_v1.yaml` fixes the expected identity mapping for all
+18 neural measurements and the five endpoints. Inputs use DIV5 and DIV7; targets
+use DIV12. Values use the same-plate, same-DIV zero-dose percent-control transform.
+No test-outcome-aware normalization, imputation, or mapping is allowed.
 
-No outcome can support claims of human transfer, direct organ-on-chip validation,
-new-laboratory/device transfer, or deployment readiness.
+For recordings present in both releases, every required input and endpoint is
+classified using Spearman correlation, median new/old ratio, and missingness:
+
+- `EXACT`: same declared name, semantics, units/scale, and transform;
+- `COMPATIBLE_WITH_FROZEN_TRANSFORM`: Spearman ≥0.95 and ratio 0.9–1.1 after the
+  frozen transform;
+- `MAPPED`: only a predeclared monotone mapping fitted on overlap recordings;
+- `NOT_COMPARABLE`: thresholds or semantics fail and no defensible overlap-only
+  mapping exists.
+
+An endpoint is scored only when every feature required by its final M1 input and
+the endpoint itself is comparable. Equivalence is never forced.
+
+## Scoring, confidence intervals, and classification
+
+For every comparable endpoint report M1 MAE, RMSE, Spearman, BT+ MAE, BT++ MAE,
+relative gains, paired ΔMAE, and a 1,000-draw paired chemical bootstrap 95% CI
+using seed 20260928. Also report nominal-90% zero-shot coverage and the frozen
+70%-policy risk/coverage result when valid. Results are shown by experiment date
+when sample size permits.
+
+- **STRONG:** significant gain versus BT++ on at least three comparable
+  endpoints, chemical independence, acceptable zero-shot calibration, and no
+  provenance or validity defect.
+- **MIXED:** some predictive value remains but effects vary or coverage degrades.
+- **FAIL:** frozen external performance does not establish useful transfer.
+- **CUT:** provenance, final-model construction, harmonization, or data validity
+  prevents a defensible test.
+
+The strongest allowed wording is: “Post-lock external evaluation on chemically
+non-overlapping refinement data retained predictive value on X of Y comparable
+endpoints.” No outcome establishes human, neural organ-on-chip, external-
+laboratory/device, or deployment validation.

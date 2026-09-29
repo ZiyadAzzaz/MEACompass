@@ -1,5 +1,12 @@
 # MEACompass
 
+## Team
+
+Ziyad Azzaz; College of Artificial Intelligence; Arab Academy for Science,
+Technology & Maritime Transport (AASTMT); Alamein Campus, Egypt.
+
+Team name: **USER CONFIRMATION REQUIRED**.
+
 ## Links
 
 1. Demo video: **VIDEO_URL_TO_BE_ADDED_AFTER_UPLOAD**

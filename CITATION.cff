@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use MEACompass, please cite this software."
+title: "MEACompass: Reliability-Aware Early Prediction of Neural Network Development from Microelectrode-Array Assays"
+type: software
+version: 1.0.0
+date-released: 2026-09-29
+authors:
+  - family-names: Azzaz
+    given-names: Ziyad
+    affiliation: "College of Artificial Intelligence, Arab Academy for Science, Technology & Maritime Transport (AASTMT), Alamein Campus, Egypt"
+license: Apache-2.0
+repository-code: "https://github.com/ZiyadAzzaz/MEACompass"

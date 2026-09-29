@@ -2,6 +2,9 @@
 
 **Toward Functional Digital Twins for Neural Organ-on-Chip Screening**
 
+Author: **Ziyad Azzaz**, College of Artificial Intelligence, Arab Academy for
+Science, Technology & Maritime Transport (AASTMT), Alamein Campus, Egypt.
+
 MEACompass uses measurements available by day in vitro 7 (DIV7) to forecast
 five DIV12 functional outcomes for unseen chemicals. It adds calibrated 90%
 intervals and abstains on the least certain 30% of cases.

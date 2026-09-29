@@ -1,0 +1,27 @@
+{
+  "absent_required_inputs": [
+    "cv.time",
+    "cv.network"
+  ],
+  "classification": "CUT",
+  "comparable_endpoints": [],
+  "compatibility_threshold_failures": [
+    "r"
+  ],
+  "fallback": "Use the completed post-lock held-out NTP-to-ToxCast and ToxCast-to-NTP analysis.",
+  "gate": "F3b",
+  "missing_or_not_comparable_required_inputs": [
+    "r",
+    "cv.time",
+    "cv.network"
+  ],
+  "not_comparable_endpoints": [
+    "meanfiringrate",
+    "burst.per.min",
+    "nAE",
+    "ns.n",
+    "r"
+  ],
+  "reason": "Every final M1 endpoint requires all registered neural inputs. The refinement release omits cv.time and cv.network, including DIV5/DIV7 values and their missingness indicators; r also fails the registered rank-correlation threshold. The preregistered harmonization gate therefore forbids scoring.",
+  "scoring_performed": false
+}

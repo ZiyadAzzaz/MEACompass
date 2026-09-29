@@ -30,6 +30,7 @@ docs = [
   "reportlab==5.0.1",
   "pypdf==6.1.1",
 ]
+f3b = ["pyreadr==0.5.7"]
 
 [tool.setuptools.packages.find]
 include = ["meacompass*"]

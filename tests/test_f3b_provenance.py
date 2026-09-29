@@ -20,9 +20,10 @@ def test_f3b_manifest_is_pinned_and_provenance_reviewed() -> None:
     assert frame["SHA256"].str.len().gt(0).all()
 
 
-def test_f3b_fetch_refuses_until_sha256_is_frozen() -> None:
-    with pytest.raises(ValueError, match="Missing frozen SHA-256"):
-        load_approved(MANIFEST, PINNED_COMMIT)
+def test_f3b_fetch_manifest_has_frozen_sha256() -> None:
+    approved = load_approved(MANIFEST, PINNED_COMMIT)
+    assert len(approved) == 6
+    assert all(len(row["SHA256"]) == 64 for row in approved)
 
 
 def test_f3b_fetch_refuses_commit_drift() -> None:

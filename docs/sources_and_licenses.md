@@ -27,9 +27,11 @@ The post-lock external-validation candidate is pinned at commit
 repository-wide reuse grant. Under the registered four-part file-level provenance
 rule, the six declared EPA analysis files are marked `allowed_for_analysis=YES` in
 `results/f3b/source_manifest.csv`; this is not a blanket repository license claim.
-No refinement file was downloaded or redistributed because the exact serialized
-frozen-model ensemble was unavailable, so F3b remains CUT. The recorded license
-clarification request remains unanswered.
+The six allowlisted files were downloaded locally from the pinned commit, hashed,
+and analyzed only for provenance and harmonization. They remain ignored and are
+not redistributed. F3b was CUT before outcome scoring because required inputs
+were absent or not comparable. The recorded license clarification request remains
+unanswered.
 
 ## Dependencies
 

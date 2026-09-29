@@ -490,3 +490,19 @@
   the first four endpoints and BT+ for `r`, consistently across all three seeds.
 - No external/refinement outcome or file influenced model construction,
   comparator selection, calibration, or abstention thresholds.
+
+## 2026-09-29 — F3b CUT at harmonization gate
+
+- After commits `4d2d5de` (registration), `1fc532c` (final-model manifest), and
+  `25024bb` (external source hashes), six allowlisted files were acquired from
+  the pinned EPA commit. The local download is 20.4 MiB and remains ignored.
+- The overlap audit found 12,709 matched recordings across 96 plates. Fifteen of
+  18 registered neural variables passed the compatibility thresholds.
+- `cv.time` and `cv.network` are absent from the refinement objects. The frozen
+  feature order uses both at DIV5 and DIV7 plus their missingness flags.
+- `r` is present but fails the registered Spearman threshold (0.817 versus 0.95),
+  although its median ratio is 1.000. No outcome-aware mapping was attempted.
+- Decision: **CUT** for all five endpoints before scoring. No external outcome,
+  MAE, interval coverage, or showcase case was inspected or reported.
+- Required fallback: retain the completed post-lock NTP↔ToxCast held-out cohort
+  analysis with its existing narrow, non-device-transfer wording.

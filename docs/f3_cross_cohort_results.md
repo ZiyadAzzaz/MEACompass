@@ -50,9 +50,10 @@ The evidence supports only this wording:
 
 The two cohorts belong to the same 2019 EPA NFA release. The analysis does not
 establish performance on new experiment dates, laboratories, recording devices,
-species, human tissue, or organ-on-chip systems. F3b remains CUT because exact
-serialized frozen M1 models were unavailable; no external refinement files were
-downloaded or scored.
+species, human tissue, or organ-on-chip systems. F3b was later resumed under
+Amendment B with deterministic final-refit models, but remained CUT because the
+refinement release omitted required inputs and `r` failed its compatibility
+threshold. No external refinement outcomes were scored.
 
 ## Reproduction
 

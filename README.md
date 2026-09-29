@@ -28,6 +28,9 @@ external validation.
   found no leakage, produced a clean full-shuffle result, and separated real M1
   from 20 independent chemical-block null runs. The failed gate remains recorded.
 - Gate L1 is **LOCK**: the model, reliability protocol, and claims are frozen.
+- Post-lock F3b refinement evaluation was **CUT before scoring**: two required
+  inputs were absent and `r` failed the registered compatibility threshold.
+  No external-performance claim is made.
 
 Dose/cohort subgroup results are deliberately narrower than the aggregate claim.
 Firing-rate confidence intervals cross zero at low and mid dose and in ToxCast;

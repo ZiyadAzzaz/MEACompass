@@ -49,7 +49,7 @@ Intervals are calibrated from training chemicals only. At the frozen 70% retaine
 
 DIV5 alone is weaker; DIV7 is the earliest window with consistent primary gains. Frozen tree contributions assign 56.9–77.3% of absolute predictive contribution to DIV7 physiology and 11.2–31.8% to chemistry. These are predictive associations, not mechanisms, and the tributyltin chloride failure remains disclosed.
 
-Post-lock secondary analysis retained predictive value under a held-out NTP↔ToxCast cohort shift without model retuning. This is not external laboratory or device transfer. Frozen external scoring on the later refinement release was cut before data acquisition because the exact serialized locked model ensemble was unavailable; it was not reconstructed or tuned.
+Post-lock secondary analysis retained predictive value under a held-out NTP↔ToxCast cohort shift without model retuning. This is not external laboratory or device transfer. A later refinement release was audited with deterministic final-refit models frozen before access, but external scoring was cut at harmonization: two required inputs were absent and `r` failed the registered compatibility threshold. No external outcomes were scored.
 
 ## Use on your own data
 

@@ -1,0 +1,19 @@
+metric,role,available_old,available_refinement,overlap_pairs,spearman,median_new_old_ratio,old_missing_rate,refinement_missing_rate,status,note
+meanfiringrate,input+endpoint,True,True,11880,0.9974773893335749,1.000010849330942,0.06522936501691715,0.06522936501691715,COMPATIBLE_WITH_FROZEN_TRANSFORM,same-plate/same-well/same-DIV overlap; percent-control transformed
+burst.per.min,input+endpoint,True,True,10835,0.9957305934021226,1.0,0.14745455976079944,0.14367770871036273,COMPATIBLE_WITH_FROZEN_TRANSFORM,same-plate/same-well/same-DIV overlap; percent-control transformed
+mean.isis,input,True,True,8483,0.9934775818908493,1.0,0.3315760484695885,0.3315760484695885,COMPATIBLE_WITH_FROZEN_TRANSFORM,same-plate/same-well/same-DIV overlap; percent-control transformed
+per.spikes.in.burst,input,True,True,10259,0.9892847806472572,1.0,0.19277677236603982,0.19277677236603982,COMPATIBLE_WITH_FROZEN_TRANSFORM,same-plate/same-well/same-DIV overlap; percent-control transformed
+mean.dur,input,True,True,8483,0.9942970787921679,1.0,0.3315760484695885,0.3315760484695885,COMPATIBLE_WITH_FROZEN_TRANSFORM,same-plate/same-well/same-DIV overlap; percent-control transformed
+mean.IBIs,input,True,True,8483,0.988206465060936,1.0,0.3315760484695885,0.3315760484695885,COMPATIBLE_WITH_FROZEN_TRANSFORM,same-plate/same-well/same-DIV overlap; percent-control transformed
+nAE,input+endpoint,True,True,11880,0.9956793055551366,1.0,0.06522936501691715,0.06522936501691715,COMPATIBLE_WITH_FROZEN_TRANSFORM,same-plate/same-well/same-DIV overlap; percent-control transformed
+nABE,input,True,True,10259,0.9975279823626292,1.0,0.19277677236603982,0.19277677236603982,COMPATIBLE_WITH_FROZEN_TRANSFORM,same-plate/same-well/same-DIV overlap; percent-control transformed
+ns.n,input+endpoint,True,True,8606,0.9989362807405877,1.0,0.3228420804154536,0.3190652293650169,COMPATIBLE_WITH_FROZEN_TRANSFORM,same-plate/same-well/same-DIV overlap; percent-control transformed
+ns.peak.m,input,True,True,7055,0.9967581748791886,1.0,0.44472421118892125,0.44362262963254384,COMPATIBLE_WITH_FROZEN_TRANSFORM,same-plate/same-well/same-DIV overlap; percent-control transformed
+ns.durn.m,input,True,True,7055,0.9952154003888849,1.0,0.44472421118892125,0.44362262963254384,COMPATIBLE_WITH_FROZEN_TRANSFORM,same-plate/same-well/same-DIV overlap; percent-control transformed
+ns.percent.of.spikes.in.ns,input,True,True,8606,0.9978085617065704,1.0,0.3228420804154536,0.3190652293650169,COMPATIBLE_WITH_FROZEN_TRANSFORM,same-plate/same-well/same-DIV overlap; percent-control transformed
+ns.mean.insis,input,True,True,6872,0.9975646235199389,1.0,0.45880871823117475,0.4577858210716815,COMPATIBLE_WITH_FROZEN_TRANSFORM,same-plate/same-well/same-DIV overlap; percent-control transformed
+ns.durn.sd,input,True,True,6872,0.9933887887645212,1.0,0.45880871823117475,0.4577858210716815,COMPATIBLE_WITH_FROZEN_TRANSFORM,same-plate/same-well/same-DIV overlap; percent-control transformed
+ns.mean.spikes.in.ns,input,True,True,7055,0.9969977014664125,1.0,0.44472421118892125,0.44362262963254384,COMPATIBLE_WITH_FROZEN_TRANSFORM,same-plate/same-well/same-DIV overlap; percent-control transformed
+r,input+endpoint,True,True,10642,0.8170181375213788,1.0,0.09914234007396333,0.15508694625855693,NOT_COMPARABLE,same-plate/same-well/same-DIV overlap; percent-control transformed
+cv.time,input,True,False,0,,,,1.0,NOT_COMPARABLE,required input absent from refinement release
+cv.network,input,True,False,0,,,,1.0,NOT_COMPARABLE,required input absent from refinement release

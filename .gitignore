@@ -6,6 +6,9 @@ results/*
 !results/f3b/
 results/f3b/*
 !results/f3b/source_manifest.csv
+!results/f3b/harmonization.csv
+!results/f3b/independence_audit.json
+!results/f3b/decision.json
 !results/f3_cross_cohort/
 results/f3_cross_cohort/*
 !results/f3_cross_cohort/summary.csv

@@ -1,108 +1,69 @@
-# F3b frozen external validation: controlled provenance gate
+# F3b post-lock external validation
 
-## Gate record
+## Gate report
 
-**Status: CUT AT FROZEN-MODEL AVAILABILITY GATE**
+**GATE: CUT AT HARMONIZATION — NO EXTERNAL OUTCOME SCORING**
 
-The amended F3b protocol provides a four-part, file-level provenance rule. The
-source audit was performed first. Six explicitly declared candidate files meet
-that rule, but the exact serialized historical M1 models required by the frozen
-evaluation definition are not present. No external data, predictions,
-harmonization statistics, or endpoint scores were viewed or computed.
+F3b is post-lock secondary work. It cannot alter the locked primary results.
+Under Amendment B, deterministic final models were built from all eligible 2019
+development chemicals before external access. The three-seed models, final BT+ /
+BT++ selections, grouped residual pool, abstention thresholds, feature order,
+package versions, and every artifact hash are recorded in
+`schemas/final_model_manifest.json`.
 
-| Field | Frozen record |
-|---|---|
-| Repository | `https://github.com/USEPA/CompTox-DNT-NFA-Refinement` |
-| Owner | U.S. Environmental Protection Agency (`USEPA`) |
-| Default branch | `main` |
-| Pinned commit | `01adf3e1a0068c87fe221d60df36b9f96c4b4b1d` |
-| Commit date | 2026-04-24 02:41:37 UTC |
-| Repository visibility | Public |
-| GitHub license metadata | `null` / none detected |
-| Root `LICENSE` or `COPYING` file | Not present |
-| README license grant | Not present |
+## Controlled source acquisition
 
-The repository describes source files and analysis outputs for the NFA refinement
-manuscript, but its README does not state a reuse license. Public GitHub access is
-not treated as permission to reuse or redistribute the included data. Government
-authorship or public-domain status is not assumed because the provenance and
-authorship of every included file are not established by the repository metadata.
+Only six files listed as `allowed_for_analysis=YES` in
+`results/f3b/source_manifest.csv` were fetched from USEPA repository commit
+`01adf3e1a0068c87fe221d60df36b9f96c4b4b1d`. Their combined local size is
+21,357,516 bytes (20.4 MiB). The manifest freezes each SHA-256. Raw files remain
+ignored and are not redistributed.
 
-## Decision
+This is a file-level provenance determination, not a blanket license claim. The
+repository has no detected repository-wide license. The permission clarification
+reported as requested by email and GitHub issue on 2026-09-29 remains unanswered.
 
-Per the registered F3b rule, model availability is also a prerequisite. Therefore:
+## Independence audit stopped after harmonization CUT
 
-- no repository clone or external data download was performed;
-- no external files were copied into this project;
-- no overlap or harmonization gate was computed;
-- the frozen M1 model was not scored on the refinement release;
-- no external-validation claim is permitted.
+The refinement objects cover 45 experiment dates. Twenty-eight dates are absent
+from the 2019 development release, yielding 10,422 candidate rows and 111
+treatment labels before CAS filtering. CAS-level external eligibility was not
+continued because the earlier harmonization gate failed. No candidate row became
+an evaluation row and no outcome was scored.
 
-## Controlled reconsideration registered 2026-09-29
+## Harmonization evidence
 
-The user reports that permission clarification was requested by email and by a
-GitHub issue on 2026-09-29. No message contents, issue URL, recipient confirmation,
-or response were supplied to this repository, so this is recorded as a
-user-reported request rather than verified permission. Private correspondence is
-not copied into publication artifacts.
+The audit matched 12,709 recordings across 96 plates using cohort, plate, well,
+and DIV. Each release was independently transformed with the preregistered
+same-plate, same-DIV zero-dose percent-control rule.
 
-Controlling rule:
+- Fifteen of 18 neural variables passed Spearman ≥ 0.95 and median-ratio
+  0.9–1.1.
+- `cv.time` and `cv.network` are absent from the refinement objects. The frozen
+  M1 feature order requires their DIV5 and DIV7 values and missingness flags.
+- `r` is present but fails the rank-correlation threshold: Spearman 0.817, with
+  median ratio 1.000.
+- No mapping was fitted using candidate test rows or outcomes.
 
-> For files verified as EPA-authored U.S. Government works, document the
-> 17 U.S.C. §105 public-domain rationale. Repository ownership alone is not
-> sufficient to classify every included file as public domain. Each downloaded
-> file must have a documented provenance and reuse basis before harmonization or
-> scoring.
+Because every final endpoint model requires the full registered input vector,
+all five endpoints are `NOT_COMPARABLE`. The preregistered rule therefore forbids
+external scoring, including MAE, rank correlation, interval coverage, abstention,
+or case selection.
 
-This is not a blanket license claim. Public GitHub access is not treated as reuse
-permission. A file with unclear provenance is skipped.
+Machine-readable evidence:
 
-### Registered execution sequence
+- `results/f3b/harmonization.csv`
+- `results/f3b/independence_audit.json`
+- `results/f3b/decision.json`
+- `results/f3b/source_manifest.csv`
 
-1. **Pre-acquisition manifest.** Every candidate appears in
-   `results/f3b/source_manifest.csv`. Only `allowed_for_analysis=YES` may be
-   fetched or analyzed.
-2. **Controlled fetch.** `scripts/fetch_f3b.py` accepts the pinned commit only,
-   downloads only declared files, requires a frozen SHA-256, refuses undeclared
-   local files, and writes under ignored `data/external/f3b/`.
-3. **Pre-registration.** Before outcomes, harmonization, or performance are
-   viewed, freeze endpoint/time mappings, transforms, controls, chemical
-   canonicalization, overlap exclusion, missingness, inclusion rules, metrics,
-   chemical bootstrap, calibration, abstention, and gate criteria in
-   `docs/f3b_preregistration.md`; commit it separately.
-4. **Chemical independence.** Exclude every CAS RN present in original model
-   development and report total, overlap-excluded, and remaining counts.
-5. **Harmonization.** Classify each endpoint as `EXACT MATCH`,
-   `COMPATIBLE WITH DECLARED TRANSFORM`, or `NOT COMPARABLE`; score only the first
-   two categories.
-6. **Frozen evaluation.** No retraining or tuning. Report MAE, RMSE, Spearman,
-   gain versus external BT+/BT++, chemical-bootstrap 95% intervals, and zero-shot
-   coverage if applicable. Any local recalibration is a separate secondary result.
-7. **Interpretation.** Classify as STRONG, MIXED, FAIL, or CUT. Even a successful
-   result is post-lock secondary evidence and does not imply human, organ-on-chip,
-   laboratory/device, or deployment transfer.
+Reproduce the gate with `make f3b-audit PYTHON=<environment-python>` after placing
+the verified allowlisted files under ignored `data/external/f3b/`.
 
-### Amended file-level result
+## Narrow interpretation
 
-The official repository description associates the repository with the Vahanan
-et al. NFA-refinement manuscript. `ReadMe_MV_27June2025.txt` identifies
-`source_files` as inputs needed for the manuscript RMD and identifies the
-`tcplfit2_results` inputs/results. GitHub's per-path commit history traces all six
-candidate files to commit `ac86b693`, authored with an `epa.gov` address. No
-third-party dataset or separate license is stated for those candidate paths.
-Under the user-approved four-part rule they are marked
-`allowed_for_analysis=YES`. This conclusion is limited to the manifest files and
-is not a blanket license statement for the repository.
-
-The controlled fetch still refuses to run because SHA-256 values have not been
-frozen, and acquisition is unnecessary while the model gate fails. The repository
-contains 75 tuning records and locked out-of-fold predictions, but no serialized
-M1 model artifacts. The amendment defines an external prediction as the mean of
-15 locked outer-fold models per endpoint and expressly forbids refitting. F3b is
-therefore CUT without scoring. The full registered specification is in
-`docs/f3b_preregistration.md`.
-
-F3b may resume only if the exact historical serialized models are supplied and
-their hashes verified. It remains future work rather than a positive or negative
-external-transfer result. The registered fallback is the post-lock, directional
-ToxCast-to-NTP and NTP-to-ToxCast analysis using frozen hyperparameters.
+F3b is **CUT**, not a positive or negative external-performance result. The
+actual reason is missing/non-comparable required inputs, not model availability.
+The completed post-lock NTP↔ToxCast held-out-cohort analysis remains the fallback:
+it retained predictive value without model retuning, but it is not external
+laboratory, device, human, or organ-on-chip validation.

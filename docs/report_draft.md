@@ -352,11 +352,15 @@ and are not used to estimate generalization.
 
 ## 14. External validation and cohort-shift robustness
 
-F3b external refinement scoring was CUT before data acquisition. The six declared
-EPA files passed the amended file-level provenance rule, but the exact serialized
-historical outer-fold models required for a genuinely frozen ensemble were not
-available. Refitting would violate the registered definition. No external
-refinement file was downloaded, harmonized, or scored.
+F3b external refinement scoring was CUT at the preregistered harmonization gate.
+After the deterministic all-2019 three-seed final models and source hashes were
+frozen, six allowlisted EPA files (20.4 MiB) were acquired from the pinned commit.
+Across 12,709 overlap recordings, 15 of 18 neural variables passed the compatibility
+threshold. The refinement objects omit `cv.time` and `cv.network`, while `r` had
+Spearman 0.817 after the registered transform, below the 0.95 threshold. Because
+all frozen endpoint models require every registered input, none of the five
+endpoints was eligible for scoring. No external outcomes were scored and no
+external-performance claim is made.
 
 The registered fallback held out each 2019 screening cohort in turn, excluded 11
 chemicals shared with the source cohort, and used fixed hyperparameters with no
@@ -531,7 +535,7 @@ project does not claim to predict official potency five days earlier.
 | M2 | PASS | Nominal 90% coverage attained for every endpoint |
 | M3 | PASS, 3/5 | Passes for firing rate, active electrodes, and `r` |
 | L1 | LOCK | Primary model and reliability protocol frozen |
-| F3b | CUT | Exact serialized frozen models unavailable; no external data scored |
+| F3b | CUT | Required inputs absent / not comparable; no external outcomes scored |
 | F3 | PASS, secondary | Five wins in both chemically disjoint cohort directions |
 
 This ledger preserves failures, deviations, and boundaries alongside positive

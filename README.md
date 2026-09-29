@@ -1,7 +1,7 @@
 # NeuroChip-Twin
 
-**Reliability-aware early prediction of neural network development from
-microelectrode-array assays**
+**Reliability-Aware Early Prediction of Neural Network Development from
+Microelectrode-Array Assays**
 
 NeuroChip-Twin uses measurements available by day in vitro 7 (DIV7) to forecast
 five DIV12 functional outcomes for unseen chemicals. It adds calibrated 90%
@@ -26,6 +26,14 @@ external validation.
   found no leakage, produced a clean full-shuffle result, and separated real M1
   from 20 independent chemical-block null runs. The failed gate remains recorded.
 - Gate L1 is **LOCK**: the model, reliability protocol, and claims are frozen.
+
+Dose/cohort subgroup results are deliberately narrower than the aggregate claim.
+Firing-rate confidence intervals cross zero at low and mid dose and in ToxCast;
+the network-spike interval crosses zero at low dose. At zero dose, M1 is worse
+than BT+ by point estimate for bursts, firing rate, and network spikes. One
+interpretation is that control normalization makes simple baselines competitive
+there; this is not established as a causal explanation. The intended early-triage
+use is exposed wells.
 
 Read the integrated [report](docs/report_draft.md), [integrity audit](docs/integrity_audit.md),
 [defense Q&A](docs/defense_qa.md), [video script](docs/video_script.md), and

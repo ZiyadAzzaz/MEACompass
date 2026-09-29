@@ -111,6 +111,25 @@ correlated concentrations and replicates as independent and narrow confidence
 intervals artificially. Each bootstrap draw keeps all observations of a sampled
 chemical together.
 
+## Does the model improve every dose stratum?
+
+No. At low and mid dose, all five point estimates favor M1, but firing-rate
+confidence intervals cross zero in both strata and the network-spike interval
+crosses zero at low dose. At zero dose, M1 is worse than BT+ by point estimate for
+bursts, firing rate, and network spikes. The harmful interval excludes zero for
+bursts and network spikes; the firing interval crosses zero. One interpretation
+is that percent-of-control normalization makes simple control-centered baselines
+especially competitive at zero dose, but this is not an established causal
+explanation. The intended early-triage use is exposed wells.
+
+## Does the per-cohort analysis prove transfer between NTP and ToxCast?
+
+No. Both cohort slices have beneficial point estimates for all five endpoints,
+but the ToxCast firing-rate confidence interval crosses zero. More importantly,
+the current cohort slices come from the same cross-validation design and do not
+hold out an entire cohort. They are descriptive robustness results, not external
+laboratory/device transfer.
+
 ## Why do you still qualify active electrodes and coordinated activity?
 
 Active electrodes had strong prediction and abstention results, but it remains a

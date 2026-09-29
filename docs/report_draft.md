@@ -1,4 +1,4 @@
-# NeuroChip-Twin: reliability-aware early forecasting of neural network formation
+# NeuroChip-Twin: Reliability-Aware Early Prediction of Neural Network Development from Microelectrode-Array Assays
 
 ## Abstract
 
@@ -184,12 +184,31 @@ chemistry-augmented model is not claimed to dominate the simpler model everywher
 
 ### 5.1 Dose and cohort robustness
 
-The DIV7 M1 gain versus BT+ is present at low and mid doses for all five endpoints;
-it is not a high-dose-only effect. Dose cut points were learned on each outer
-training fold and applied unchanged to its test fold. In descriptive cohort
-analysis, M1 improved on BT+ for both NTP and ToxCast for all five endpoints.
-Because cohort was not held out as a domain, these results show robustness within
-the evaluation—not cross-cohort generalization.
+Dose cut points were learned on each outer training fold and applied unchanged to
+its test fold. At low and mid dose, all five endpoints had beneficial point
+estimates versus BT+. The confidence intervals were more selective: bursts,
+active electrodes, and coordinated activity excluded zero at low dose; bursts,
+active electrodes, network spikes, and coordinated activity excluded zero at mid
+dose. Firing-rate intervals crossed zero at both low and mid dose, and the
+network-spike interval crossed zero at low dose. The result is therefore not
+high-dose-only, but neither is every low/mid subgroup conclusive.
+
+At zero dose, M1 was worse than BT+ by point estimate for bursts (−11.5% relative
+gain), firing rate (−23.7%), and network spikes (−8.2%). The bursts and
+network-spike paired intervals excluded zero in the harmful direction; the firing
+interval crossed zero. Active electrodes and coordinated activity remained
+beneficial. **Interpretation:** because the target is percent of matched zero-dose
+control, simple control-centered baselines may be especially competitive in
+zero-dose wells. This interpretation is not an established causal explanation.
+The intended early-triage use is exposed wells, while all zero-dose observations
+remain visible in the evaluation.
+
+In descriptive cohort slices, M1 had beneficial point estimates versus BT+ for
+all five endpoints in both NTP and ToxCast. Confidence intervals excluded zero for
+all five NTP endpoints and four of five ToxCast endpoints; the ToxCast firing-rate
+interval crossed zero despite a 13.8% point-estimate gain. These are within-study
+subgroup results, not held-out cohort transfer and not external laboratory or
+device validation.
 
 ## 6. Reliability and abstention
 
@@ -268,6 +287,9 @@ days earlier.
 - `r` percent-control normalization can be unstable near zero denominators.
 - Abstention did not reach the registered 15% improvement for bursts or network
   spikes.
+- At zero dose, M1 was worse than BT+ by point estimate for bursts, firing rate,
+  and network spikes. A control-normalization explanation is interpretation, not
+  an established finding; the intended early-triage use is exposed wells.
 - Chemistry contributions are predictive associations, not mechanistic evidence;
   M1 did not significantly beat B3 on three endpoints.
 - The original Gate S failed. The later audit narrows the suspected mechanism and

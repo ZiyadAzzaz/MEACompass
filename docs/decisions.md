@@ -219,3 +219,18 @@
   endpoint-scaled error rule. They are descriptive, not performance estimates or
   automatically chosen showcase defaults.
 - Full evidence: `docs/interpretability.md`.
+
+## 2026-09-29 — Gate F1 claim correction
+
+- The locked model, endpoints, splits, comparators, predictions, and headline
+  numbers remain unchanged.
+- Dose language now separates beneficial point estimates from confidence
+  intervals excluding zero. Firing-rate low/mid and network-spike low-dose
+  intervals are explicitly inconclusive.
+- Cohort language now states that ToxCast firing rate is inconclusive and that
+  the existing slices are not held-out cohort or external device transfer.
+- Zero-dose underperformance for bursts, firing rate, and network spikes is
+  disclosed. Control normalization is labeled interpretation rather than an
+  established explanation; the intended early-triage use is exposed wells.
+- The locked title is restored in the report and README. Deck-title alignment is
+  reserved for the required F7 deck rebuild.

@@ -98,11 +98,11 @@ def test_locked_claims_remain_consistent_in_core_public_materials() -> None:
     assert "not an autonomous" in boundary_corpus
 
 
-def test_final_gate_is_ready_for_human_review_and_registration_is_recorded() -> None:
+def test_final_gate_is_frozen_and_registration_is_recorded() -> None:
     final = _read(DOCS / "final_competition_compliance.md")
     reproducibility = _read(DOCS / "reproducibility.md")
     writeup = _read(DOCS / "kaggle_writeup.md")
-    assert "FINAL STATUS: READY FOR HUMAN SUBMISSION REVIEW" in final
+    assert "REPOSITORY SUBMISSION FREEZE: PASS" in final
     assert "| VIDEO | **PASS**" in final
     assert "| KAGGLE WRITEUP | **PASS**" in final
     assert "84 passed" in final

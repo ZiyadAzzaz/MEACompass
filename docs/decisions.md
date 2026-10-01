@@ -597,3 +597,15 @@ cohort-balanced subset, estimate performance, or select a new scientific result.
   `https://ziyadazzaz.github.io/MEACompass/video/`.
 - The submission tag remains withheld until Ziyad Azzaz watches the public
   video, approves both caption tracks, and confirms the Kaggle submission.
+
+## 2026-10-02 — Final repository submission freeze authorized
+
+- Ziyad Azzaz confirmed that the final public video and both caption tracks were
+  reviewed and approved without changes.
+- The scientific package remains immutable: no model, data, protocol, result,
+  figure, threshold, claim, limitation, or interpretation was changed.
+- The final release audit is authorized to create and push
+  `v1.0.0-submission` after tests, claim checks, security checks, public links,
+  and a fresh public clone pass.
+- The release tag freezes the public repository package only. Entering and
+  submitting the writeup on Kaggle remains a manual action by the author.

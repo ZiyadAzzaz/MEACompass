@@ -1,6 +1,6 @@
 # Competition video QA
 
-Status: **FINAL MEDIA PASS — HUMAN VIEWING APPROVAL REQUIRED BEFORE TAG**.
+Status: **FINAL MEDIA PASS — AUTHOR APPROVED**.
 
 ## Final deliverable
 
@@ -50,8 +50,8 @@ evidence are shown instead.
   video duration.
 - [x] Chinese first mention uses “最强基线 BT+” and “平均绝对误差（MAE）”.
 - [x] The final MP4 contains selectable English and Chinese subtitle streams.
-- [ ] Ziyad Azzaz watches the public player from beginning to end and approves
-  voice, timing, and both caption tracks before `v1.0.0-submission`.
+- [x] Ziyad Azzaz reviewed the final public video and approved the voice, timing,
+  and both caption tracks for `v1.0.0-submission` on 2026-10-02.
 
 ## Rights and scientific boundary
 

@@ -45,17 +45,18 @@ fields are confirmed and filled. The runtime identity check returned exactly
 `ZiyadAzzaz`, the scrubbed history was pushed publicly, and the static demo was
 verified anonymously. Slide 10 now contains the authentic public-demo capture.
 The author-recorded final video, retimed EN/ZH captions, and public video page
-are included. Only final human viewing approval and Kaggle submission remain.
+are included. The author approved the final video and captions on 2026-10-02;
+only the author's manual Kaggle submission remains.
 
-## Final competition compliance re-audit — 2026-09-29
+## Final competition compliance re-audit — 2026-10-02
 
-- Scanned all 68 reachable commits after the final media commit by filename and file content: no credential,
+- Scanned all 69 reachable commits after the submission-freeze commit by filename and file content: no credential,
   API-key, bearer-token, or private-key pattern; no historical `.env`, credential,
   key, raw-data, external-data, or checkpoint path.
 - The only history match for a workstation-path pattern was the test code that
   bans `localhost`; it is not a stored path. A binary email-pattern match in the
   report produced no extracted email address.
-- Largest reachable blob is `results/demo_predictions.csv` at 5,811,523 bytes.
+- Largest reachable blob is the final competition MP4 at 7,908,838 bytes.
 - Committed PNGs contain no EXIF/text metadata. The PPTX has no external
   relationship, embedded object, or private path; its only media object is the
   authentic demo capture. PDF metadata contains the confirmed author/title and
@@ -64,5 +65,6 @@ are included. Only final human viewing approval and Kaggle submission remain.
   checkpoint, or secret is tracked. The sole tracked video is the final 7.54 MiB
   project-authored competition MP4; raw narration and production files remain ignored.
 
-Status remains **PUBLICATION SCRUB: PASS — SAFE TO PUBLISH**. The submission tag
-remains withheld only for final human video/caption approval and Kaggle submission.
+Status remains **PUBLICATION SCRUB: PASS — SAFE TO PUBLISH**. The author approved
+the final video and captions; the repository freeze may be tagged, while the
+actual Kaggle submission remains a manual author action.

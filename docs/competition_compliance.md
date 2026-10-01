@@ -1,6 +1,6 @@
 # Competition compliance matrix
 
-Audit date: **2026-09-29**  
+Audit date: **2026-10-02**
 Submission category: **Model & Algorithm**
 
 Controlling public sources reviewed:
@@ -21,8 +21,8 @@ originality, intellectual-property responsibility, and data-use constraints.
 | Requirement | Official source | Level | MEACompass artifact | Status | Action needed |
 |---|---|---|---|---|---|
 | Category at the beginning | Kaggle challenge | Mandatory | `docs/kaggle_writeup.md` | **PASS** | None; Model & Algorithm is declared first |
-| Kaggle Writeup | Kaggle challenge | Mandatory | `docs/kaggle_writeup.md` | **PASS, waiting video URL** | Replace the sole video placeholder after upload |
-| Public demo video, maximum five minutes, no access barrier | Kaggle challenge | Mandatory | 4:45 local draft; script/shot list/SRT/QA committed | **PENDING HUMAN UPLOAD** | Record voice, retime SRTs, final QA, public upload |
+| Kaggle Writeup | Kaggle challenge | Mandatory | `docs/kaggle_writeup.md` | **PASS** | Submit the prepared Writeup after final human review |
+| Public demo video, maximum five minutes, no access barrier | Kaggle challenge | Mandatory | 3:53 author-narrated 1080p MP4 with EN/ZH captions and public Pages player | **PASS** | Keep public through judging |
 | Public code repository | Kaggle challenge | Mandatory | [public GitHub repository](https://github.com/ZiyadAzzaz/MEACompass) | **PASS** | Keep public through judging |
 | Technical report | Kaggle challenge | Mandatory | `docs/MEACompass_Technical_Report.pdf` | **PASS** | None; 18 pages |
 | Public interactive demo | Kaggle challenge | Optional | [GitHub Pages demo](https://ziyadazzaz.github.io/MEACompass/demo/) | **PASS** | Keep public through judging |
@@ -33,8 +33,8 @@ originality, intellectual-property responsibility, and data-use constraints.
 | Organizing Committee's stated joint ownership/use terms for submitted materials | Kaggle rules | Mandatory acknowledgement through participation | Submission package | **ACKNOWLEDGED** | Submit only materials the team has the right to submit; third-party terms remain separate |
 | No unlicensed raw-data redistribution | Pazhou guidelines | Mandatory | `.gitignore`, EPA and F3b manifests | **PASS** | Keep raw EPA/refinement files ignored |
 | Reproducible without paid service/private data | Kaggle challenge | Mandatory | Makefile, environments, committed result manifest | **PASS** | Result-only path needs no paid service or raw data |
-| Video demonstrates workflow, outputs, and value | Kaggle challenge | Mandatory | video script and shot list | **READY FOR RECORDING** | Human recording and upload |
-| Video/media rights documented | Kaggle challenge; Pazhou IP rule | Mandatory | video QA and sources/licenses | **PASS FOR CURRENT ASSETS** | Do not add media without rights |
+| Video demonstrates workflow, outputs, and value | Kaggle challenge | Mandatory | public final video, script, shot list, subtitles, and QA | **PASS** | None |
+| Video/media rights documented | Kaggle challenge; Pazhou IP rule | Mandatory | video QA and sources/licenses | **PASS** | Do not add media without rights |
 | Factual AI-tool disclosure | Technical-report guidance | Recommended | report, writeup, README, AI disclosure | **PASS** | Keep; AI prose is not evidence |
 | Report near 15–20 pages | Technical-report guidance | Recommended | 18-page report | **PASS** | None |
 | Competition deck | Presentation package | Recommended | 12-slide deck | **PASS** | None |

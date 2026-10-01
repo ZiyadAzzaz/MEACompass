@@ -88,7 +88,7 @@ redistribution or covered combined work.
 | `docs/assets/main_results_locked.png` | Render of the project-authored locked-results slide | Project-authored, Apache-2.0 | Yes | No external image |
 | `docs/assets/demo_public_neutral.png` | Authentic crop from the author's public MEACompass demo capture | Project-authored UI/model outputs | Yes | Provenance hash in `docs/deck_qa.md`; no redrawn value |
 | Competition deck/report | Project-authored text, shapes, tables, and figures | Project-authored; upstream terms stay separate | Yes | No logo, stock image, or paid asset |
-| Competition video | Project slides and authentic public-demo footage | Project-authored | Draft not committed | No music; any later addition requires documented rights |
+| Competition video | Project slides, authentic public-demo capture, and author-recorded narration | Project-authored, Apache-2.0 | Yes | No music, synthetic voice, paid service, stock media, or third-party footage |
 
 The demo uses generic system font families and the deck uses system presentation
 fonts. No font file is committed or embedded for redistribution. No stock icons,

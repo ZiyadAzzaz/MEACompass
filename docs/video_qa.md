@@ -1,58 +1,61 @@
 # Competition video QA
 
-Status: **DRAFT — HUMAN ENGLISH VOICE RECORDING REQUIRED**.
+Status: **FINAL MEDIA PASS — HUMAN VIEWING APPROVAL REQUIRED BEFORE TAG**.
 
-## Automatically produced draft
+## Final deliverable
 
-- File: `docs/media/MEACompass_Competition_Video_DRAFT_SILENT.mp4`
-- Duration: 285 seconds (4:45)
+- File: `docs/media/MEACompass_Competition_Video.mp4`
+- Public player: <https://ziyadazzaz.github.io/MEACompass/video/>
+- Duration: 233.13 seconds (3:53.13), below the five-minute maximum
 - Resolution: 1920×1080
 - Frame rate: 30 fps
-- Video codec: MPEG-4 Part 2 (`FMP4`)
-- File size: 93,064,006 bytes (88.75 MiB)
-- Audio: none
-- Voice source: none; Ziyad Azzaz must record the approved English script
-- Subtitle drafts: `docs/video_script_en.srt` and
-  `docs/video_script_zh.srt`
-- Free tools: Python, OpenCV, Pillow, and the local presentation renderer; cost
-  $0
+- Video: H.264 High, progressive, yuv420p
+- Audio: AAC-LC, 48 kHz, mono, approximately 150 kb/s
+- Audio loudness: −17.2 LUFS integrated; −1.4 dBTP true peak; 3.3 LU range
+- Captions: 29 English cues and 29 Chinese cues
+- Embedded tracks: English (default) and Chinese
+- WebVTT tracks: `docs/video/captions-en.vtt` and `captions-zh.vtt`
+- Source SRTs: `docs/video_script_en.srt` and `docs/video_script_zh.srt`
+- File size: 7,908,838 bytes (7.54 MiB)
 
-The draft uses only real rendered competition slides. The public demo appears
-within the first minute through the authentic GitHub Pages capture on slide 10.
-No synthetic voice, paid API, paid editor, music, fabricated interface, or
-private information is used.
+## Production record
 
-The 88.75-MiB silent draft remains a local, ignored production artifact rather
-than repository history. This avoids burdening every public clone with a file
-that must still be replaced after narration. The finished narrated MP4 should
-be uploaded to a competition-supported free video host by the author.
+Ziyad Azzaz recorded the English narration. The raw recording was preserved in
+an ignored production directory and was never committed. Audio processing used
+free local FFmpeg tools: high/low-pass filtering, loudness normalization, and
+removal of one clearly repeated false start. No sentence was synthesized or
+replaced. No paid service, music, synthetic voice, stock media, third-party
+logo, or external footage was used.
 
-## Finalization still required
+Visuals are rendered project-authored competition slides plus the authentic
+logged-out public-demo capture already documented in `docs/deck_qa.md`. Browser
+control was unavailable during final assembly, so the video does not claim a
+new live selector recording. The verified capture and registered failure-case
+evidence are shown instead.
 
-The current SRT time ranges are recording guides, not publication-ready subtitle
-timing. Record the approved English narration in a quiet room, edit it to the
-4:45 timeline, then retime both SRT files against the actual voice track. Replace
-the silent draft with `docs/media/MEACompass_Competition_Video.mp4` only after
-checking intelligibility, exact claims, subtitle readability, and duration
-below five minutes.
+## Mechanical QA
 
-The final recording should include live, logged-out interaction with the three
-fixed demo cases where practical. The silent draft does not claim to replace
-that interaction: live browser control was unavailable during automated media
-production.
+- [x] Duration is below five minutes.
+- [x] 1920×1080, 30 fps, H.264/AAC browser-compatible output.
+- [x] Fast-start metadata permits progressive web playback.
+- [x] No black interval of 0.5 seconds or longer was detected.
+- [x] No unexpected silence of 2.5 seconds or longer was detected.
+- [x] Final narration is normalized without clipping.
+- [x] Full contact-sheet review shows the intended evidence sequence.
+- [x] Demo evidence appears within the first minute.
+- [x] Locked gains, interval coverage, and three-of-five limitation are visible.
+- [x] Gate S stop, rat-MEA scope, non-human/non-OoC boundary, and
+  non-autonomous-use language remain visible.
+- [x] English and Chinese captions contain 29 non-overlapping cues within the
+  video duration.
+- [x] Chinese first mention uses “最强基线 BT+” and “平均绝对误差（MAE）”.
+- [x] The final MP4 contains selectable English and Chinese subtitle streams.
+- [ ] Ziyad Azzaz watches the public player from beginning to end and approves
+  voice, timing, and both caption tracks before `v1.0.0-submission`.
 
-## Final video rights and access checklist
+## Rights and scientific boundary
 
-- [x] Target duration is 4:45 and below the five-minute maximum.
-- [x] Current visuals are project-authored slides, figures, or authentic
-  MEACompass public-demo footage.
-- [x] No fabricated UI, manually redrawn value, stock image, third-party logo,
-  or external clip is used.
-- [x] No background music or other copyrighted audio is used.
-- [x] The workflow, outputs, reliability decision, practical value, and
-  rat-MEA/not-human/not-OoC boundary are in the approved script.
-- [x] Production uses free local tools; no paid service is required.
-- [ ] Add the final human English narration and retime both subtitle files.
-- [ ] Export and QA the final MP4, then upload it to a public URL requiring no
-  login, payment, or permission request.
-- [ ] Verify that URL logged out and replace the sole video placeholder.
+All visuals, interface captures, model outputs, narration, and captions are
+project-authored. This is research decision support using rat cortical neural
+MEA data. It is not human or organ-on-chip validation and not an autonomous
+assay-termination system.

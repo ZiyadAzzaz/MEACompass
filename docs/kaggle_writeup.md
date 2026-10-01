@@ -4,7 +4,7 @@
 
 ## Links
 
-1. Demo video: **VIDEO_URL_TO_BE_ADDED_AFTER_UPLOAD**
+1. Demo video: <https://ziyadazzaz.github.io/MEACompass/video/>
 2. Public repository: [github.com/ZiyadAzzaz/MEACompass](https://github.com/ZiyadAzzaz/MEACompass)
 3. Live demo: [ziyadazzaz.github.io/MEACompass/demo/](https://ziyadazzaz.github.io/MEACompass/demo/) — static and precomputed.
 4. Technical report: [MEACompass Technical Report](https://github.com/ZiyadAzzaz/MEACompass/blob/main/docs/MEACompass_Technical_Report.pdf)

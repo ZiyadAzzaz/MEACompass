@@ -13,6 +13,7 @@ def test_readme_uses_verified_public_links_and_has_no_stale_hosting_text() -> No
     lowered = text.lower()
     assert "https://github.com/ZiyadAzzaz/MEACompass" in text
     assert "https://ziyadazzaz.github.io/MEACompass/demo/" in text
+    assert "https://ziyadazzaz.github.io/MEACompass/video/" in text
     assert "hosting is pending" not in lowered
     assert "no public url is claimed" not in lowered
     assert "video_url_to_be_added" not in lowered

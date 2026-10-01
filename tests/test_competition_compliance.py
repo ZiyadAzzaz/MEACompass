@@ -31,11 +31,20 @@ def test_required_compliance_artifacts_exist() -> None:
         DOCS / "final_competition_compliance.md",
         DOCS / "sources_and_licenses.md",
         DOCS / "ai_tool_disclosure.md",
+        DOCS / "media" / "MEACompass_Competition_Video.mp4",
+        DOCS / "video" / "index.html",
+        DOCS / "video" / "captions-en.vtt",
+        DOCS / "video" / "captions-zh.vtt",
     ]
     assert all(path.is_file() and path.stat().st_size > 0 for path in required)
+    video = DOCS / "media" / "MEACompass_Competition_Video.mp4"
+    assert video.stat().st_size < 10 * 1024 * 1024
+    media_bytes = video.read_bytes()
+    assert b"avc1" in media_bytes and b"mp4a" in media_bytes
+    assert media_bytes.count(b"tx3g") >= 2
 
 
-def test_writeup_order_summary_length_and_only_allowed_placeholder() -> None:
+def test_writeup_order_summary_length_and_no_placeholder() -> None:
     writeup = _read(DOCS / "kaggle_writeup.md")
     assert writeup.lstrip().startswith("**Submission Category: Model & Algorithm**")
     assert writeup.index("## Links") < writeup.index("## Team") < writeup.index("## Project summary")
@@ -57,7 +66,8 @@ def test_writeup_order_summary_length_and_only_allowed_placeholder() -> None:
     placeholders = re.findall(
         r"[A-Z][A-Z0-9_]*(?:TO_BE_ADDED|CONFIRMATION_REQUIRED)[A-Z0-9_]*", writeup
     )
-    assert placeholders == ["VIDEO_URL_TO_BE_ADDED_AFTER_UPLOAD"]
+    assert placeholders == []
+    assert "https://ziyadazzaz.github.io/MEACompass/video/" in writeup
 
 
 def test_locked_claims_remain_consistent_in_core_public_materials() -> None:
@@ -88,12 +98,13 @@ def test_locked_claims_remain_consistent_in_core_public_materials() -> None:
     assert "not an autonomous" in boundary_corpus
 
 
-def test_final_gate_is_ready_except_video_and_registration_is_recorded() -> None:
+def test_final_gate_is_ready_for_human_review_and_registration_is_recorded() -> None:
     final = _read(DOCS / "final_competition_compliance.md")
     reproducibility = _read(DOCS / "reproducibility.md")
     writeup = _read(DOCS / "kaggle_writeup.md")
-    assert "FINAL STATUS: READY EXCEPT VIDEO" in final
-    assert "PENDING HUMAN UPLOAD" in final
+    assert "FINAL STATUS: READY FOR HUMAN SUBMISSION REVIEW" in final
+    assert "| VIDEO | **PASS**" in final
+    assert "| KAGGLE WRITEUP | **PASS**" in final
     assert "84 passed" in final
     assert "89/89 passed" in final
     assert "77 passes" not in final

@@ -44,8 +44,10 @@ def test_subtitle_headline_and_preferred_terms_are_present() -> None:
     english = (ROOT / "docs" / "video_script_en.srt").read_text(encoding="utf-8")
     chinese = (ROOT / "docs" / "video_script_zh.srt").read_text(encoding="utf-8")
     normalized_english = " ".join(english.split())
-    assert "14.2 to 39.0" in normalized_english
-    assert "paired chemical-level 95 percent confidence interval" in normalized_english
-    assert "14.2% 至 39.0%" in chinese
-    assert "选择性预测（拒绝预测）机制" in chinese
-    assert "限定范围的完整性审计" in chinese
+    assert "14.2–39.0% versus BT+" in normalized_english
+    assert "Confidence intervals across chemicals excluded zero" in normalized_english
+    assert "最强基线 BT+" in chinese
+    assert "平均绝对误差（MAE）" in chinese
+    assert "14.2–39.0%" in chinese
+    assert "选择性预测" in chinese
+    assert "限定审计" in chinese

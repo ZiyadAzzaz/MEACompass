@@ -15,7 +15,7 @@ rewritten.
 | Raw data | PASS | No tracked path under `data/` or `external/`; the 20.4 MiB refinement download remains ignored and is not redistributed |
 | Models/checkpoints | PASS | No tracked `.pt`, `.pth`, `.ckpt`, `.joblib`, `.pkl`, or `.onnx`; local final-model artifacts remain ignored |
 | Other-project content | PASS | No tracked file from the earlier imaging repository or its deliverables |
-| Oversized/history blobs | PASS | Largest current tracked file is `results/demo_predictions.csv` at 5,811,523 bytes; no reachable historical blob exceeds 10 MiB |
+| Oversized/history blobs | PASS | Largest current tracked file is the final competition MP4 at 7,908,838 bytes; no reachable historical blob exceeds 10 MiB |
 | Temporary outputs | PASS | Duplicate authoring deck removed from the tracked tree; working deck is retained locally under an ignore rule; only the judge-facing deck is tracked |
 | Personal correspondence | PASS | No private email text or personal email address detected in tracked deliverables or history |
 | Structured/package validity | PASS | All checked JSON/YAML parses; PPTX ZIP CRC passes; report PDF opens as 18 pages; no tracked notebook |
@@ -44,12 +44,12 @@ other-project, malformed-package, or oversized-history defect. Team and AI-tool
 fields are confirmed and filled. The runtime identity check returned exactly
 `ZiyadAzzaz`, the scrubbed history was pushed publicly, and the static demo was
 verified anonymously. Slide 10 now contains the authentic public-demo capture.
-The final English voice recording, subtitle retiming, video upload, and public
-video URL remain human publication work and do not weaken repository security.
+The author-recorded final video, retimed EN/ZH captions, and public video page
+are included. Only final human viewing approval and Kaggle submission remain.
 
 ## Final competition compliance re-audit — 2026-09-29
 
-- Scanned all 65 reachable commits by filename and file content: no credential,
+- Scanned all 68 reachable commits after the final media commit by filename and file content: no credential,
   API-key, bearer-token, or private-key pattern; no historical `.env`, credential,
   key, raw-data, external-data, or checkpoint path.
 - The only history match for a workstation-path pattern was the test code that
@@ -60,9 +60,9 @@ video URL remain human publication work and do not weaken repository security.
   relationship, embedded object, or private path; its only media object is the
   authentic demo capture. PDF metadata contains the confirmed author/title and
   open-source ReportLab producer only.
-- No notebook, font file, audio/video file, browser cache, raw dataset, external
-  refinement file, checkpoint, or secret is tracked.
+- No notebook, font file, browser cache, raw dataset, external refinement file,
+  checkpoint, or secret is tracked. The sole tracked video is the final 7.54 MiB
+  project-authored competition MP4; raw narration and production files remain ignored.
 
-Status remains **PUBLICATION SCRUB: PASS — SAFE TO PUBLISH**. This is not the
-submission hard freeze because the final narrated video and timed subtitles are
-still pending.
+Status remains **PUBLICATION SCRUB: PASS — SAFE TO PUBLISH**. The submission tag
+remains withheld only for final human video/caption approval and Kaggle submission.

@@ -577,3 +577,23 @@ cohort-balanced subset, estimate performance, or select a new scientific result.
 - Current judge-facing compliance and reproducibility documents were aligned to
   the latest executed results. No scientific result, model, threshold, or claim
   was changed.
+
+## 2026-10-02 — Final competition video package complete
+
+- Ziyad Azzaz supplied a 3:57.57 human English narration. The raw file remains
+  ignored and was not committed.
+- Free local processing normalized the narration and removed one clearly
+  repeated false start; no synthetic or replacement speech was used. Final
+  duration is 3:53.13.
+- The final 1920×1080 H.264/AAC video uses project-authored slides and the
+  previously verified authentic logged-out demo capture. Browser control was
+  unavailable during assembly, so no new live interaction is claimed.
+- English and Chinese captions were retimed into 29 cues each and embedded as
+  selectable tracks. Matching WebVTT captions power the public Pages player.
+- Media QA found no black interval of 0.5 seconds or longer, no unexpected
+  silence of 2.5 seconds or longer, and no audio clipping. Locked claims and
+  limitations remain unchanged.
+- The Kaggle video placeholder was replaced with
+  `https://ziyadazzaz.github.io/MEACompass/video/`.
+- The submission tag remains withheld until Ziyad Azzaz watches the public
+  video, approves both caption tracks, and confirms the Kaggle submission.

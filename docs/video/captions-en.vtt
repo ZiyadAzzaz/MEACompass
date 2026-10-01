@@ -1,142 +1,115 @@
-1
-00:00:01,000 --> 00:00:07,700
+WEBVTT
+
+00:01.000 --> 00:07.700
 A neural test reaches its main result on day twelve.
 MEACompass asks two questions.
 
-2
-00:00:07,700 --> 00:00:16,600
+00:07.700 --> 00:16.600
 Can day-seven measurements predict that result for a new chemical?
 And can the system refuse when it is not confident?
 
-3
-00:00:16,600 --> 00:00:22,300
+00:16.600 --> 00:22.300
 This demo uses held-out examples.
 OBSERVED shows early measurements.
 
-4
-00:00:22,300 --> 00:00:28,900
+00:22.300 --> 00:28.900
 PREDICTED shows the day-twelve forecast,
 uncertainty interval, and baseline.
 
-5
-00:00:28,900 --> 00:00:36,400
+00:28.900 --> 00:36.400
 The reliability badge says accept or abstain.
 High uncertainty means continue the experiment.
 
-6
-00:00:36,400 --> 00:00:40,400
+00:36.400 --> 00:40.400
 HYPOTHESIS marks what we have not validated.
 
-7
-00:00:40,400 --> 00:00:48,600
+00:40.400 --> 00:48.600
 We studied 136 chemicals and about 4,200
 complete records across time.
 
-8
-00:00:48,600 --> 00:00:53,800
+00:48.600 --> 00:53.800
 To prevent leakage, all doses and repeats
 from one chemical stay together.
 
-9
-00:00:53,800 --> 00:01:04,200
+00:53.800 --> 01:04.200
 We tested firing rate, bursts, active electrodes,
 network spikes, and coordinated activity.
 
-10
-00:01:04,200 --> 00:01:17,900
+01:04.200 --> 01:17.900
 MAE fell by 14.2–39.0% versus BT+,
 and by 12.3–42.9% versus BT++.
 
-11
-00:01:17,900 --> 00:01:23,600
+01:17.900 --> 01:23.600
 Confidence intervals across chemicals
 excluded zero for all five endpoints.
 
-12
-00:01:23,600 --> 00:01:31,900
+01:23.600 --> 01:31.900
 A registered negative control failed,
 so our rule stopped the pipeline. We show this failure.
 
-13
-00:01:31,900 --> 00:01:37,500
+01:31.900 --> 01:37.500
 A limited audit found no future information or alignment error.
 A clean target shuffle worked correctly.
 
-14
-00:01:37,500 --> 00:01:48,600
+01:37.500 --> 01:48.600
 The real model beat all twenty independent block-null runs.
 We continued with safeguards and the stronger BT++ comparison.
 
-15
-00:01:48,600 --> 00:01:59,600
+01:48.600 --> 01:59.600
 Nominal 90% intervals achieved
 91.0–92.4% empirical coverage.
 
-16
-00:01:59,600 --> 00:02:06,500
+01:59.600 --> 02:06.500
 Selective prediction passed three of five endpoints:
 firing rate, active electrodes, and coordinated activity.
 
-17
-00:02:06,500 --> 00:02:17,300
+02:06.500 --> 02:17.300
 Bursts and network spikes did not pass and remain limitations.
 This is research decision support only.
 
-18
-00:02:17,300 --> 00:02:27,100
+02:17.300 --> 02:27.100
 Day-five data alone were weaker.
 Adding day-seven physiology gave the main improvement.
 
-19
-00:02:27,100 --> 00:02:35,600
+02:27.100 --> 02:35.600
 For accepted cases, the forecast is available five days
 before the day-twelve result.
 
-20
-00:02:35,600 --> 00:02:43,000
+02:35.600 --> 02:43.000
 Day-seven physiology was the strongest feature group.
 Chemical information also helped. These are predictions, not causes.
 
-21
-00:02:45,200 --> 00:02:53,100
+02:45.200 --> 02:53.100
 A reliable system must show mistakes.
 The demo includes one correct case and one declared failure.
 
-22
-00:02:53,100 --> 00:03:02,700
+02:53.100 --> 03:02.700
 We chose both before recording, not because they looked better.
 The uncertainty and reliability decisions stay visible.
 
-23
-00:03:02,700 --> 00:03:10,600
+03:02.700 --> 03:10.600
 A secondary test retained predictive value
 when we held out either NTP or ToxCast.
 
-24
-00:03:10,600 --> 00:03:17,200
+03:10.600 --> 03:17.200
 The model was not retuned.
 This is not transfer to another laboratory or device.
 
-25
-00:03:17,300 --> 00:03:22,700
+03:17.300 --> 03:22.700
 The data come from rat cortical neural MEA tests.
 
-26
-00:03:22,700 --> 00:03:29,100
+03:22.700 --> 03:29.100
 They are not human or organ-on-chip data.
 A new platform needs local training,
 
-27
-00:03:29,100 --> 00:03:38,400
+03:29.100 --> 03:38.400
 recalibration, and prospective validation.
 MEACompass is open and reproducible.
 
-28
-00:03:38,400 --> 00:03:47,100
+03:38.400 --> 03:47.100
 It turns early measurements into a forecast,
 an uncertainty interval, and an honest option to wait.
 
-29
-00:03:47,100 --> 00:03:51,900
+03:47.100 --> 03:51.900
 Forecast when evidence is strong.
 Continue the experiment when it is not.

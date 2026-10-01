@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MEACompass — Competition Demo Video</title>
+  <meta name="description" content="The public MEACompass competition demo: reliability-aware early prediction from rat cortical neural MEA assays.">
+  <style>
+    :root { color-scheme: dark; --ink: #0c1d28; --paper: #f3f0e7; --mint: #49c4b2; --gold: #e1a927; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--ink); color: var(--paper); font-family: Arial, sans-serif; }
+    main { width: min(1180px, 94vw); margin: 0 auto; padding: 42px 0 54px; }
+    .kicker { color: var(--mint); font-size: .78rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { max-width: 1000px; margin: 12px 0 10px; font: 700 clamp(2rem, 4.5vw, 4.2rem)/1.02 Georgia, serif; }
+    .subtitle { max-width: 900px; color: #becbd0; font-size: clamp(1rem, 1.8vw, 1.3rem); line-height: 1.5; }
+    video { width: 100%; margin-top: 28px; border: 1px solid #38515e; background: #000; box-shadow: 0 22px 60px #0008; }
+    .note { margin: 18px 0 0; color: #cad5d8; line-height: 1.55; }
+    .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+    a { color: var(--ink); background: var(--mint); padding: 11px 15px; border-radius: 3px; font-weight: 700; text-decoration: none; }
+    a.secondary { background: transparent; color: var(--paper); border: 1px solid #607783; }
+    .boundary { margin-top: 28px; padding-top: 18px; border-top: 1px solid #38515e; color: #aebdc2; font-size: .92rem; line-height: 1.55; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="kicker">Competition demo · 3:53</div>
+    <h1>MEACompass</h1>
+    <p class="subtitle">Reliability-aware early prediction of neural network development from microelectrode-array assays.</p>
+    <video controls preload="metadata" poster="poster.png">
+      <source src="../media/MEACompass_Competition_Video.mp4" type="video/mp4">
+      <track kind="captions" src="captions-en.vtt" srclang="en" label="English" default>
+      <track kind="captions" src="captions-zh.vtt" srclang="zh" label="中文">
+      Your browser does not support HTML5 video. Use the MP4 download below.
+    </video>
+    <p class="note">Use the CC control to select English or Chinese captions. The narration is the author’s recorded voice; no synthetic voice or paid media service was used.</p>
+    <div class="links">
+      <a href="../media/MEACompass_Competition_Video.mp4">Open or download MP4</a>
+      <a class="secondary" href="../demo/">Try the public demo</a>
+      <a class="secondary" href="https://github.com/ZiyadAzzaz/MEACompass">View the repository</a>
+    </div>
+    <p class="boundary">Scientific boundary: this is research decision support using rat cortical neural MEA data. It is not human or organ-on-chip validation and is not an autonomous assay-termination system.</p>
+  </main>
+</body>
+</html>

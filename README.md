@@ -9,6 +9,7 @@ MEACompass uses measurements available by day in vitro 7 (DIV7) to forecast
 five DIV12 functional outcomes for unseen chemicals. It adds calibrated 90%
 intervals and abstains on the least certain 30% of cases.
 
+[Demo video](https://ziyadazzaz.github.io/MEACompass/video/) ·
 [Live demo](https://ziyadazzaz.github.io/MEACompass/demo/) ·
 [Technical report](https://github.com/ZiyadAzzaz/MEACompass/blob/main/docs/MEACompass_Technical_Report.pdf) ·
 [Competition deck](https://github.com/ZiyadAzzaz/MEACompass/blob/main/docs/MEACompass_Competition_Deck.pptx) ·

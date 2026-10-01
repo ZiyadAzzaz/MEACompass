@@ -68,7 +68,7 @@ def test_kaggle_summary_and_boundary_are_submission_ready() -> None:
     assert "three of five" in summary
     assert "not organ-on-chip or human data" in summary
     assert "autonomous assay termination" in summary
-    assert "VIDEO_URL_TO_BE_ADDED_AFTER_UPLOAD" in writeup
+    assert "https://ziyadazzaz.github.io/MEACompass/video/" in writeup
 
 
 def test_kaggle_category_is_declared_at_the_beginning() -> None:
